@@ -37,7 +37,7 @@
                                         <!-- CTA Button -->
                                         <div class="hero-2-btn-wrap" data-animation="flipInX" data-duration="1s" data-delay="1s">
                                             <a class="hpt-btn-3" href="contact.php">
-                                                GET YOUR FREE MARKETING PLAN
+                                                GET YOUR FREE MARKETING PLAN TODAY
                                                 <span class="icon"><i class="fal fa-chevron-double-right"></i></span>
                                             </a>
                                         </div>
