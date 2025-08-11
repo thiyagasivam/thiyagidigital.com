@@ -1,6 +1,6 @@
 <?php include 'header.php';?>
 <head>
-    <title>Best Digital Marketing Company - ThiyagiDigital 2025</title>
+    <title>Best Digital Marketing Company - ThiyagiDigital</title>
     <meta name="description" content="ThiyagiDigital - Top digital marketing agency in Chennai offering SEO, social media marketing, content marketing, and web development services">
     <meta name="keywords" content="digital marketing, SEO, social media marketing, content marketing, web development, Chennai, ThiyagiDigital">
     <meta name="author" content="ThiyagiDigital">
@@ -37,7 +37,7 @@
                                         <!-- CTA Button -->
                                         <div class="hero-2-btn-wrap" data-animation="flipInX" data-duration="1s" data-delay="1s">
                                             <a class="hpt-btn-3" href="contact.php">
-                                                GET YOUR FREE MARKETING PLAN
+                                                GET YOUR FREE MARKETING PLAN For Demo
                                                 <span class="icon"><i class="fal fa-chevron-double-right"></i></span>
                                             </a>
                                         </div>
