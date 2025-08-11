@@ -1,6 +1,6 @@
 <?php include 'header.php';?>
 <head>
-    <title>Best Digital Marketing Company - ThiyagiDigital</title>
+    <title>Best Digital Marketing Company - ThiyagiDigital 2025</title>
     <meta name="description" content="ThiyagiDigital - Top digital marketing agency in Chennai offering SEO, social media marketing, content marketing, and web development services">
     <meta name="keywords" content="digital marketing, SEO, social media marketing, content marketing, web development, Chennai, ThiyagiDigital">
     <meta name="author" content="ThiyagiDigital">
