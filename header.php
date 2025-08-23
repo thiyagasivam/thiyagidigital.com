@@ -195,7 +195,7 @@
                                 </li>
                                 <li><a href="https://www.thiyagidigital.com/portfolio">Portfolio</a></li>
 								<li><a href="https://www.thiyagidigital.com/testimonial">Testimonial</a></li>
-								<li><a href="https://www.thiyagidigital.com/sitemap">Sitemap</a></li>
+						
 								<li><a href="/#">Blog</a></li>
                                 <li><a href="https://www.thiyagidigital.com/contact">Contact Us</a></li>
 
