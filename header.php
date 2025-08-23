@@ -10,6 +10,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="Z9lTCvuf7MLsgjjWtZoGZERzMiQ9qE5fcCCTJEjZzCs" />
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FVK3WNZJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N9FVK3WNZJ');
+</script>
 	<?php
 	// Dynamic SEO meta handling with sensible defaults
 	$page_title = $page_title ?? 'ThiyagiDigital — Digital Marketing Company in Chennai';
