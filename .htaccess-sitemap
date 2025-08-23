@@ -1,9 +1,0 @@
-# Add to .htaccess for sitemap.xml to work dynamically
-
-# Redirect sitemap.xml to the dynamic PHP generator
-RewriteEngine On
-RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
-
-# Optional: Add sitemap reference for search engines
-# Add this to your robots.txt:
-# Sitemap: https://www.thiyagidigital.com/sitemap.xml

@@ -31,4 +31,5 @@ RewriteRule ^(.*)$ $1.php [L]
     
     
    RewriteEngine On
-RewriteRule ^sitemap\.xml$ sitemap.php [L]
+# Dynamic sitemap redirect
+RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]

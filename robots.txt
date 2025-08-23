@@ -1,0 +1,56 @@
+User-agent: *
+Allow: /
+
+# Block access to admin/internal files
+Disallow: /mailer.php
+Disallow: /smailer.php
+Disallow: /sitemap-functions.php
+Disallow: /sitemap-generator.php
+Disallow: /config.php
+
+# Block access to partial/component files
+Disallow: /header.php
+Disallow: /footer.php
+Disallow: /callbox.php
+Disallow: /callservice-sidebar.php
+Disallow: /client-logo.php
+Disallow: /mainservice-sidebar.php
+Disallow: /marquee.php
+Disallow: /project-count.php
+Disallow: /certify-partner.php
+Disallow: /sideform.php
+Disallow: /testmonial2.php
+
+# Block direct access to city template files
+Disallow: /seo-city.php
+Disallow: /smm-city.php
+Disallow: /sem-city.php
+Disallow: /web-development-city.php
+Disallow: /content-writing-city.php
+Disallow: /email-marketing-city.php
+
+# Allow clean URLs for city pages
+Allow: /seo-services/
+Allow: /smm-service/
+Allow: /sem-services/
+Allow: /web-development-service/
+Allow: /content-writing-service/
+Allow: /email-marketing-service/
+
+# Block assets that don't need indexing
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /assets/fonts/
+
+# Allow important assets
+Allow: /assets/img/
+
+# Crawl delay for being respectful to server resources
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.thiyagidigital.com/sitemap.xml
+
+# Additional sitemaps (if needed in future)
+# Sitemap: https://www.thiyagidigital.com/sitemap-images.xml
+# Sitemap: https://www.thiyagidigital.com/sitemap-news.xml
