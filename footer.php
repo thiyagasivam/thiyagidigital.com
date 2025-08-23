@@ -27,12 +27,12 @@
                         <h3 class="widget-title">Our Services</h3>
                         <ul>
                             
-                                        <li><a href="https://www.thiyagidigital.com/seo-services.php">Search Engine Optimization</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/smm.php">Social Media Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/sem.php">Search Engine Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/web-development.php">Web Development</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/content-writing.php">Content Writing</a></li>
-										<li><a href="https://www.thiyagidigital.com/email-marketing.php">Email Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/seo-services">Search Engine Optimization</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/smm-service">Social Media Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/sem-services">Search Engine Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/web-development-service">Web Development</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/content-writing-service">Content Writing</a></li>
+										<li><a href="https://www.thiyagidigital.com/email-marketing-service">Email Marketing</a></li>
                         </ul>
                         
                     </div>
@@ -43,12 +43,13 @@
                     <div class="menu-widget">
                         <h3 class="widget-title">Quick Links</h3>
                         <ul>
-                            <li><a href="https://www.thiyagidigital.com/about.php"  >About Us</a></li>
-                            <li><a href="https://www.thiyagidigital.com/portfolio.php">Portfolio</a></li>
-                            <li><a href="https://www.thiyagidigital.com/privacy-policy.php"  >Privacy Policy</a></li>
-                            <li><a href="https://www.thiyagidigital.com/terms-and-conditions.php"  >Terms & Conditions</a></li>
-                            <li><a href="https://www.thiyagidigital.com/return-refund-policy.php"  >Return & Policy</a></li>
-                            <li><a href="https://www.thiyagidigital.com/shipping-and-delivery.php"  >Shipping & Delivery Policy</a></li>
+                            <li><a href="https://www.thiyagidigital.com/about"  >About Us</a></li>
+                            <li><a href="https://www.thiyagidigital.com/portfolio">Portfolio</a></li>
+                            <li><a href="https://www.thiyagidigital.com/sitemap">Sitemap</a></li>
+                            <li><a href="https://www.thiyagidigital.com/privacy-policy"  >Privacy Policy</a></li>
+                            <li><a href="https://www.thiyagidigital.com/terms-and-conditions"  >Terms & Conditions</a></li>
+                            <li><a href="https://www.thiyagidigital.com/return-refund-policy"  >Return & Policy</a></li>
+                            <li><a href="https://www.thiyagidigital.com/shipping-and-delivery"  >Shipping & Delivery Policy</a></li>
                             <!--<li><a href="#"  >Career</a></li>-->
                         </ul>
                     </div>

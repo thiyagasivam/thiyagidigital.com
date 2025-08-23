@@ -75,7 +75,7 @@ foreach ($publicPages as $page) {
     $pageName = str_replace('.php', '', $page);
     if ($pageName === 'index' || $pageName === 'thankyou') continue;
     
-    $loc = $baseUrl . $pageName . '.php';
+    $loc = $baseUrl . $pageName; // Clean URLs without .php extension
     $lastmod = $today; // Use current date for all pages
     
     echo '  <url>' . "\n";
@@ -89,17 +89,17 @@ foreach ($publicPages as $page) {
 // 3. SERVICE PAGES (Main service pages)
 echo "\n  <!-- Main Service Pages -->\n";
 $mainServices = [
-    'seo-services.php' => 'Search Engine Optimization',
-    'smm-service.php' => 'Social Media Marketing', 
-    'sem-services.php' => 'Search Engine Marketing',
-    'web-development-service.php' => 'Web Development',
-    'content-writing-service.php' => 'Content Writing',
-    'email-marketing-service.php' => 'Email Marketing'
+    'seo-services' => 'Search Engine Optimization',
+    'smm-service' => 'Social Media Marketing', 
+    'sem-services' => 'Search Engine Marketing',
+    'web-development-service' => 'Web Development',
+    'content-writing-service' => 'Content Writing',
+    'email-marketing-service' => 'Email Marketing'
 ];
 
-foreach ($mainServices as $serviceFile => $serviceName) {
-    if (file_exists(__DIR__ . DIRECTORY_SEPARATOR . str_replace('.php', '', $serviceFile) . '.php')) {
-        $loc = $baseUrl . $serviceFile;
+foreach ($mainServices as $serviceSlug => $serviceName) {
+    if (file_exists(__DIR__ . DIRECTORY_SEPARATOR . $serviceSlug . '.php')) {
+        $loc = $baseUrl . $serviceSlug;
         $lastmod = $today; // Use current date for all pages
         
         echo '  <url>' . "\n";

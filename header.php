@@ -195,6 +195,7 @@
                                 </li>
                                 <li><a href="https://www.thiyagidigital.com/portfolio">Portfolio</a></li>
 								<li><a href="https://www.thiyagidigital.com/testimonial">Testimonial</a></li>
+								<li><a href="https://www.thiyagidigital.com/sitemap">Sitemap</a></li>
 								<li><a href="/#">Blog</a></li>
                                 <li><a href="https://www.thiyagidigital.com/contact">Contact Us</a></li>
 
@@ -251,6 +252,7 @@
 								</li>
                                 <li><a href="https://www.thiyagidigital.com/portfolio">Portfolio</a></li>
                                 <li><a href="https://www.thiyagidigital.com/testimonial">Testimonial</a></li>
+                                <li><a href="https://www.thiyagidigital.com/sitemap">Sitemap</a></li>
 								<li><a href="/#">Blog</a></li>
                                 <li><a href="https://www.thiyagidigital.com/contact">Contact Us</a></li>
 
@@ -321,6 +323,7 @@
 								<li><a href="https://www.thiyagidigital.com/portfolio"><i class="fal fa-briefcase"></i> Portfolio </a></li>
 								<li><a href="https://www.thiyagidigital.com/about"><i class="fal fa-home"></i> About Us </a></li>
 									<li><a href="https://www.thiyagidigital.com/testimonial"><i class="fal fa-comments-alt"></i> Testimonial </a></li>
+									<li><a href="https://www.thiyagidigital.com/sitemap"><i class="fal fa-sitemap"></i> Sitemap </a></li>
 									<!-- <li><a href="team"><i class="fal fa-users"></i> Our Team </a></li> -->
 									<!-- <li><a href="portfolio.php"><i class="fal fa-briefcase"></i> Portfolio </a></li> -->
 									<!-- <li><a href="#"><i class="fal fa-blog"></i> Blog </a></li> -->
