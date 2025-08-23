@@ -1,9 +1,9 @@
-<?php include 'header.php';?>
-
-<head>
-<title>Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="Haptic contact">
-</head>
+<?php
+$page_title = 'Web Development Services | ThiyagiDigital';
+$page_description = 'Custom web development in Chennai: responsive, fast, SEO-friendly websites tailored to your business by ThiyagiDigital.';
+$page_keywords = 'web development Chennai, website design, responsive websites, custom development';
+include 'header.php';
+?>
 
 <!-- Start of breadcrumb section
 	============================================= -->

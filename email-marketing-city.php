@@ -22,16 +22,13 @@ if (!array_key_exists($citySlug, $supportedCities)) {
 $cityData = $supportedCities[$citySlug];
 $fullCityName = $cityData['name'];
 $stateName = $cityData['state'];
-?>
 
-<head>
-    <title>Professional Email Marketing Services in <?php echo $fullCityName; ?> | ThiyagiDigital</title>
-    <meta name="description" content="Targeted email marketing solutions for <?php echo $fullCityName; ?> businesses. Drive engagement and conversions with our localized email campaigns in <?php echo $stateName; ?>.">
-    <meta name="keywords" content="email marketing <?php echo $fullCityName; ?>, email campaigns <?php echo $fullCityName; ?>, email automation <?php echo $fullCityName; ?>">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.thiyagidigital.com/email-marketing-service/<?php echo $citySlug; ?>" />
-</head>
+// Dynamic SEO variables for this city page
+$page_title = "Professional Email Marketing Services in {$fullCityName} | ThiyagiDigital";
+$page_description = "Targeted email marketing solutions for {$fullCityName} businesses. Drive engagement and conversions with our localized email campaigns in {$stateName}.";
+$page_keywords = "email marketing {$fullCityName}, email campaigns {$fullCityName}, email automation {$fullCityName}";
+$canonical_url = "https://www.thiyagidigital.com/email-marketing-service/{$citySlug}";
+?>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">

@@ -1,6 +1,9 @@
     
-    
-<?php include 'header.php';?>
+<?php
+$page_title = 'Thank You | ThiyagiDigital';
+$page_description = 'Thanks for contacting ThiyagiDigital. Our team will reach out shortly.';
+$page_robots = 'noindex, nofollow';
+include 'header.php';?>
 <br><br>
     <section style="background-color: #f4f4f4;padding:200px!important;">
         <div class="container">

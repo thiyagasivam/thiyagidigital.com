@@ -1,11 +1,8 @@
-<?php include 'header.php'; ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found | 404 Error</title>
+<?php
+$page_title = 'Page Not Found | 404 Error';
+$page_description = 'The page you are looking for could not be found.';
+$page_robots = 'noindex, nofollow';
+include 'header.php'; ?>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom CSS that complements Tailwind */
@@ -25,8 +22,7 @@
             /* Replace [header_height] and [footer_height] with actual values */
         }
     </style>
-</head>
-<body>
+
     <div class="error-content bg-404 flex items-center justify-center p-4">
         <div class="max-w-md w-full text-center">
             <!-- Animated ghost SVG -->
@@ -77,5 +73,4 @@
     </script>
 
 <?php include 'footer.php'; ?>
-</body>
 </html>

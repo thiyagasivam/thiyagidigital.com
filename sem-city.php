@@ -390,16 +390,13 @@ if (!array_key_exists($citySlug, $supportedCities)) {
 $cityData = $supportedCities[$citySlug];
 $fullCityName = $cityData['name'];
 $stateName = $cityData['state'];
-?>
 
-<head>
-    <title>Best SEM Services in <?php echo $fullCityName; ?> | ThiyagiDigital</title>
-    <meta name="description" content="Professional SEM services in <?php echo $fullCityName; ?>. Drive targeted traffic and increase conversions with our expert Search Engine Marketing strategies in <?php echo $stateName; ?>.">
-    <meta name="keywords" content="SEM services <?php echo $fullCityName; ?>, PPC advertising <?php echo $fullCityName; ?>, Google Ads <?php echo $fullCityName; ?>, digital marketing <?php echo $fullCityName; ?>">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.thiyagidigital.com/sem-services/<?php echo $citySlug; ?>" />
-</head>
+// Dynamic SEO variables for this city page
+$page_title = "Best SEM Services in {$fullCityName} | ThiyagiDigital";
+$page_description = "Professional SEM services in {$fullCityName}. Drive targeted traffic and increase conversions with our expert Search Engine Marketing strategies in {$stateName}.";
+$page_keywords = "SEM services {$fullCityName}, PPC advertising {$fullCityName}, Google Ads {$fullCityName}, digital marketing {$fullCityName}";
+$canonical_url = "https://www.thiyagidigital.com/sem-services/{$citySlug}";
+?>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">

@@ -1,10 +1,9 @@
-<?php include 'header.php';?>
-<head>
-<title>About Us Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="About Us">
-    <meta name="keywords" content="About Us">
-    <meta name="author" content="Themexriver">
-</head>
+<?php
+$page_title = 'About Us | ThiyagiDigital';
+$page_description = 'Learn about ThiyagiDigital—our mission, values, and the team behind our SEO, SMM, SEM, content, and web development services.';
+$page_keywords = 'About ThiyagiDigital, digital marketing agency, Chennai';
+include 'header.php';
+?>
 
 
 <!-- Start of breadcrumb section

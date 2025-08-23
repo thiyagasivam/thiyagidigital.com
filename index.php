@@ -1,10 +1,35 @@
-<?php include 'header.php';?>
-<head>
-    <title>Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="ThiyagiDigital - Top digital marketing agency in Chennai offering SEO, social media marketing, content marketing, and web development services">
-    <meta name="keywords" content="digital marketing, SEO, social media marketing, content marketing, web development, Chennai, ThiyagiDigital">
-    <meta name="author" content="ThiyagiDigital">
-</head>
+<?php
+$page_title = 'Best Digital Marketing Company - ThiyagiDigital';
+$page_description = 'ThiyagiDigital - Top digital marketing agency in Chennai offering SEO, social media marketing, content marketing, and web development services.';
+$page_keywords = 'digital marketing, SEO, social media marketing, content marketing, web development, Chennai, ThiyagiDigital';
+// Optional Organization schema
+$page_schema = [
+    '@context' => 'https://schema.org',
+    '@type' => 'Organization',
+    'name' => 'ThiyagiDigital',
+    'url' => 'https://www.thiyagidigital.com/',
+    'logo' => 'https://www.thiyagidigital.com/assets/img/logo/tdigilogo.png',
+    'sameAs' => [
+        'https://www.facebook.com/profile.php?id=61560465773612',
+        'https://www.instagram.com/thiyagidigital/',
+        'https://x.com/thiyagidigital',
+        'https://in.pinterest.com/thiyagidigital/'
+    ],
+    'address' => [
+        '@type' => 'PostalAddress',
+        'addressLocality' => 'Chennai',
+        'addressRegion' => 'TN',
+        'postalCode' => '600073',
+        'addressCountry' => 'IN'
+    ],
+    'contactPoint' => [
+        '@type' => 'ContactPoint',
+        'telephone' => '+91 9363252875',
+        'contactType' => 'customer service'
+    ]
+];
+include 'header.php';
+?>
 
 <div id="main">
     <div id="smooth-content">

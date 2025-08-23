@@ -1,9 +1,9 @@
-<?php include 'header.php';?>
-
-<head>
-<title>Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="Haptic contact">
-</head>
+<?php
+$page_title = 'Social Media Marketing (SMM) Agency | ThiyagiDigital';
+$page_description = 'Grow your brand with ThiyagiDigital’s social media marketing: strategy, content, and ads that increase reach and engagement.';
+$page_keywords = 'social media marketing Chennai, SMM agency, social media ads, content creation';
+include 'header.php';
+?>
 
 <!-- Start of breadcrumb section
 	============================================= -->

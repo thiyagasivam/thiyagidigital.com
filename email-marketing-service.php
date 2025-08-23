@@ -1,9 +1,9 @@
-<?php include 'header.php';?>
-
-<head>
-<title>Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="Haptic contact">
-</head>
+<?php
+$page_title = 'Email Marketing Services | ThiyagiDigital';
+$page_description = 'Targeted email campaigns, automation, and segmentation that grow engagement and conversions. Email marketing by ThiyagiDigital.';
+$page_keywords = 'email marketing Chennai, email campaigns, email automation, newsletters';
+include 'header.php';
+?>
 
 <!-- Start of breadcrumb section
 	============================================= -->

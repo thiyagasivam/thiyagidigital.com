@@ -1,9 +1,9 @@
-<?php include 'header.php';?>
 
-<head>
-<title>Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="Haptic contact">
-</head>
+<?php
+$page_title = 'Client Testimonials | ThiyagiDigital';
+$page_description = 'Read client testimonials and success stories from ThiyagiDigital’s SEO, SMM, SEM, and web development projects.';
+include 'header.php';
+?>
 	
 <!-- Start of breadcrumb section
 	============================================= -->

@@ -1,10 +1,8 @@
-<?php include 'header.php';?>
-<head>
-<title>About Us Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="About Us">
-    <meta name="keywords" content="About Us">
-    <meta name="author" content="Themexriver">
-</head>
+<?php
+$page_title = 'Return and Refund Policy | ThiyagiDigital';
+$page_description = 'ThiyagiDigital’s return and refund policy outlining terms and conditions for service engagements.';
+include 'header.php';
+?>
 
 
 <!-- Start of breadcrumb section

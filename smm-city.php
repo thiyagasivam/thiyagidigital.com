@@ -390,16 +390,13 @@ if (!array_key_exists($citySlug, $supportedCities)) {
 $cityData = $supportedCities[$citySlug];
 $fullCityName = $cityData['name'];
 $stateName = $cityData['state'];
-?>
 
-<head>
-    <title>Top Social Media Marketing Services in <?php echo $fullCityName; ?> | ThiyagiDigital</title>
-    <meta name="description" content="Professional SMM services in <?php echo $fullCityName; ?>. Boost your social media presence with our expert strategies tailored for <?php echo $stateName; ?> businesses.">
-    <meta name="keywords" content="SMM services <?php echo $fullCityName; ?>, social media marketing <?php echo $fullCityName; ?>, social media management <?php echo $fullCityName; ?>">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.thiyagidigital.com/smm-service/<?php echo $citySlug; ?>" />
-</head>
+// Dynamic SEO variables for this city page
+$page_title = "Top Social Media Marketing Services in {$fullCityName} | ThiyagiDigital";
+$page_description = "Professional SMM services in {$fullCityName}. Boost your social media presence with our expert strategies tailored for {$stateName} businesses.";
+$page_keywords = "SMM services {$fullCityName}, social media marketing {$fullCityName}, social media management {$fullCityName}";
+$canonical_url = "https://www.thiyagidigital.com/smm-service/{$citySlug}";
+?>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">

@@ -1,9 +1,9 @@
-<?php include 'header.php';?>
-
-<head>
-<title>Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="Haptic contact">
-</head>
+<?php
+$page_title = 'Content Writing Services | ThiyagiDigital';
+$page_description = 'Engaging, SEO-optimized content writing services that build authority and drive conversions. Blogs, web copy, and more.';
+$page_keywords = 'content writing Chennai, SEO content, copywriting, blog writing';
+include 'header.php';
+?>
 
 <!-- Start of breadcrumb section
 	============================================= -->

@@ -1,10 +1,8 @@
-<?php include 'header.php';?>
-<head>
-<title>About Us Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="About Us">
-    <meta name="keywords" content="About Us">
-    <meta name="author" content="Themexriver">
-</head>
+<?php
+$page_title = 'Terms and Conditions | ThiyagiDigital';
+$page_description = 'ThiyagiDigital’s terms and conditions governing use of our website and services.';
+include 'header.php';
+?>
 
 
 <!-- Start of breadcrumb section

@@ -1,9 +1,8 @@
-<?php include 'header.php';?>
-
-<head>
-<title>Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="Haptic contact">
-</head>
+<?php
+$page_title = 'Contact ThiyagiDigital | Get a Free Marketing Plan';
+$page_description = 'Contact ThiyagiDigital for SEO, SMM, SEM, content writing, and web development in Chennai. Get a free marketing plan today.';
+include 'header.php';
+?>
 <!-- Start of breadcrumb section
 	============================================= -->
 	<section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="assets/img/bg/bread-bg.jpg">

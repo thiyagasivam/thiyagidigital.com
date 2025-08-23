@@ -390,16 +390,13 @@ if (!array_key_exists($citySlug, $supportedCities)) {
 $cityData = $supportedCities[$citySlug];
 $fullCityName = $cityData['name'];
 $stateName = $cityData['state'];
-?>
 
-<head>
-    <title>Professional Web Development Services in <?php echo $fullCityName; ?> | ThiyagiDigital</title>
-    <meta name="description" content="Custom web development services in <?php echo $fullCityName; ?>. We build responsive, high-performance websites for businesses in <?php echo $stateName; ?>.">
-    <meta name="keywords" content="web development <?php echo $fullCityName; ?>, website design <?php echo $fullCityName; ?>, custom websites <?php echo $fullCityName; ?>">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.thiyagidigital.com/web-development-service/<?php echo $citySlug; ?>" />
-</head>
+// Dynamic SEO variables for this city page
+$page_title = "Professional Web Development Services in {$fullCityName} | ThiyagiDigital";
+$page_description = "Custom web development services in {$fullCityName}. We build responsive, high-performance websites for businesses in {$stateName}.";
+$page_keywords = "web development {$fullCityName}, website design {$fullCityName}, custom websites {$fullCityName}";
+$canonical_url = "https://www.thiyagidigital.com/web-development-service/{$citySlug}";
+?>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">

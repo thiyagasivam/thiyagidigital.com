@@ -1,5 +1,10 @@
 
 
+<?php
+// Prepare city context early to build meta before header
+$citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
+$cityName = ucwords(str_replace('-', ' ', $citySlug));
+?>
 <?php include 'header.php';?>
 
 <?php
@@ -392,20 +397,14 @@ if (!array_key_exists($citySlug, $supportedCities)) {
 $cityData = $supportedCities[$citySlug];
 $fullCityName = $cityData['name'];
 $stateName = $cityData['state'];
+
+// Dynamic SEO variables for this city page
+$page_title = "Best SEO Services in {$fullCityName} | ThiyagiDigital";
+$page_description = "Professional SEO services in {$fullCityName}, {$stateName}. Boost your local search rankings with our expert SEO strategies.";
+$page_keywords = "SEO services {$fullCityName}, digital marketing {$fullCityName}, local SEO {$fullCityName}";
+$canonical_url = "https://www.thiyagidigital.com/seo-services/{$citySlug}";
+// $og_image = '/assets/img/service/serd1.jpg';
 ?>
-
-
-<head>
-    <title>Best SEO Services in <?php echo $fullCityName; ?> | ThiyagiDigital</title>
-    <meta name="description" content="Professional SEO services in <?php echo $fullCityName; ?>, <?php echo $stateName; ?>. Boost your local search rankings with our expert SEO strategies.">
-    <meta name="keywords" content="SEO services <?php echo $fullCityName; ?>, digital marketing <?php echo $fullCityName; ?>, local SEO <?php echo $fullCityName; ?>">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.thiyagidigital.com/seo-services/<?php echo $citySlug; ?>" />
-    
-    <!-- Ensure CSS paths are root-relative -->
-    <!--<base href="/">-->
-</head>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">
