@@ -39,7 +39,7 @@ include 'header.php';
 
 								<p>achieving visibility on search engines is paramount, and that's where our Search Engine Marketing (SEM) services shine. At Thiyagidigital, we specialize in crafting strategic SEM campaigns that propel your brand to the top of search engine results, ensuring maximum exposure and driving targeted traffic.</p>
 
-								<p>  Our SEM approach combines the power of paid advertising and meticulous keyword targeting. We leverage platforms like Google Ads to create compelling ad campaigns that reach potential customers precisely when they are searching for products or services related to your business.</p>
+								<p>  combines the power of paid advertising and meticulous keyword targeting. We leverage platforms like Google Ads to create compelling ad campaigns that reach potential customers precisely when they are searching for products or services related to your business.</p>
 
 								<p>  What sets our SEM services apart is a data-driven methodology. We continuously monitor and analyze campaign performance, adjusting strategies to optimize for conversions and maximize return on investment. Our goal is not just to drive traffic but to deliver tangible results for your business.</p>
 
