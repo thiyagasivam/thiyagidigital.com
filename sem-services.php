@@ -37,7 +37,7 @@ include 'header.php';
 							<div class="bi-service-details-text headline pera-content">
 								<h3>Search Engine Marketing</h3>
 
-								<p>In the competitive digital landscape, achieving visibility on search engines is paramount, and that's where our Search Engine Marketing (SEM) services shine. At Thiyagidigital, we specialize in crafting strategic SEM campaigns that propel your brand to the top of search engine results, ensuring maximum exposure and driving targeted traffic.</p>
+								<p>achieving visibility on search engines is paramount, and that's where our Search Engine Marketing (SEM) services shine. At Thiyagidigital, we specialize in crafting strategic SEM campaigns that propel your brand to the top of search engine results, ensuring maximum exposure and driving targeted traffic.</p>
 
 								<p>  Our SEM approach combines the power of paid advertising and meticulous keyword targeting. We leverage platforms like Google Ads to create compelling ad campaigns that reach potential customers precisely when they are searching for products or services related to your business.</p>
 
