@@ -1,20 +1,6 @@
 <?php
-// Dynam# Check if header file exists before including
-if (file_exists('header.php')) {
-    include 'header.php';
-} else {
-    echo "<!DOCTYPE html><html><head><title>$page_title</title></head><body>";
-}
-
-// Debug output
-echo "<!-- Sitemap page loaded successfully -->";
-
-// Base configuration
-$baseUrl = 'https://www.thiyagidigital.com/';
-
-// Enable error reporting for debugging
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// Dynamic HTML Sitemap Page
+// Automatically discovers and displays all website pages
 
 // Page SEO settings
 $page_title = 'HTML Sitemap - All Pages | ThiyagiDigital';
@@ -23,12 +9,8 @@ $page_keywords = 'sitemap, all pages, website structure, navigation, ThiyagiDigi
 $page_robots = 'index, follow';
 $canonical_url = 'https://www.thiyagidigital.com/sitemap';
 
-// Check if header file exists before including
-if (file_exists('header.php')) {
-    include 'header.php';
-} else {
-    echo "<!DOCTYPE html><html><head><title>$page_title</title></head><body>";
-}
+// Include header
+include 'header.php';
 
 // Base configuration
 $baseUrl = 'https://www.thiyagidigital.com/';
@@ -37,10 +19,8 @@ $baseUrl = 'https://www.thiyagidigital.com/';
 function extractCitySlugs($filePath) {
     $citySlugs = [];
     
-    $fullPath = __DIR__ . DIRECTORY_SEPARATOR . $filePath;
-    if (!file_exists($fullPath)) {
-        echo "<!-- Debug: File not found: $fullPath -->";
-        // Return some default cities if file is not found
+    if (!file_exists(__DIR__ . DIRECTORY_SEPARATOR . $filePath)) {
+        // Return fallback cities if file not found
         return [
             ['slug' => 'chennai', 'name' => 'Chennai'],
             ['slug' => 'madurai', 'name' => 'Madurai'],
@@ -48,7 +28,7 @@ function extractCitySlugs($filePath) {
         ];
     }
     
-    $content = file_get_contents($fullPath);
+    $content = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . $filePath);
     
     // Match all city array keys: 'city-name' => ['name' => ...
     preg_match_all("/'([^']+)'\s*=>\s*\['name'\s*=>\s*'([^']+)'/", $content, $matches);
@@ -60,15 +40,6 @@ function extractCitySlugs($filePath) {
                 'name' => $matches[2][$i]
             ];
         }
-        echo "<!-- Debug: Extracted " . count($citySlugs) . " cities -->";
-    } else {
-        echo "<!-- Debug: No cities found in regex match -->";
-        // Fallback cities
-        $citySlugs = [
-            ['slug' => 'chennai', 'name' => 'Chennai'],
-            ['slug' => 'madurai', 'name' => 'Madurai'],
-            ['slug' => 'coimbatore', 'name' => 'Coimbatore']
-        ];
     }
     
     return $citySlugs;
@@ -106,12 +77,12 @@ $policyPages = [
 
 // Service slugs for city pages
 $serviceTypes = [
-    ['slug' => 'seo', 'name' => 'SEO Services'],
-    ['slug' => 'smm', 'name' => 'Social Media Marketing'],
-    ['slug' => 'sem', 'name' => 'Search Engine Marketing'],
-    ['slug' => 'web-development', 'name' => 'Web Development'],
-    ['slug' => 'content-writing', 'name' => 'Content Writing'],
-    ['slug' => 'email-marketing', 'name' => 'Email Marketing']
+    ['slug' => 'seo-services', 'name' => 'SEO Services'],
+    ['slug' => 'smm-service', 'name' => 'Social Media Marketing'],
+    ['slug' => 'sem-services', 'name' => 'Search Engine Marketing'],
+    ['slug' => 'web-development-service', 'name' => 'Web Development'],
+    ['slug' => 'content-writing-service', 'name' => 'Content Writing'],
+    ['slug' => 'email-marketing-service', 'name' => 'Email Marketing']
 ];
 ?>
 
