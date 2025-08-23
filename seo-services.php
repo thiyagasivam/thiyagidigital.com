@@ -1,9 +1,13 @@
-<?php include 'header.php';?>
-
-<head>
-<title>Best Digital Marketing Company - ThiyagiDigital</title>
-    <meta name="description" content="Haptic contact">
-</head>
+<?php
+// Page-specific SEO meta
+$page_title = 'SEO Services in Chennai | ThiyagiDigital';
+$page_description = 'Boost your organic traffic and rankings with ThiyagiDigital’s SEO services in Chennai: on-page SEO, technical SEO, and link building tailored to your business.';
+$page_keywords = 'SEO services Chennai, search engine optimization, on-page SEO, technical SEO, link building';
+// Optional: custom canonical or OG image
+// $canonical_url = 'https://www.thiyagidigital.com/seo-services.php';
+// $og_image = '/assets/img/service/serd1.jpg';
+include 'header.php';
+?>
 	
 <!-- Start of breadcrumb section
 	============================================= -->

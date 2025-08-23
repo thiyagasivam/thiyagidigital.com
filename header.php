@@ -12,6 +12,60 @@ updateSitemaps();
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<?php
+	// Dynamic SEO meta handling with sensible defaults
+	$page_title = $page_title ?? 'ThiyagiDigital — Digital Marketing Company in Chennai';
+	$page_description = $page_description ?? 'ThiyagiDigital - Top digital marketing agency in Chennai offering SEO, social media marketing, content marketing, and web development services.';
+	$page_keywords = $page_keywords ?? null;
+	$page_robots = $page_robots ?? 'index, follow';
+
+	// Build default canonical URL (without query string)
+	$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+	$requestUriPath = isset($_SERVER['REQUEST_URI']) ? strtok($_SERVER['REQUEST_URI'], '?') : '/';
+	$host = $_SERVER['HTTP_HOST'] ?? 'www.thiyagidigital.com';
+	$default_canonical = $scheme . '://' . $host . $requestUriPath;
+	$canonical_url = $canonical_url ?? $default_canonical;
+
+	$og_image = $og_image ?? '/assets/img/logo/tdigilogo.png';
+	$og_type = $og_type ?? 'website';
+	$og_site_name = $og_site_name ?? 'ThiyagiDigital';
+	$locale = $locale ?? 'en_US';
+	?>
+
+	<title><?php echo htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8'); ?></title>
+	<meta name="description" content="<?php echo htmlspecialchars($page_description, ENT_QUOTES, 'UTF-8'); ?>">
+	<?php if (!empty($page_keywords)) : ?>
+		<meta name="keywords" content="<?php echo htmlspecialchars($page_keywords, ENT_QUOTES, 'UTF-8'); ?>">
+	<?php endif; ?>
+	<meta name="robots" content="<?php echo htmlspecialchars($page_robots, ENT_QUOTES, 'UTF-8'); ?>">
+	<link rel="canonical" href="<?php echo htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8'); ?>">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="<?php echo htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8'); ?>" />
+	<meta property="og:description" content="<?php echo htmlspecialchars($page_description, ENT_QUOTES, 'UTF-8'); ?>" />
+	<meta property="og:type" content="<?php echo htmlspecialchars($og_type, ENT_QUOTES, 'UTF-8'); ?>" />
+	<meta property="og:url" content="<?php echo htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8'); ?>" />
+	<meta property="og:image" content="<?php echo htmlspecialchars($og_image, ENT_QUOTES, 'UTF-8'); ?>" />
+	<meta property="og:site_name" content="<?php echo htmlspecialchars($og_site_name, ENT_QUOTES, 'UTF-8'); ?>" />
+	<meta property="og:locale" content="<?php echo htmlspecialchars($locale, ENT_QUOTES, 'UTF-8'); ?>" />
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="<?php echo htmlspecialchars($page_title, ENT_QUOTES, 'UTF-8'); ?>" />
+	<meta name="twitter:description" content="<?php echo htmlspecialchars($page_description, ENT_QUOTES, 'UTF-8'); ?>" />
+	<meta name="twitter:image" content="<?php echo htmlspecialchars($og_image, ENT_QUOTES, 'UTF-8'); ?>" />
+
+	<?php
+	// Optional JSON-LD Schema markup support
+	if (!empty($page_schema)) {
+		if (is_array($page_schema)) {
+			echo '<script type="application/ld+json">' . json_encode($page_schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . '</script>';
+		} elseif (is_string($page_schema)) {
+			echo '<script type="application/ld+json">' . $page_schema . '</script>';
+		}
+	}
+	?>
+
     <link rel="shortcut icon" href="/assets/img/logo/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/fontawesome.css">
