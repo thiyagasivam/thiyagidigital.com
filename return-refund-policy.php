@@ -29,7 +29,7 @@ include 'header.php';
 			<div class="bi-about-content position-relative">
 				<div class="row">
                     <h1>Return and Refund Policy</h1>
-                    <p>Last updated: June 10, 2024</p>
+                    <p>Last updated: August 24, 2025</p>
                     <p>Thank you for shopping at thiyagidigital.</p>
                     <p>If, for any reason, You are not completely satisfied with a purchase We invite You to review our policy on refunds and returns.</p>
                     <p>The following terms are applicable for any products that You purchased with Us.</p>

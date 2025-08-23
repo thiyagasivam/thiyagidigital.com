@@ -102,7 +102,7 @@
 </div>
 
 <div class="hpt-footer-copyright text-center">
-    Copyright 2024 @thiyagidigital
+    Copyright 2025 @thiyagidigital
 </div>
 
 </footer>	        
