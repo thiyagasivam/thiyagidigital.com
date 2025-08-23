@@ -1,18 +1,20 @@
 RewriteEngine On
+
+# Force www and HTTPS
 RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
-RewriteEngine On
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# City service page redirects
 RewriteRule ^seo-services/([a-z-]+)/?$ seo-city.php?city=$1 [L,QSA]
 RewriteRule ^sem-services/([a-z-]+)/?$ sem-city.php?city=$1 [L,QSA,NC]
-# Web Development Service City Pages
 RewriteRule ^web-development-service/([a-z-]+)/?$ web-development-city.php?city=$1 [L,QSA,NC]
-# SMM Service City Pages
 RewriteRule ^smm-service/([a-z-]+)/?$ smm-city.php?city=$1 [L,QSA,NC]
-ErrorDocument 404 /404.php
-# Content Writing Service City Pages
 RewriteRule ^content-writing-service/([a-z-]+)/?$ content-writing-city.php?city=$1 [L,QSA,NC]
-# Email Marketing Service City Pages
 RewriteRule ^email-marketing-service/([a-z-]+)/?$ email-marketing-city.php?city=$1 [L,QSA,NC]
+
+# Dynamic sitemap redirect
+RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
+
 # Remove .php from URL (redirect to clean URL)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
 RewriteRule ^ %1 [R=301,L]
@@ -22,14 +24,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [L]
 
-
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    
-    # Set custom 404 error page
-    ErrorDocument 404 /404.php
-    
-    
-   RewriteEngine On
-# Dynamic sitemap redirect
-RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
+# Custom error pages
+ErrorDocument 404 /404.php

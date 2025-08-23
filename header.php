@@ -1,7 +1,5 @@
 <?php
-// Sitemap Auto-update Functionality
-require_once 'sitemap-functions.php'; // This will contain our sitemap functions
-updateSitemaps();
+// Removed sitemap auto-update as it's now handled by dynamic sitemap.xml.php
 ?>
 
 
