@@ -1,13 +1,5 @@
-
-
 <?php
-// Prepare city context early to build meta before header
-$citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
-$cityName = ucwords(str_replace('-', ' ', $citySlug));
-?>
-<?php include 'header.php';?>
-
-<?php
+// IMPORTANT: Build city context and meta BEFORE including header (no output above)
 // Get city name from URL and sanitize it
 $citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
 $cityName = ucwords(str_replace('-', ' ', $citySlug));
@@ -19,11 +11,6 @@ $supportedCities = [
     'madurai' => ['name' => 'Madurai', 'state' => 'Tamil Nadu'],
     'coimbatore' => ['name' => 'Coimbatore', 'state' => 'Tamil Nadu'],
     'tiruchirappalli' => ['name' => 'Tiruchirappalli', 'state' => 'Tamil Nadu'],
-    'salem' => ['name' => 'Salem', 'state' => 'Tamil Nadu'],
-    'tirunelveli' => ['name' => 'Tirunelveli', 'state' => 'Tamil Nadu'],
-    'vellore' => ['name' => 'Vellore', 'state' => 'Tamil Nadu'],
-    'tiruppur' => ['name' => 'Tiruppur', 'state' => 'Tamil Nadu'],
-    'erode' => ['name' => 'Erode', 'state' => 'Tamil Nadu'],
     'thoothukudi' => ['name' => 'Thoothukudi', 'state' => 'Tamil Nadu'],
     'dindigul' => ['name' => 'Dindigul', 'state' => 'Tamil Nadu'],
     'thanjavur' => ['name' => 'Thanjavur', 'state' => 'Tamil Nadu'],
@@ -37,8 +24,6 @@ $supportedCities = [
     'tambaram' => ['name' => 'Tambaram', 'state' => 'Tamil Nadu'],
     'karaikudi' => ['name' => 'Karaikudi', 'state' => 'Tamil Nadu'],
     'namakkal' => ['name' => 'Namakkal', 'state' => 'Tamil Nadu'],
-    'pudukkottai' => ['name' => 'Pudukkottai', 'state' => 'Tamil Nadu'],
-    'tiruvannamalai' => ['name' => 'Tiruvannamalai', 'state' => 'Tamil Nadu'],
     'chengalpattu' => ['name' => 'Chengalpattu', 'state' => 'Tamil Nadu'],
     'kanchipuram' => ['name' => 'Kanchipuram', 'state' => 'Tamil Nadu'],
     'ooty' => ['name' => 'Ooty', 'state' => 'Tamil Nadu'],
@@ -389,7 +374,7 @@ $supportedCities = [
 
 // Redirect to main SEO page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
-    header("Location: /seo");
+    header("Location: /seo-services.php");
     exit();
 }
 
@@ -404,7 +389,67 @@ $page_description = "Professional SEO services in {$fullCityName}, {$stateName}.
 $page_keywords = "SEO services {$fullCityName}, digital marketing {$fullCityName}, local SEO {$fullCityName}";
 $canonical_url = "https://www.thiyagidigital.com/seo-services/{$citySlug}";
 // $og_image = '/assets/img/service/serd1.jpg';
+// Add BreadcrumbList + FAQPage JSON-LD via @graph
+$serviceName = 'SEO Services';
+$serviceUrl = 'https://www.thiyagidigital.com/seo-services.php';
+$breadcrumbSchema = [
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'name' => 'Home',
+            'item' => 'https://www.thiyagidigital.com/'
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 2,
+            'name' => $serviceName,
+            'item' => $serviceUrl
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 3,
+            'name' => $serviceName . ' in ' . $fullCityName,
+            'item' => $canonical_url
+        ]
+    ]
+];
+$faqSchema = [
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => 'What is SEO?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "SEO, or Search Engine Optimization, improves website visibility and rankings on search engines for queries like 'SEO services in {$fullCityName}'."
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "Why is local SEO important for {$fullCityName} businesses?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Local SEO increases your visibility in {$fullCityName}, attracting targeted local traffic and boosting leads and revenue."
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "How long does it take to see SEO results in {$fullCityName}?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'Timelines vary, but many businesses notice improvements within 4–6 months, with ongoing optimization for sustained growth.'
+            ]
+        ]
+    ]
+];
+$page_schema = [
+    '@context' => 'https://schema.org',
+    '@graph' => [ $breadcrumbSchema, $faqSchema ]
+];
 ?>
+<?php include 'header.php';?>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">

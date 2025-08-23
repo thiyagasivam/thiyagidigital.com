@@ -1,10 +1,63 @@
 <?php
 // Page-specific SEO meta
-$page_title = 'SEO Services in Chennai | ThiyagiDigital';
-$page_description = 'Boost your organic traffic and rankings with ThiyagiDigital’s SEO services in Chennai: on-page SEO, technical SEO, and link building tailored to your business.';
-$page_keywords = 'SEO services Chennai, search engine optimization, on-page SEO, technical SEO, link building';
-// Optional: custom canonical or OG image
-// $canonical_url = 'https://www.thiyagidigital.com/seo-services.php';
+$page_title = 'Best SEO Services | ThiyagiDigital';
+$page_description = 'Boost your organic traffic and rankings with ThiyagiDigital’s SEO services: on-page SEO, technical SEO, and link building tailored to your business.';
+$page_keywords = 'SEO services, search engine optimization, on-page SEO, technical SEO, link building';
+
+// Canonical & Schema (Breadcrumbs + FAQ)
+$canonical_url = 'https://www.thiyagidigital.com/seo-services.php';
+$breadcrumbSchema = [
+	'@type' => 'BreadcrumbList',
+	'itemListElement' => [
+		[
+			'@type' => 'ListItem',
+			'position' => 1,
+			'name' => 'Home',
+			'item' => 'https://www.thiyagidigital.com/'
+		],
+		[
+			'@type' => 'ListItem',
+			'position' => 2,
+			'name' => 'Search Engine Optimization',
+			'item' => $canonical_url
+		]
+	]
+];
+$faqSchema = [
+	'@type' => 'FAQPage',
+	'mainEntity' => [
+		[
+			'@type' => 'Question',
+			'name' => 'What is SEO?',
+			'acceptedAnswer' => [
+				'@type' => 'Answer',
+				'text' => 'SEO, or Search Engine Optimization, is the process of optimizing websites to improve visibility and rankings on search engines.'
+			]
+		],
+		[
+			'@type' => 'Question',
+			'name' => 'Why is SEO important?',
+			'acceptedAnswer' => [
+				'@type' => 'Answer',
+				'text' => 'SEO enhances online visibility, attracts targeted traffic, and boosts credibility, ultimately contributing to increased leads and revenue.'
+			]
+		],
+		[
+			'@type' => 'Question',
+			'name' => 'How long does it take to see SEO results?',
+			'acceptedAnswer' => [
+				'@type' => 'Answer',
+				'text' => 'SEO timelines vary, but noticeable improvements often occur in 4-6 months; sustained success involves ongoing optimization efforts.'
+			]
+		]
+	]
+];
+$page_schema = [
+	'@context' => 'https://schema.org',
+	'@graph' => [ $breadcrumbSchema, $faqSchema ]
+];
+
+// Optional: custom OG image
 // $og_image = '/assets/img/service/serd1.jpg';
 include 'header.php';
 ?>
@@ -17,7 +70,7 @@ include 'header.php';
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
 				<h2 style="color: white"><b>Search Engine Optimization</b></h2><br>
 				<ul>
-					<li><a href="/#">Home</a></li>
+					<li><a href="/">Home</a></li>
 					<li>Services</li>
 					<li style="color: white">SEO</li>
 				</ul>

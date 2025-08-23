@@ -1,6 +1,5 @@
-<?php include 'header.php';?>
-
 <?php
+// IMPORTANT: Build city context and meta BEFORE including header (no output above)
 // Get city name from URL and sanitize it
 $citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
 $cityName = ucwords(str_replace('-', ' ', $citySlug));
@@ -382,7 +381,7 @@ $supportedCities = [
 
 // Redirect to main SMM page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
-    header("Location: /smm");
+    header("Location: /smm-service.php");
     exit();
 }
 
@@ -396,7 +395,67 @@ $page_title = "Top Social Media Marketing Services in {$fullCityName} | ThiyagiD
 $page_description = "Professional SMM services in {$fullCityName}. Boost your social media presence with our expert strategies tailored for {$stateName} businesses.";
 $page_keywords = "SMM services {$fullCityName}, social media marketing {$fullCityName}, social media management {$fullCityName}";
 $canonical_url = "https://www.thiyagidigital.com/smm-service/{$citySlug}";
+// BreadcrumbList + FAQPage JSON-LD via @graph
+$serviceName = 'Social Media Marketing';
+$serviceUrl = 'https://www.thiyagidigital.com/smm-service.php';
+$breadcrumbSchema = [
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'name' => 'Home',
+            'item' => 'https://www.thiyagidigital.com/'
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 2,
+            'name' => $serviceName,
+            'item' => $serviceUrl
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 3,
+            'name' => $serviceName . ' in ' . $fullCityName,
+            'item' => $canonical_url
+        ]
+    ]
+];
+$faqSchema = [
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => "Which social platforms work best in {$fullCityName}?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Typically Instagram and Facebook for B2C, LinkedIn for B2B, with growing regional platforms depending on {$stateName}."
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "How do you localize content for {$fullCityName} audiences?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "We incorporate local references, festivals, and vernacular nuances to resonate with {$fullCityName} and {$stateName} audiences."
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "Do you offer local event coverage in {$fullCityName}?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Yes, including live posting, stories, and post-event content packages for local events."
+            ]
+        ]
+    ]
+];
+$page_schema = [
+    '@context' => 'https://schema.org',
+    '@graph' => [ $breadcrumbSchema, $faqSchema ]
+];
 ?>
+<?php include 'header.php';?>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">

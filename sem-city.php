@@ -1,6 +1,5 @@
-<?php include 'header.php';?>
-
 <?php
+// IMPORTANT: Build city context and meta BEFORE including header (no output above)
 // Get city name from URL and sanitize it
 $citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
 $cityName = ucwords(str_replace('-', ' ', $citySlug));
@@ -382,7 +381,7 @@ $supportedCities = [
 
 // Redirect to main SEM page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
-    header("Location: /sem");
+    header("Location: /sem-services.php");
     exit();
 }
 
@@ -396,7 +395,67 @@ $page_title = "Best SEM Services in {$fullCityName} | ThiyagiDigital";
 $page_description = "Professional SEM services in {$fullCityName}. Drive targeted traffic and increase conversions with our expert Search Engine Marketing strategies in {$stateName}.";
 $page_keywords = "SEM services {$fullCityName}, PPC advertising {$fullCityName}, Google Ads {$fullCityName}, digital marketing {$fullCityName}";
 $canonical_url = "https://www.thiyagidigital.com/sem-services/{$citySlug}";
+// BreadcrumbList + FAQPage JSON-LD via @graph
+$serviceName = 'Search Engine Marketing';
+$serviceUrl = 'https://www.thiyagidigital.com/sem-services.php';
+$breadcrumbSchema = [
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'name' => 'Home',
+            'item' => 'https://www.thiyagidigital.com/'
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 2,
+            'name' => $serviceName,
+            'item' => $serviceUrl
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 3,
+            'name' => $serviceName . ' in ' . $fullCityName,
+            'item' => $canonical_url
+        ]
+    ]
+];
+$faqSchema = [
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => 'What is SEM?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "SEM uses paid ads (like Google Ads) to reach customers searching in {$fullCityName}, delivering immediate visibility."
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "Why choose SEM for my {$fullCityName} business?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "SEM provides precise local targeting, measurable results, and fast traffic for {$fullCityName} businesses."
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "How quickly can I see SEM results in {$fullCityName}?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'Ads can start appearing within 24 hours of launch; optimization continues to improve performance.'
+            ]
+        ]
+    ]
+];
+$page_schema = [
+    '@context' => 'https://schema.org',
+    '@graph' => [ $breadcrumbSchema, $faqSchema ]
+];
 ?>
+<?php include 'header.php';?>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">

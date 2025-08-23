@@ -1,6 +1,5 @@
-<?php include 'header.php';?>
-
 <?php
+// IMPORTANT: Build city context and meta BEFORE including header (no output above)
 // Get city name from URL and sanitize it
 $citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
 $cityName = ucwords(str_replace('-', ' ', $citySlug));
@@ -382,7 +381,7 @@ $supportedCities = [
 
 // Redirect to main web development page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
-    header("Location: /web-development");
+    header("Location: /web-development-service.php");
     exit();
 }
 
@@ -396,7 +395,67 @@ $page_title = "Professional Web Development Services in {$fullCityName} | Thiyag
 $page_description = "Custom web development services in {$fullCityName}. We build responsive, high-performance websites for businesses in {$stateName}.";
 $page_keywords = "web development {$fullCityName}, website design {$fullCityName}, custom websites {$fullCityName}";
 $canonical_url = "https://www.thiyagidigital.com/web-development-service/{$citySlug}";
+// BreadcrumbList + FAQPage JSON-LD via @graph
+$serviceName = 'Web Development';
+$serviceUrl = 'https://www.thiyagidigital.com/web-development.php';
+$breadcrumbSchema = [
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'name' => 'Home',
+            'item' => 'https://www.thiyagidigital.com/'
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 2,
+            'name' => $serviceName,
+            'item' => $serviceUrl
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 3,
+            'name' => $serviceName . ' in ' . $fullCityName,
+            'item' => $canonical_url
+        ]
+    ]
+];
+$faqSchema = [
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => "What web technologies do you use for {$fullCityName} businesses?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'We use modern stacks like MERN and LAMP, optimized for performance and local SEO.'
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "How do you optimize websites for {$fullCityName} audiences?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Local SEO strategies, {$fullCityName}-specific content, mobile optimization, and performance tuning."
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "Do you provide ongoing support for {$fullCityName} clients?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'Yes, including security updates, performance monitoring, and content updates.'
+            ]
+        ]
+    ]
+];
+$page_schema = [
+    '@context' => 'https://schema.org',
+    '@graph' => [ $breadcrumbSchema, $faqSchema ]
+];
 ?>
+<?php include 'header.php';?>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">

@@ -1,6 +1,5 @@
-<?php include 'header.php';?>
-
 <?php
+// IMPORTANT: Build city context and meta BEFORE including header (no output above)
 // Get city name from URL and sanitize it
 $citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
 $cityName = ucwords(str_replace('-', ' ', $citySlug));
@@ -382,7 +381,7 @@ $supportedCities = [
 
 // Redirect to main content writing page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
-    header("Location: /content-writing");
+    header("Location: /content-writing-service.php");
     exit();
 }
 
@@ -396,7 +395,67 @@ $page_title = "Professional Content Writing Services in {$fullCityName} | Thiyag
 $page_description = "Expert content writing services in {$fullCityName}. We craft engaging, SEO-optimized content tailored for {$stateName} businesses.";
 $page_keywords = "content writing {$fullCityName}, professional writers {$fullCityName}, SEO content {$fullCityName}";
 $canonical_url = "https://www.thiyagidigital.com/content-writing-service/{$citySlug}";
+// BreadcrumbList + FAQPage JSON-LD via @graph
+$serviceName = 'Content Writing';
+$serviceUrl = 'https://www.thiyagidigital.com/content-writing.php';
+$breadcrumbSchema = [
+    '@type' => 'BreadcrumbList',
+    'itemListElement' => [
+        [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'name' => 'Home',
+            'item' => 'https://www.thiyagidigital.com/'
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 2,
+            'name' => $serviceName,
+            'item' => $serviceUrl
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 3,
+            'name' => $serviceName . ' in ' . $fullCityName,
+            'item' => $canonical_url
+        ]
+    ]
+];
+$faqSchema = [
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => "Do you create vernacular content for {$fullCityName} audiences?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'Yes, we offer Tamil and other regional language content tailored for local audiences.'
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "How do you optimize content for {$fullCityName} businesses?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'We research local keywords, incorporate regional references, and structure for location-based searches.'
+            ]
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "Can you help with industry-specific content in {$fullCityName}?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => 'Yes, including technical content for key local industries with proper research.'
+            ]
+        ]
+    ]
+];
+$page_schema = [
+    '@context' => 'https://schema.org',
+    '@graph' => [ $breadcrumbSchema, $faqSchema ]
+];
 ?>
+<?php include 'header.php';?>
 	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">
