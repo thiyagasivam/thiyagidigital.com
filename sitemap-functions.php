@@ -2,22 +2,41 @@
 // sitemap-functions.php
 
 function generateSitemapXML($baseUrl) {
-    // Get all PHP files in the directory (excluding special files)
+    // Discover PHP files and filter to public pages only
     $files = glob('*.php');
     $excludedFiles = [
-        'sitemap-functions.php', 
-        'sitemap.php', 
-        '404.php', 
-        'config.php',
-        'header.php',
-        'footer.php'
+        // internals/utilities
+        'sitemap-functions.php','sitemap-generator.php','sitemap.php','404.php','config.php','header.php','footer.php','mailer.php','smailer.php',
+        // partials/components (not standalone pages)
+        'callbox.php','callservice-sidebar.php','client-logo.php','mainservice-sidebar.php','marquee.php','project-count.php','certify-partner.php','sideform.php','testmonial2.php','new-index.php',
+        // dynamic city templates (handled separately as pretty URLs)
+        'seo-city.php','smm-city.php','sem-city.php','web-development-city.php','content-writing-city.php','email-marketing-city.php',
+        // utility
+        'sitemap-functions.php'
     ];
-    $pages = array_diff($files, $excludedFiles);
-    
+    $pages = array_values(array_diff($files, $excludedFiles));
+
+    // Service city URL patterns and a curated set of popular cities
+    $serviceCityPatterns = [
+        'seo-services',
+        'smm-service',
+        'sem-services',
+        'web-development-service',
+        'content-writing-service',
+        'email-marketing-service',
+    ];
+    $citySlugs = extractCitySlugs('seo-city.php');
+    if (empty($citySlugs)) {
+        // Fallback to a curated subset if parsing fails
+        $citySlugs = [
+            'chennai','madurai','coimbatore','tiruchirappalli','salem','tirunelveli','vellore','tiruppur','erode','thoothukudi','dindigul','thanjavur','nagercoil','hosur','avadi','kumbakonam','cuddalore','karur','sivakasi','tambaram'
+        ];
+    }
+
     // Start XML
     $xml = '<?xml version="1.0" encoding="UTF-8"?>';
     $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-    
+
     // Add homepage first
     $xml .= '<url>';
     $xml .= '<loc>' . htmlspecialchars($baseUrl) . '</loc>';
@@ -25,39 +44,67 @@ function generateSitemapXML($baseUrl) {
     $xml .= '<changefreq>daily</changefreq>';
     $xml .= '<priority>1.0</priority>';
     $xml .= '</url>';
-    
-    // Add other pages
+
+    // Add other public pages (use .php URLs)
     foreach ($pages as $page) {
         $pageName = str_replace('.php', '', $page);
-        if ($pageName === 'index') continue;
-        
+        if ($pageName === 'index' || $pageName === 'thankyou') continue; // skip duplicates/utility
+        $loc = $baseUrl . $pageName . '.php';
+        $lastmod = @filemtime($page) ?: time();
         $xml .= '<url>';
-        $xml .= '<loc>' . htmlspecialchars($baseUrl . $pageName) . '</loc>';
-        $xml .= '<lastmod>' . date('Y-m-d', filemtime($page)) . '</lastmod>';
-        $xml .= '<changefreq>daily</changefreq>';
-        $xml .= '<priority>1.0</priority>';
+        $xml .= '<loc>' . htmlspecialchars($loc) . '</loc>';
+        $xml .= '<lastmod>' . date('Y-m-d', $lastmod) . '</lastmod>';
+        $xml .= '<changefreq>weekly</changefreq>';
+        $xml .= '<priority>0.8</priority>';
         $xml .= '</url>';
     }
-    
+
+    // Add city URLs for each service
+    $today = date('Y-m-d');
+    foreach ($serviceCityPatterns as $pattern) {
+        foreach ($citySlugs as $slug) {
+            $loc = $baseUrl . $pattern . '/' . $slug;
+            $xml .= '<url>';
+            $xml .= '<loc>' . htmlspecialchars($loc) . '</loc>';
+            $xml .= '<lastmod>' . $today . '</lastmod>';
+            $xml .= '<changefreq>weekly</changefreq>';
+            $xml .= '<priority>0.7</priority>';
+            $xml .= '</url>';
+        }
+    }
+
     $xml .= '</urlset>';
-    
+
     // Save to file
     file_put_contents('sitemap.xml', $xml);
 }
 
 function generateHTMLSitemap($baseUrl) {
-    // Get all PHP files in the directory
+    // Get all PHP files and filter to public pages
     $files = glob('*.php');
     $excludedFiles = [
-        'sitemap-functions.php',
-        'sitemap.php',
-        '404.php',
-        'config.php',
-        'header.php',
-        'footer.php'
+        'sitemap-functions.php','sitemap-generator.php','sitemap.php','404.php','config.php','header.php','footer.php','mailer.php','smailer.php',
+        'callbox.php','callservice-sidebar.php','client-logo.php','mainservice-sidebar.php','marquee.php','project-count.php','certify-partner.php','sideform.php','testmonial2.php','new-index.php',
+        'seo-city.php','smm-city.php','sem-city.php','web-development-city.php','content-writing-city.php','email-marketing-city.php',
     ];
-    $pages = array_diff($files, $excludedFiles);
-    
+    $pages = array_values(array_diff($files, $excludedFiles));
+
+    // City URL patterns
+    $serviceCityPatterns = [
+        'Search Engine Optimization' => 'seo-services',
+        'Social Media Marketing' => 'smm-service',
+        'Search Engine Marketing' => 'sem-services',
+        'Web Development' => 'web-development-service',
+        'Content Writing' => 'content-writing-service',
+        'Email Marketing' => 'email-marketing-service',
+    ];
+    $citySlugs = extractCitySlugs('seo-city.php');
+    if (empty($citySlugs)) {
+        $citySlugs = [
+            'chennai','madurai','coimbatore','tiruchirappalli','salem','tirunelveli','vellore','tiruppur','erode','thoothukudi','dindigul','thanjavur','nagercoil','hosur','avadi','kumbakonam','cuddalore','karur','sivakasi','tambaram'
+        ];
+    }
+
     // Start PHP file with output buffering
     ob_start();
     ?>
@@ -68,36 +115,52 @@ function generateHTMLSitemap($baseUrl) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML Sitemap - ThiyagiDigital</title>
         <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+            body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 980px; margin: 0 auto; padding: 20px; }
             h1 { color: #333; }
-            .sitemap-list { list-style-type: none; padding: 0; }
-            .sitemap-list li { margin-bottom: 10px; }
+            h2 { margin-top: 30px; }
+            .sitemap-list { list-style-type: none; padding: 0; columns: 2; column-gap: 40px; }
+            .sitemap-list li { margin-bottom: 10px; break-inside: avoid; }
             .sitemap-list a { color: #0066cc; text-decoration: none; }
             .sitemap-list a:hover { text-decoration: underline; }
         </style>
     </head>
     <body>
         <h1>ThiyagiDigital Sitemap</h1>
+        <h2>Pages</h2>
         <ul class="sitemap-list">
             <li><a href="<?= htmlspecialchars($baseUrl) ?>">Homepage</a></li>
             <?php foreach ($pages as $page): 
                 $pageName = str_replace('.php', '', $page);
-                if ($pageName === 'index') continue;
+                if ($pageName === 'index' || $pageName === 'thankyou') continue;
                 $pageTitle = ucwords(str_replace('-', ' ', $pageName));
+                $href = $baseUrl . $pageName . '.php';
             ?>
-                <li><a href="<?= htmlspecialchars($baseUrl . $pageName) ?>"><?= $pageTitle ?></a></li>
+                <li><a href="<?= htmlspecialchars($href) ?>"><?= $pageTitle ?></a></li>
             <?php endforeach; ?>
         </ul>
+
+        <h2>City Service Pages</h2>
+        <?php foreach ($serviceCityPatterns as $serviceLabel => $pattern): ?>
+            <h3><?= htmlspecialchars($serviceLabel) ?></h3>
+            <ul class="sitemap-list">
+            <?php foreach ($citySlugs as $slug): 
+                $labelCity = ucwords(str_replace('-', ' ', $slug));
+                $href = $baseUrl . $pattern . '/' . $slug;
+            ?>
+                <li><a href="<?= htmlspecialchars($href) ?>"><?= htmlspecialchars($serviceLabel . ' in ' . $labelCity) ?></a></li>
+            <?php endforeach; ?>
+            </ul>
+        <?php endforeach; ?>
     </body>
     </html>
     <?php
-    
+
     // Get the buffered content
     $html = ob_get_clean();
-    
+
     // Save to PHP file
     file_put_contents('sitemap.php', $html);
-    
+
     return $html;
 }
 
@@ -114,4 +177,26 @@ function updateSitemaps() {
     if (!file_exists($htmlSitemapFile) || (time() - filemtime($htmlSitemapFile)) > 86400) {
         generateHTMLSitemap($baseUrl);
     }
+}
+
+// Extract city slugs from a city template file by parsing the $supportedCities array keys
+function extractCitySlugs($filePath) {
+    if (!file_exists($filePath)) {
+        return [];
+    }
+    $content = @file_get_contents($filePath);
+    if ($content === false) {
+        return [];
+    }
+    $slugs = [];
+    // Find the $supportedCities array block
+    if (preg_match('/\$supportedCities\s*=\s*\[(.*?)\];/s', $content, $m)) {
+        $arrayBody = $m[1];
+        // Match keys like 'chennai' => [
+        if (preg_match_all("/'([a-z0-9.-]+(?:-[a-z0-9.-]+)*)'\s*=>\s*\[/i", $arrayBody, $mm)) {
+            $slugs = array_unique($mm[1]);
+        }
+    }
+    sort($slugs);
+    return $slugs;
 }
