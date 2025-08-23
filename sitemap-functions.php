@@ -2,7 +2,7 @@
 // sitemap-functions.php
 
 function generateSitemapXML($baseUrl) {
-    // Discover PHP files (absolute) and filter to public pages only
+    // Discover ALL PHP files (absolute) and filter to public pages only
     $filesAbs = glob(__DIR__ . DIRECTORY_SEPARATOR . '*.php');
     $files = array_map('basename', $filesAbs);
     $excludedFiles = [
@@ -12,20 +12,20 @@ function generateSitemapXML($baseUrl) {
         'callbox.php','callservice-sidebar.php','client-logo.php','mainservice-sidebar.php','marquee.php','project-count.php','certify-partner.php','sideform.php','testmonial2.php','new-index.php',
         // dynamic city templates (handled separately as pretty URLs)
         'seo-city.php','smm-city.php','sem-city.php','web-development-city.php','content-writing-city.php','email-marketing-city.php',
-        // utility
-        'sitemap-functions.php'
     ];
     $pages = array_values(array_diff($files, $excludedFiles));
 
-    // Service city URL patterns and a curated set of popular cities
+    // Service city URL patterns and extract ALL cities from seo-city.php
     $serviceCityPatterns = [
         'seo-services',
-        'smm-service',
+        'smm-service', 
         'sem-services',
         'web-development-service',
         'content-writing-service',
         'email-marketing-service',
     ];
+    
+    // Extract ALL cities from the city template file
     $citySlugs = extractCitySlugs('seo-city.php');
     if (empty($citySlugs)) {
         // Fallback to a curated subset if parsing fails
@@ -35,46 +35,50 @@ function generateSitemapXML($baseUrl) {
     }
 
     // Start XML
-    $xml = '<?xml version="1.0" encoding="UTF-8"?>';
-    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+    $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 
     // Add homepage first
-    $xml .= '<url>';
-    $xml .= '<loc>' . htmlspecialchars($baseUrl) . '</loc>';
-    $xml .= '<lastmod>' . date('Y-m-d') . '</lastmod>';
-    $xml .= '<changefreq>daily</changefreq>';
-    $xml .= '<priority>1.0</priority>';
-    $xml .= '</url>';
+    $xml .= '  <url>' . "\n";
+    $xml .= '    <loc>' . htmlspecialchars($baseUrl) . '</loc>' . "\n";
+    $xml .= '    <lastmod>' . date('Y-m-d') . '</lastmod>' . "\n";
+    $xml .= '    <changefreq>daily</changefreq>' . "\n";
+    $xml .= '    <priority>1.0</priority>' . "\n";
+    $xml .= '  </url>' . "\n\n";
 
-    // Add other public pages (use .php URLs)
+    // Add ALL public pages found in directory (use .php URLs)
+    $xml .= '  <!-- All public pages -->' . "\n";
     foreach ($pages as $page) {
         $pageName = str_replace('.php', '', $page);
         if ($pageName === 'index' || $pageName === 'thankyou') continue; // skip duplicates/utility
         $loc = $baseUrl . $pageName . '.php';
         $lastmod = @filemtime(__DIR__ . DIRECTORY_SEPARATOR . $page) ?: time();
-        $xml .= '<url>';
-        $xml .= '<loc>' . htmlspecialchars($loc) . '</loc>';
-        $xml .= '<lastmod>' . date('Y-m-d', $lastmod) . '</lastmod>';
-        $xml .= '<changefreq>weekly</changefreq>';
-        $xml .= '<priority>0.8</priority>';
-        $xml .= '</url>';
+        $xml .= '  <url>' . "\n";
+        $xml .= '    <loc>' . htmlspecialchars($loc) . '</loc>' . "\n";
+        $xml .= '    <lastmod>' . date('Y-m-d', $lastmod) . '</lastmod>' . "\n";
+        $xml .= '    <changefreq>weekly</changefreq>' . "\n";
+        $xml .= '    <priority>0.8</priority>' . "\n";
+        $xml .= '  </url>' . "\n";
     }
 
-    // Add city URLs for each service
+    // Add ALL city URLs for ALL services
+    $xml .= "\n  <!-- All city service pages -->\n";
     $today = date('Y-m-d');
     foreach ($serviceCityPatterns as $pattern) {
+        $xml .= "  <!-- " . ucwords(str_replace('-', ' ', $pattern)) . " -->\n";
         foreach ($citySlugs as $slug) {
             $loc = $baseUrl . $pattern . '/' . $slug;
-            $xml .= '<url>';
-            $xml .= '<loc>' . htmlspecialchars($loc) . '</loc>';
-            $xml .= '<lastmod>' . $today . '</lastmod>';
-            $xml .= '<changefreq>weekly</changefreq>';
-            $xml .= '<priority>0.7</priority>';
-            $xml .= '</url>';
+            $xml .= '  <url>' . "\n";
+            $xml .= '    <loc>' . htmlspecialchars($loc) . '</loc>' . "\n";
+            $xml .= '    <lastmod>' . $today . '</lastmod>' . "\n";
+            $xml .= '    <changefreq>daily</changefreq>' . "\n";
+            $xml .= '    <priority>1.0</priority>' . "\n";
+            $xml .= '  </url>' . "\n";
         }
+        $xml .= "\n";
     }
 
-    $xml .= '</urlset>';
+    $xml .= '</urlset>' . "\n";
 
     // Save to file using absolute path
     $sitemapFile = __DIR__ . DIRECTORY_SEPARATOR . 'sitemap.xml';
@@ -180,12 +184,13 @@ function updateSitemaps() {
     $sitemapFile = __DIR__ . DIRECTORY_SEPARATOR . 'sitemap.xml';
     $htmlSitemapFile = __DIR__ . DIRECTORY_SEPARATOR . 'sitemap.php';
 
-    // Only update if sitemap doesn't exist or is older than 1 day
-    if (!file_exists($sitemapFile) || (time() - @filemtime($sitemapFile)) > 86400) {
+    // Force regenerate sitemap every time to catch new pages immediately
+    // OR if sitemap doesn't exist or is older than 1 hour (for rapid updates)
+    if (!file_exists($sitemapFile) || (time() - @filemtime($sitemapFile)) > 3600) {
         generateSitemapXML($baseUrl);
     }
 
-    if (!file_exists($htmlSitemapFile) || (time() - @filemtime($htmlSitemapFile)) > 86400) {
+    if (!file_exists($htmlSitemapFile) || (time() - @filemtime($htmlSitemapFile)) > 3600) {
         generateHTMLSitemap($baseUrl);
     }
 }
