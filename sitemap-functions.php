@@ -2,8 +2,9 @@
 // sitemap-functions.php
 
 function generateSitemapXML($baseUrl) {
-    // Discover PHP files and filter to public pages only
-    $files = glob('*.php');
+    // Discover PHP files (absolute) and filter to public pages only
+    $filesAbs = glob(__DIR__ . DIRECTORY_SEPARATOR . '*.php');
+    $files = array_map('basename', $filesAbs);
     $excludedFiles = [
         // internals/utilities
         'sitemap-functions.php','sitemap-generator.php','sitemap.php','404.php','config.php','header.php','footer.php','mailer.php','smailer.php',
@@ -50,7 +51,7 @@ function generateSitemapXML($baseUrl) {
         $pageName = str_replace('.php', '', $page);
         if ($pageName === 'index' || $pageName === 'thankyou') continue; // skip duplicates/utility
         $loc = $baseUrl . $pageName . '.php';
-        $lastmod = @filemtime($page) ?: time();
+        $lastmod = @filemtime(__DIR__ . DIRECTORY_SEPARATOR . $page) ?: time();
         $xml .= '<url>';
         $xml .= '<loc>' . htmlspecialchars($loc) . '</loc>';
         $xml .= '<lastmod>' . date('Y-m-d', $lastmod) . '</lastmod>';
@@ -75,13 +76,19 @@ function generateSitemapXML($baseUrl) {
 
     $xml .= '</urlset>';
 
-    // Save to file
-    file_put_contents('sitemap.xml', $xml);
+    // Save to file using absolute path
+    $sitemapFile = __DIR__ . DIRECTORY_SEPARATOR . 'sitemap.xml';
+    $ok = @file_put_contents($sitemapFile, $xml, LOCK_EX);
+    if ($ok === false) {
+        error_log('[sitemap] Failed to write sitemap.xml at ' . $sitemapFile);
+    }
+    return $xml;
 }
 
 function generateHTMLSitemap($baseUrl) {
     // Get all PHP files and filter to public pages
-    $files = glob('*.php');
+    $filesAbs = glob(__DIR__ . DIRECTORY_SEPARATOR . '*.php');
+    $files = array_map('basename', $filesAbs);
     $excludedFiles = [
         'sitemap-functions.php','sitemap-generator.php','sitemap.php','404.php','config.php','header.php','footer.php','mailer.php','smailer.php',
         'callbox.php','callservice-sidebar.php','client-logo.php','mainservice-sidebar.php','marquee.php','project-count.php','certify-partner.php','sideform.php','testmonial2.php','new-index.php',
@@ -158,23 +165,27 @@ function generateHTMLSitemap($baseUrl) {
     // Get the buffered content
     $html = ob_get_clean();
 
-    // Save to PHP file
-    file_put_contents('sitemap.php', $html);
+    // Save to PHP file (absolute)
+    $htmlSitemapFile = __DIR__ . DIRECTORY_SEPARATOR . 'sitemap.php';
+    $ok = @file_put_contents($htmlSitemapFile, $html, LOCK_EX);
+    if ($ok === false) {
+        error_log('[sitemap] Failed to write sitemap.php at ' . $htmlSitemapFile);
+    }
 
     return $html;
 }
 
 function updateSitemaps() {
     $baseUrl = 'https://www.thiyagidigital.com/';
-    $sitemapFile = 'sitemap.xml';
-    $htmlSitemapFile = 'sitemap.php';  // Changed from sitemap.html to sitemap.php
-    
+    $sitemapFile = __DIR__ . DIRECTORY_SEPARATOR . 'sitemap.xml';
+    $htmlSitemapFile = __DIR__ . DIRECTORY_SEPARATOR . 'sitemap.php';
+
     // Only update if sitemap doesn't exist or is older than 1 day
-    if (!file_exists($sitemapFile) || (time() - filemtime($sitemapFile)) > 86400) {
+    if (!file_exists($sitemapFile) || (time() - @filemtime($sitemapFile)) > 86400) {
         generateSitemapXML($baseUrl);
     }
-    
-    if (!file_exists($htmlSitemapFile) || (time() - filemtime($htmlSitemapFile)) > 86400) {
+
+    if (!file_exists($htmlSitemapFile) || (time() - @filemtime($htmlSitemapFile)) > 86400) {
         generateHTMLSitemap($baseUrl);
     }
 }
