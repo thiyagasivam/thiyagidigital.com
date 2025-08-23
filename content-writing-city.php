@@ -500,6 +500,39 @@ $canonical_url = "https://www.thiyagidigital.com/content-writing-service/{$cityS
                                     <p>We provide specialized content writing services for businesses in <?php echo $fullCityName; ?>, <?php echo $stateName; ?>.</p>
                                 </div>
                             </div>
+                            <div class="bi-single-sidebar-item">
+                                <div class="bi-sidebar-contact-widget headline">
+                                    <h3 class="widget-title">Quick FAQs: Content in <?php echo $fullCityName; ?></h3>
+                                    <div class="bi-faq-content-area">
+                                        <div class="accordion" id="accordionSidebarCONTENT">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="cwfaq1">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cwfaq1c" aria-expanded="false" aria-controls="cwfaq1c">
+                                                        Do you write in Tamil?
+                                                    </button>
+                                                </h2>
+                                                <div id="cwfaq1c" class="accordion-collapse collapse" aria-labelledby="cwfaq1" data-bs-parent="#accordionSidebarCONTENT">
+                                                    <div class="accordion-body">
+                                                        Yes—vernacular content available for audiences in <?php echo $fullCityName; ?>.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="cwfaq2">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cwfaq2c" aria-expanded="false" aria-controls="cwfaq2c">
+                                                        Do you optimize for SEO?
+                                                    </button>
+                                                </h2>
+                                                <div id="cwfaq2c" class="accordion-collapse collapse" aria-labelledby="cwfaq2" data-bs-parent="#accordionSidebarCONTENT">
+                                                    <div class="accordion-body">
+                                                        We research local keywords and structure content to rank in <?php echo $fullCityName; ?>.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <?php include 'callservice-sidebar.php';?>
                         </div>	
                     </div>

@@ -500,6 +500,39 @@ $canonical_url = "https://www.thiyagidigital.com/smm-service/{$citySlug}";
                                     <p>We provide specialized SMM services for businesses in <?php echo $fullCityName; ?>, <?php echo $stateName; ?>.</p>
                                 </div>
                             </div>
+                            <div class="bi-single-sidebar-item">
+                                <div class="bi-sidebar-contact-widget headline">
+                                    <h3 class="widget-title">Quick FAQs: SMM in <?php echo $fullCityName; ?></h3>
+                                    <div class="bi-faq-content-area">
+                                        <div class="accordion" id="accordionSidebarSMM">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="smmfaq1">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#smmfaq1c" aria-expanded="false" aria-controls="smmfaq1c">
+                                                        What does SMM include?
+                                                    </button>
+                                                </h2>
+                                                <div id="smmfaq1c" class="accordion-collapse collapse" aria-labelledby="smmfaq1" data-bs-parent="#accordionSidebarSMM">
+                                                    <div class="accordion-body">
+                                                        Strategy, content, ads, and reporting tailored for audiences in <?php echo $fullCityName; ?>.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="smmfaq2">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#smmfaq2c" aria-expanded="false" aria-controls="smmfaq2c">
+                                                        Which platforms work best?
+                                                    </button>
+                                                </h2>
+                                                <div id="smmfaq2c" class="accordion-collapse collapse" aria-labelledby="smmfaq2" data-bs-parent="#accordionSidebarSMM">
+                                                    <div class="accordion-body">
+                                                        It depends on your niche—Facebook, Instagram, LinkedIn, and YouTube are common choices in <?php echo $fullCityName; ?>.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <?php include 'callservice-sidebar.php';?>
                         </div>	
                     </div>

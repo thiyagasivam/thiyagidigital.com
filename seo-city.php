@@ -508,6 +508,51 @@ $canonical_url = "https://www.thiyagidigital.com/seo-services/{$citySlug}";
                                     <p>We provide specialized SEO services for businesses in <?php echo $fullCityName; ?>, <?php echo $stateName; ?>.</p>
                                 </div>
                             </div>
+                            <div class="bi-single-sidebar-item">
+                                <div class="bi-sidebar-contact-widget headline">
+                                    <h3 class="widget-title">Quick FAQs: SEO in <?php echo $fullCityName; ?></h3>
+                                    <div class="bi-faq-content-area">
+                                        <div class="accordion" id="accordionSidebarSEO">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="sfaq1">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq1c" aria-expanded="false" aria-controls="sfaq1c">
+                                                        What is SEO?
+                                                    </button>
+                                                </h2>
+                                                <div id="sfaq1c" class="accordion-collapse collapse" aria-labelledby="sfaq1" data-bs-parent="#accordionSidebarSEO">
+                                                    <div class="accordion-body">
+                                                        SEO improves your website’s visibility on search engines for local terms like “SEO services in <?php echo $fullCityName; ?>”.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="sfaq2">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq2c" aria-expanded="false" aria-controls="sfaq2c">
+                                                        Why is local SEO important?
+                                                    </button>
+                                                </h2>
+                                                <div id="sfaq2c" class="accordion-collapse collapse" aria-labelledby="sfaq2" data-bs-parent="#accordionSidebarSEO">
+                                                    <div class="accordion-body">
+                                                        It helps businesses in <?php echo $fullCityName; ?> reach nearby customers, boosting relevant traffic and leads.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="sfaq3">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq3c" aria-expanded="false" aria-controls="sfaq3c">
+                                                        How long to see results?
+                                                    </button>
+                                                </h2>
+                                                <div id="sfaq3c" class="accordion-collapse collapse" aria-labelledby="sfaq3" data-bs-parent="#accordionSidebarSEO">
+                                                    <div class="accordion-body">
+                                                        Typically 4–6 months, depending on competition in <?php echo $fullCityName; ?> and your site’s starting point.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <?php include 'callservice-sidebar.php';?>
                         </div>	
                     </div>

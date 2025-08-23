@@ -500,6 +500,39 @@ $canonical_url = "https://www.thiyagidigital.com/web-development-service/{$cityS
                                     <p>We provide specialized web development services for businesses in <?php echo $fullCityName; ?>, <?php echo $stateName; ?>.</p>
                                 </div>
                             </div>
+                            <div class="bi-single-sidebar-item">
+                                <div class="bi-sidebar-contact-widget headline">
+                                    <h3 class="widget-title">Quick FAQs: Web Dev in <?php echo $fullCityName; ?></h3>
+                                    <div class="bi-faq-content-area">
+                                        <div class="accordion" id="accordionSidebarWEB">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="webfaq1">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webfaq1c" aria-expanded="false" aria-controls="webfaq1c">
+                                                        How long does a website take?
+                                                    </button>
+                                                </h2>
+                                                <div id="webfaq1c" class="accordion-collapse collapse" aria-labelledby="webfaq1" data-bs-parent="#accordionSidebarWEB">
+                                                    <div class="accordion-body">
+                                                        Typical builds finish in 2–6 weeks depending on scope and content readiness in <?php echo $fullCityName; ?>.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="webfaq2">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webfaq2c" aria-expanded="false" aria-controls="webfaq2c">
+                                                        Do you offer maintenance?
+                                                    </button>
+                                                </h2>
+                                                <div id="webfaq2c" class="accordion-collapse collapse" aria-labelledby="webfaq2" data-bs-parent="#accordionSidebarWEB">
+                                                    <div class="accordion-body">
+                                                        Yes, we provide ongoing updates, security, and performance support for sites in <?php echo $fullCityName; ?>.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <?php include 'callservice-sidebar.php';?>
                         </div>	
                     </div>

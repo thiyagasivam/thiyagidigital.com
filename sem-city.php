@@ -500,6 +500,39 @@ $canonical_url = "https://www.thiyagidigital.com/sem-services/{$citySlug}";
                                     <p>We provide specialized SEM services for businesses in <?php echo $fullCityName; ?>, <?php echo $stateName; ?>.</p>
                                 </div>
                             </div>
+                            <div class="bi-single-sidebar-item">
+                                <div class="bi-sidebar-contact-widget headline">
+                                    <h3 class="widget-title">Quick FAQs: SEM in <?php echo $fullCityName; ?></h3>
+                                    <div class="bi-faq-content-area">
+                                        <div class="accordion" id="accordionSidebarSEM">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="semfaq1">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#semfaq1c" aria-expanded="false" aria-controls="semfaq1c">
+                                                        What is SEM?
+                                                    </button>
+                                                </h2>
+                                                <div id="semfaq1c" class="accordion-collapse collapse" aria-labelledby="semfaq1" data-bs-parent="#accordionSidebarSEM">
+                                                    <div class="accordion-body">
+                                                        Search Engine Marketing uses paid ads (like Google Ads) to reach customers in <?php echo $fullCityName; ?>.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="semfaq2">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#semfaq2c" aria-expanded="false" aria-controls="semfaq2c">
+                                                        What budget do I need?
+                                                    </button>
+                                                </h2>
+                                                <div id="semfaq2c" class="accordion-collapse collapse" aria-labelledby="semfaq2" data-bs-parent="#accordionSidebarSEM">
+                                                    <div class="accordion-body">
+                                                        We tailor budgets based on competition and goals in <?php echo $fullCityName; ?>; even modest budgets can work.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <?php include 'callservice-sidebar.php';?>
                         </div>	
                     </div>

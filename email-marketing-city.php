@@ -132,6 +132,39 @@ $canonical_url = "https://www.thiyagidigital.com/email-marketing-service/{$cityS
                                     <p>We provide specialized email marketing services for businesses in <?php echo $fullCityName; ?>, <?php echo $stateName; ?>.</p>
                                 </div>
                             </div>
+                            <div class="bi-single-sidebar-item">
+                                <div class="bi-sidebar-contact-widget headline">
+                                    <h3 class="widget-title">Quick FAQs: Email in <?php echo $fullCityName; ?></h3>
+                                    <div class="bi-faq-content-area">
+                                        <div class="accordion" id="accordionSidebarEMAIL">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="emfaq1">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#emfaq1c" aria-expanded="false" aria-controls="emfaq1c">
+                                                        What open rates should I expect?
+                                                    </button>
+                                                </h2>
+                                                <div id="emfaq1c" class="accordion-collapse collapse" aria-labelledby="emfaq1" data-bs-parent="#accordionSidebarEMAIL">
+                                                    <div class="accordion-body">
+                                                        Benchmarks vary by industry; we optimize subject lines and timing for <?php echo $fullCityName; ?> to lift engagement.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="emfaq2">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#emfaq2c" aria-expanded="false" aria-controls="emfaq2c">
+                                                        Can you automate follow-ups?
+                                                    </button>
+                                                </h2>
+                                                <div id="emfaq2c" class="accordion-collapse collapse" aria-labelledby="emfaq2" data-bs-parent="#accordionSidebarEMAIL">
+                                                    <div class="accordion-body">
+                                                        Yes—nurture sequences and behavior-based automation tailored to <?php echo $fullCityName; ?> audiences.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <?php include 'callservice-sidebar.php';?>
                         </div>	
                     </div>
