@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="google-site-verification" content="Z9lTCvuf7MLsgjjWtZoGZERzMiQ9qE5fcCCTJEjZzCs" />
 	<?php
 	// Dynamic SEO meta handling with sensible defaults
 	$page_title = $page_title ?? 'ThiyagiDigital — Digital Marketing Company in Chennai';
@@ -171,23 +171,23 @@
 								<li>
 									<a href="/#">Home</a>
 								</li>
-								<li><a href="https://www.thiyagidigital.com/about.php">About Us</a></li>
+								<li><a href="https://www.thiyagidigital.com/about">About Us</a></li>
 								
                                 <li class="dropdown">
                                     <a href="#">Services</a>
                                     <ul class="dropdown-menu clearfix">
-                                        <li><a href="https://www.thiyagidigital.com/seo-services.php">Search Engine Optimization</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/smm-service.php">Social Media Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/sem-services.php">Search Engine Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/web-development-service.php">Web Development</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/content-writing-service.php">Content Writing</a></li>
-										<li><a href="https://www.thiyagidigital.com/email-marketing-service.php">Email Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/seo-services">Search Engine Optimization</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/smm-service">Social Media Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/sem-services">Search Engine Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/web-development-service">Web Development</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/content-writing-service">Content Writing</a></li>
+										<li><a href="https://www.thiyagidigital.com/email-marketing-service">Email Marketing</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="https://www.thiyagidigital.com/portfolio.php">Portfolio</a></li>
-								<li><a href="https://www.thiyagidigital.com/testimonial.php">Testimonial</a></li>
+                                <li><a href="https://www.thiyagidigital.com/portfolio">Portfolio</a></li>
+								<li><a href="https://www.thiyagidigital.com/testimonial">Testimonial</a></li>
 								<li><a href="/#">Blog</a></li>
-                                <li><a href="https://www.thiyagidigital.com/contact.php">Contact Us</a></li>
+                                <li><a href="https://www.thiyagidigital.com/contact">Contact Us</a></li>
 
 							</ul>
 						</nav>
@@ -227,23 +227,23 @@
 								<li>
 									<a href="/#">Home</a>
 								</li>
-								<li><a href="https://www.thiyagidigital.com/about.php">About Us</a></li>
+								<li><a href="https://www.thiyagidigital.com/about">About Us</a></li>
 
                                 <li class="dropdown">
 								   <a href="#">Services</a>
 									<ul class="dropdown-menu clearfix">
-									    <li><a href="https://www.thiyagidigital.com/seo-services.php">Search Engine Optimization</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/smm-service.php">Social Media Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/sem-services.php">Search Engine Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/web-development-service.php">Web Development</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/content-writing-service.php">Content Writing</a></li>
-										<li><a href="https://www.thiyagidigital.com/email-marketing-service.php">Email Marketing</a></li>
+									    <li><a href="https://www.thiyagidigital.com/seo-services">Search Engine Optimization</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/smm-service">Social Media Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/sem-services">Search Engine Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/web-development-service">Web Development</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/content-writing-service">Content Writing</a></li>
+										<li><a href="https://www.thiyagidigital.com/email-marketing-service">Email Marketing</a></li>
 									</ul>
 								</li>
-                                <li><a href="https://www.thiyagidigital.com/portfolio.php">Portfolio</a></li>
-                                <li><a href="https://www.thiyagidigital.com/testimonial.php">Testimonial</a></li>
+                                <li><a href="https://www.thiyagidigital.com/portfolio">Portfolio</a></li>
+                                <li><a href="https://www.thiyagidigital.com/testimonial">Testimonial</a></li>
 								<li><a href="/#">Blog</a></li>
-                                <li><a href="https://www.thiyagidigital.com/contact.php">Contact Us</a></li>
+                                <li><a href="https://www.thiyagidigital.com/contact">Contact Us</a></li>
 
 							</ul>
 						</nav>
@@ -301,21 +301,21 @@
 									<li class="dropdown">
 										<a href="#"><i class="fa fa-wrench"></i> Services</a>
 									<ul class="dropdown-menu clearfix">
-									    <li><a href="https://www.thiyagidigital.com/seo-services.php">Search Engine Optimization</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/smm-service.php">Social Media Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/sem-services.php">Search Engine Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/web-development-service.php">Web Development</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/content-writing-service.php">Content Writing</a></li>
-										<li><a href="https://www.thiyagidigital.com/email-marketing-service.php">Email Marketing</a></li>
+									    <li><a href="https://www.thiyagidigital.com/seo-services">Search Engine Optimization</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/smm-service">Social Media Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/sem-services">Search Engine Marketing</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/web-development-service">Web Development</a></li>
+                                        <li><a href="https://www.thiyagidigital.com/content-writing-service">Content Writing</a></li>
+										<li><a href="https://www.thiyagidigital.com/email-marketing-service">Email Marketing</a></li>
 									</ul>
 								</li>
-								<li><a href="https://www.thiyagidigital.com/portfolio.php"><i class="fal fa-briefcase"></i> Portfolio </a></li>
-								<li><a href="https://www.thiyagidigital.com/about.php"><i class="fal fa-home"></i> About Us </a></li>
-									<li><a href="https://www.thiyagidigital.com/testimonial.php"><i class="fal fa-comments-alt"></i> Testimonial </a></li>
+								<li><a href="https://www.thiyagidigital.com/portfolio"><i class="fal fa-briefcase"></i> Portfolio </a></li>
+								<li><a href="https://www.thiyagidigital.com/about"><i class="fal fa-home"></i> About Us </a></li>
+									<li><a href="https://www.thiyagidigital.com/testimonial"><i class="fal fa-comments-alt"></i> Testimonial </a></li>
 									<!-- <li><a href="team"><i class="fal fa-users"></i> Our Team </a></li> -->
 									<!-- <li><a href="portfolio.php"><i class="fal fa-briefcase"></i> Portfolio </a></li> -->
 									<!-- <li><a href="#"><i class="fal fa-blog"></i> Blog </a></li> -->
-									<li><a href="https://www.thiyagidigital.com/contact.php"><i class="fal fa-envelope"></i> Contact Us</a></li>
+									<li><a href="https://www.thiyagidigital.com/contact"><i class="fal fa-envelope"></i> Contact Us</a></li>
 								</ul>
 							</div>
 						
