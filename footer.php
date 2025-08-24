@@ -61,10 +61,10 @@
                     <div class="menu-widget">
                         <h3 class="widget-title">Branches</h3>
                         <ul>
-                            <li><a href="">Chennai</a></li>
-                            <li><a href="">Bengaluru</a></li>
-                            <li><a href=""  >Dubai</a></li>
-                            <li><a href="" >USA</a></li>
+                            <li><a href="/seo-city?city=chennai">Chennai</a></li>
+                            <li><a href="/contact">Bengaluru</a></li>
+                            <li><a href="/contact">Dubai</a></li>
+                            <li><a href="/contact">USA</a></li>
                         </ul>
                     </div>
                 </div>

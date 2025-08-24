@@ -5,7 +5,7 @@
 											<i class="fas fa-phone"></i>
 										</div>
 										<div class="add-text pera-content">
-											<h3><a href="tel:+919363252875 " target="_blank">9363252875</h3>
+											<h3><a href="tel:+919363252875" target="_blank">9363252875</a></h3>
 										</div>
 									</div>
 								</div>
