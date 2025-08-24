@@ -42,12 +42,12 @@
 									<h3 class="widget-title">Main Services</h3>
 									<div class="widget-area">
 										<ul>
-										<li><a href="seo.php"  >Search Engine Optimization</a></li>
-                                        <li><a href="smm.php"  >Social Media Marketing</a></li>
-                                        <li><a href="sem.php"  >Search Engine Marketing</a></li>
-                                        <li><a href="web-development.php"  >Web Development</a></li>
-                                        <li><a href="content-writing.php"  >Content Writing</a></li>
-										<li><a href="email-marketing.php"  >Email Marketing</a></li>
+										<li><a href="/seo-services">Search Engine Optimization</a></li>
+                                        <li><a href="/smm-service">Social Media Marketing</a></li>
+                                        <li><a href="/sem-services">Search Engine Marketing</a></li>
+                                        <li><a href="/web-development-service">Web Development</a></li>
+                                        <li><a href="/content-writing-service">Content Writing</a></li>
+										<li><a href="/email-marketing-service">Email Marketing</a></li>
 										</ul>
 									</div>
 								</div>
