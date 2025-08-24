@@ -115,27 +115,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Chennai</span>
+                                                    <a href="/seo-city?city=chennai" class="service-link">SEO Services in Chennai</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=chennai" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <span>Search Engine Marketing</span>
+                                                    <a href="/sem-city?city=chennai" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <span>Web Development</span>
+                                                    <a href="/web-development-city?city=chennai" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=chennai" class="btn btn-outline-primary btn-sm me-2">View All Chennai Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -162,27 +165,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Madurai</span>
+                                                    <a href="/seo-city?city=madurai" class="service-link">SEO Services in Madurai</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=madurai" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <span>Search Engine Marketing</span>
+                                                    <a href="/sem-city?city=madurai" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <span>Email Marketing</span>
+                                                    <a href="/email-marketing-city?city=madurai" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=madurai" class="btn btn-outline-primary btn-sm me-2">View All Madurai Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -209,27 +215,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Coimbatore</span>
+                                                    <a href="/seo-city?city=coimbatore" class="service-link">SEO Services in Coimbatore</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <span>Web Development</span>
+                                                    <a href="/web-development-city?city=coimbatore" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <span>Search Engine Marketing</span>
+                                                    <a href="/sem-city?city=coimbatore" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <span>Content Writing Services</span>
+                                                    <a href="/content-writing-city?city=coimbatore" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=coimbatore" class="btn btn-outline-primary btn-sm me-2">View All Coimbatore Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -259,27 +268,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Tiruchirappalli</span>
+                                                    <a href="/seo-city?city=tiruchirappalli" class="service-link">SEO Services in Tiruchirappalli</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=tiruchirappalli" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <span>Web Development</span>
+                                                    <a href="/web-development-city?city=tiruchirappalli" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <span>Content Writing Services</span>
+                                                    <a href="/content-writing-city?city=tiruchirappalli" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=tiruchirappalli" class="btn btn-outline-primary btn-sm me-2">View All Trichy Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -306,27 +318,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Salem</span>
+                                                    <a href="/seo-city?city=salem" class="service-link">SEO Services in Salem</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <span>Search Engine Marketing</span>
+                                                    <a href="/sem-city?city=salem" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=salem" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <span>Email Marketing</span>
+                                                    <a href="/email-marketing-city?city=salem" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=salem" class="btn btn-outline-primary btn-sm me-2">View All Salem Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -353,27 +368,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Tirunelveli</span>
+                                                    <a href="/seo-city?city=tirunelveli" class="service-link">SEO Services in Tirunelveli</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=tirunelveli" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <span>Web Development</span>
+                                                    <a href="/web-development-city?city=tirunelveli" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <span>Content Writing Services</span>
+                                                    <a href="/content-writing-city?city=tirunelveli" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=tirunelveli" class="btn btn-outline-primary btn-sm me-2">View All Tirunelveli Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -402,27 +420,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Thoothukudi</span>
+                                                    <a href="/seo-city?city=thoothukudi" class="service-link">SEO Services in Thoothukudi</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <span>Search Engine Marketing</span>
+                                                    <a href="/sem-city?city=thoothukudi" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=thoothukudi" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <span>Web Development</span>
+                                                    <a href="/web-development-city?city=thoothukudi" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=thoothukudi" class="btn btn-outline-primary btn-sm me-2">View All Thoothukudi Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -449,27 +470,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Dindigul</span>
+                                                    <a href="/seo-city?city=dindigul" class="service-link">SEO Services in Dindigul</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=dindigul" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <span>Email Marketing</span>
+                                                    <a href="/email-marketing-city?city=dindigul" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <span>Content Writing Services</span>
+                                                    <a href="/content-writing-city?city=dindigul" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=dindigul" class="btn btn-outline-primary btn-sm me-2">View All Dindigul Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -496,27 +520,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Thanjavur</span>
+                                                    <a href="/seo-city?city=thanjavur" class="service-link">SEO Services in Thanjavur</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <span>Web Development</span>
+                                                    <a href="/web-development-city?city=thanjavur" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=thanjavur" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <span>Content Writing Services</span>
+                                                    <a href="/content-writing-city?city=thanjavur" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=thanjavur" class="btn btn-outline-primary btn-sm me-2">View All Thanjavur Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -543,27 +570,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Vellore</span>
+                                                    <a href="/seo-city?city=vellore" class="service-link">SEO Services in Vellore</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <span>Search Engine Marketing</span>
+                                                    <a href="/sem-city?city=vellore" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=vellore" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <span>Email Marketing</span>
+                                                    <a href="/email-marketing-city?city=vellore" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=vellore" class="btn btn-outline-primary btn-sm me-2">View All Vellore Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -592,27 +622,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Nagercoil</span>
+                                                    <a href="/seo-city?city=nagercoil" class="service-link">SEO Services in Nagercoil</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=nagercoil" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <span>Web Development</span>
+                                                    <a href="/web-development-city?city=nagercoil" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <span>Email Marketing</span>
+                                                    <a href="/email-marketing-city?city=nagercoil" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=nagercoil" class="btn btn-outline-primary btn-sm me-2">View All Nagercoil Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -639,27 +672,30 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <span>SEO Services in Hosur</span>
+                                                    <a href="/seo-city?city=hosur" class="service-link">SEO Services in Hosur</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <span>Search Engine Marketing</span>
+                                                    <a href="/sem-city?city=hosur" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <span>Social Media Marketing</span>
+                                                    <a href="/smm-city?city=hosur" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <span>Content Writing Services</span>
+                                                    <a href="/content-writing-city?city=hosur" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <a href="/seo-city?city=hosur" class="btn btn-outline-primary btn-sm me-2">View All Hosur Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -743,6 +779,29 @@
     padding: 8px 0;
     font-weight: 500;
     color: #495057;
+}
+
+.service-link {
+    color: #495057;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.service-link:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.btn-outline-primary {
+    border: 1px solid #007bff;
+    color: #007bff;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: #007bff;
+    color: #fff;
 }
 
 .city-cta {
@@ -854,6 +913,24 @@ document.addEventListener('DOMContentLoaded', function() {
             if (mobileSelect) {
                 mobileSelect.value = cityId;
             }
+        });
+    });
+    
+    // Add click tracking for service links
+    const serviceLinks = document.querySelectorAll('.service-link');
+    serviceLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            // Optional: Add analytics tracking here
+            console.log('Service link clicked:', this.href);
+        });
+    });
+    
+    // Add click tracking for city service buttons
+    const cityServiceButtons = document.querySelectorAll('.btn-outline-primary');
+    cityServiceButtons.forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            // Optional: Add analytics tracking here
+            console.log('City services button clicked:', this.href);
         });
     });
 });
