@@ -11,7 +11,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h2 style="color: white"><b>Email Marketing Service</b></h2><br>
+				<h1 style="color: white"><b>Best Email Marketing Services in Chennai</b></h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>Services</li>
@@ -35,9 +35,9 @@ include 'header.php';
 								<img src="assets/img/service/serd1.jpg" alt="">
 							</div>
 							<div class="bi-service-details-text headline pera-content">
-								<h3>Email Marketing</h3>
+								<h2>Email Marketing Services</h2>
 
-								<p>Unlock the full potential of your brand's communication strategy with our Email Marketing services at Thiyagidigital. We specialize in creating targeted and engaging email campaigns that not only reach but resonate with your audience.</p>
+								<p>Unlock the full potential of your brand's communication strategy with our Email Marketing services at ThiyagiDigital. We specialize in creating targeted and engaging email campaigns that not only reach but resonate with your audience.</p>
 
 								<p> Our team of email marketing experts understands the importance of personalized and relevant content. From compelling newsletters to promotional emails, we craft messages that captivate your subscribers and drive action. Whether you're looking to promote a new product, nurture leads, or build customer loyalty, our email campaigns are tailored to meet your specific goals.</p>
 

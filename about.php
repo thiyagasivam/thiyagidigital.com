@@ -12,7 +12,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 		<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h2 style="color: white"><b>About us</b></h2><br>
+				<h1 style="color: white"><b>About ThiyagiDigital - Leading Digital Marketing Agency</b></h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>About us</li>

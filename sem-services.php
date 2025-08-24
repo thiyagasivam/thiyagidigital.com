@@ -11,7 +11,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h2 style="color: white"><b>Search Engine Marketing Service</b></h2><br>
+				<h1 style="color: white"><b>Best Search Engine Marketing Services in Chennai</b></h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>Services</li>
@@ -35,9 +35,9 @@ include 'header.php';
 								<img src="assets/img/service/serd1.jpg" alt="">
 							</div>
 							<div class="bi-service-details-text headline pera-content">
-								<h3>Search Engine Marketing</h3>
+								<h2>Search Engine Marketing Services</h2>
 
-								<p>achieving visibility on search engines is paramount, and that's where our Search Engine Marketing (SEM) services shine. At Thiyagidigital, we specialize in crafting strategic SEM campaigns that propel your brand to the top of search engine results, ensuring maximum exposure and driving targeted traffic.</p>
+								<p>Achieving visibility on search engines is paramount, and that's where our Search Engine Marketing (SEM) services shine. At ThiyagiDigital, we specialize in crafting strategic SEM campaigns that propel your brand to the top of search engine results, ensuring maximum exposure and driving targeted traffic.</p>
 
 								<p>  combines the power of paid advertising and meticulous keyword targeting. We leverage platforms like Google Ads to create compelling ad campaigns that reach potential customers precisely when they are searching for products or services related to your business.</p>
 

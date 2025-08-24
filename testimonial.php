@@ -11,7 +11,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h2 style="color: white"><b>Our Testimonials</b></h2><br>
+				<h1 style="color: white"><b>Client Testimonials - Digital Marketing Success Stories</b></h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>Our Testimonials</li>

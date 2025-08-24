@@ -68,7 +68,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h2 style="color: white"><b>Search Engine Optimization</b></h2><br>
+				<h1 style="color: white"><b>Best SEO Services in Chennai - ThiyagiDigital</b></h1><br>
 				<ul>
 					<li><a href="/">Home</a></li>
 					<li>Services</li>
@@ -92,9 +92,9 @@ include 'header.php';
 								<img src="assets/img/service/serd1.jpg" alt="">
 							</div>
 							<div class="bi-service-details-text headline pera-content">
-								<h3>Search Engine Optimization</h3>
+								<h2>Search Engine Optimization Services</h2>
 
-								<p>In the digital landscape, visibility is key, and that's where our Search Engine Optimization (SEO) services come into play. At [Your Company Name], we specialize in propelling your business to the top of search engine results, ensuring your brand stands out in the competitive online arena.</p>
+								<p>In the digital landscape, visibility is key, and that's where our Search Engine Optimization (SEO) services come into play. At ThiyagiDigital, we specialize in propelling your business to the top of search engine results, ensuring your brand stands out in the competitive online arena.</p>
 
 								<p>Our seasoned SEO experts employ a strategic approach, conducting in-depth keyword research, optimizing on-page elements, and building high-quality backlinks to enhance your website's authority. We understand the ever-evolving algorithms of search engines and stay ahead of the curve to keep your website in sync with the latest SEO best practices.</p>
 

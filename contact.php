@@ -9,7 +9,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h2 style="color:white">Contact</h2><br>
+				<h1 style="color:white">Contact ThiyagiDigital - Best Digital Marketing Agency Chennai</h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>Contact</li>

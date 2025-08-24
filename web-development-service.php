@@ -11,11 +11,11 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h2 style="color: white"><b>Web Devlopment Service</b></h2><br>
+				<h1 style="color: white"><b>Best Web Development Services in Chennai</b></h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>Services</li>
-					<li style="color: white">Web Devlopment</li>
+					<li style="color: white">Web Development</li>
 				</ul>
 			</div>
 		</div>
@@ -35,9 +35,9 @@ include 'header.php';
 								<img src="assets/img/service/serd1.jpg" alt="">
 							</div>
 							<div class="bi-service-details-text headline pera-content">
-								<h3>Web Devlopment</h3>
+								<h2>Web Development Services</h2>
 
-								<p>At Thiyagidigital, we don't just build websites; we architect digital experiences that leave a lasting impression. Our Web Development services are designed to elevate your online presence, ensuring a seamless blend of aesthetics and functionality.</p>
+								<p>At ThiyagiDigital, we don't just build websites; we architect digital experiences that leave a lasting impression. Our Web Development services are designed to elevate your online presence, ensuring a seamless blend of aesthetics and functionality.</p>
 
 								<p> Our expert team of developers is well-versed in the latest technologies and industry best practices. From responsive design for optimal viewing across devices to robust backend development, we cover every aspect to deliver a website that not only looks stunning but performs flawlessly.</p>
 

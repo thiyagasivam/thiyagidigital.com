@@ -11,7 +11,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h2 style="color: white"><b>Content Writing Service</b></h2><br>
+				<h1 style="color: white"><b>Best Content Writing Services in Chennai</b></h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>Services</li>
@@ -35,9 +35,9 @@ include 'header.php';
 								<img src="assets/img/service/serd1.jpg" alt="">
 							</div>
 							<div class="bi-service-details-text headline pera-content">
-								<h3>Content Writing</h3>
+								<h2>Content Writing Services</h2>
 
-								<p>We at Thiyagidigital are aware of the influence words have over people's perceptions, feelings, and behaviour. Our content writing services are intended to strengthen your brand by producing carefully thought-out and relevant material.</p>
+								<p>We at ThiyagiDigital are aware of the influence words have over people's perceptions, feelings, and behaviour. Our content writing services are intended to strengthen your brand by producing carefully thought-out and relevant material.</p>
 
 								<p>  Whether you need website content, blog posts, product descriptions, or engaging social media copy, our team of skilled content writers is dedicated to delivering content that not only informs but captivates your audience. We believe that every piece of content should be a storyteller, weaving a narrative that resonates with your target audience.</p>
 

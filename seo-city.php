@@ -456,7 +456,7 @@ $page_schema = [
     <div class="background_overlay"></div>
     <div class="container">
         <div class="bi-breadcrumbs-content headline ul-li text-center">
-            <h2 style="color: white"><b>SEO Services in <?php echo $fullCityName; ?></b></h2><br>
+            <h1 style="color: white"><b>Best SEO Services in <?php echo $fullCityName; ?> - ThiyagiDigital</b></h1><br>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="#">Services</a></li>

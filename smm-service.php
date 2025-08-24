@@ -11,7 +11,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h2 style="color: white"><b>Social Media Marketing Agency</b></h2><br>
+				<h1 style="color: white"><b>Best Social Media Marketing Agency in Chennai</b></h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>Services</li>
@@ -35,7 +35,7 @@ include 'header.php';
 								<img src="assets/img/service/serd1.jpg" alt="">
 							</div>
 							<div class="bi-service-details-text headline pera-content">
-								<h3>Social Media Marketing</h3>
+								<h2>Social Media Marketing Services</h2>
 
 								<p>A strong social media presence is crucial for brand success in the age of digital domination. We are pleased to provide our Social Media Marketing Services, which will turn your online presence into a powerful force.</p>
 
