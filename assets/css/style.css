@@ -19218,9 +19218,9 @@ CSS INDEX
 }
 .bi-breadcrumbs-content h1 {
   color: #fff;
-  font-size: 98px;
-  font-weight: 700;
-  padding-bottom: 40px;
+  font-size: 45px;
+  font-weight: 500;
+  padding-bottom: 20px;
 }
 .bi-breadcrumbs-content ul {
   padding: 18px 30px;
