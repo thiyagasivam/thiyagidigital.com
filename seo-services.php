@@ -169,7 +169,11 @@ include 'header.php';
 	</section>
 
 <!-- End of Service Details section
-	============================================= -->	
+	============================================= -->
+
+	<!-- Cities Tabs Section -->
+	<?php include 'cities-tabs.php';?>
+
 	<?php include 'testmonial2.php';?>
 	<?php include 'client-logo.php';?>
 	<?php include 'project-count.php';?>
