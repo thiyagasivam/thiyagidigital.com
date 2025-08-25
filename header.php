@@ -24,7 +24,8 @@
 	$page_title = $page_title ?? 'ThiyagiDigital — Digital Marketing Company in Chennai';
 	$page_description = $page_description ?? 'ThiyagiDigital - Top digital marketing agency in Chennai offering SEO, social media marketing, content marketing, and web development services.';
 	$page_keywords = $page_keywords ?? null;
-	$page_robots = $page_robots ?? 'index, follow';
+	$page_robots = $page_robots ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+';
 
 	// Build default canonical URL (without query string)
 	$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';

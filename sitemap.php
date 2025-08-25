@@ -20,7 +20,7 @@ ini_set('display_errors', 1);
 $page_title = 'HTML Sitemap - All Pages | ThiyagiDigital';
 $page_description = 'Complete HTML sitemap listing all pages on ThiyagiDigital website including services, city pages, and information pages.';
 $page_keywords = 'sitemap, all pages, website structure, navigation, ThiyagiDigital';
-$page_robots = 'index, follow';
+$page_robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 $canonical_url = 'https://www.thiyagidigital.com/sitemap';
 
 // Check if header file exists before including
