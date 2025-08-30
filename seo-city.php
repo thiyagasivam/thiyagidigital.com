@@ -1,7 +1,7 @@
 <?php
 // IMPORTANT: Build city context and meta BEFORE including header (no output above)
 // Get city name from URL and sanitize it
-$citySlug = isset($_GET['city']) ? strtolower(trim($_GET_GET['city'])) : '';
+$citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
 $cityName = ucwords(str_replace('-', ' ', $citySlug));
 // List of supported cities (Tamil Nadu) - Existing list from Pasted_Text_1756571897409.txt
 $supportedCities = [
@@ -1119,7 +1119,7 @@ $supportedCities = array_merge($supportedCities, $newCities);
 
 // Redirect to main SEO page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
-    header("Location: /seo-services.php");
+    header("Location: /seo-services");
     exit();
 }
 // Get city data

@@ -115,7 +115,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=chennai" class="service-link">SEO Services in Chennai</a>
+                                                    <a href="/seo-services/chennai" class="service-link">SEO Services in Chennai</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -138,7 +138,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=chennai" class="btn btn-outline-primary btn-sm me-2">View All Chennai Services</a>
+                                            <a href="/seo-services/chennai" class="btn btn-outline-primary btn-sm me-2">View All Chennai Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=madurai" class="service-link">SEO Services in Madurai</a>
+                                                    <a href="/seo-services/madurai" class="service-link">SEO Services in Madurai</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -188,7 +188,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=madurai" class="btn btn-outline-primary btn-sm me-2">View All Madurai Services</a>
+                                            <a href="/seo-services/madurai" class="btn btn-outline-primary btn-sm me-2">View All Madurai Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -215,7 +215,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=coimbatore" class="service-link">SEO Services in Coimbatore</a>
+                                                    <a href="/seo-services/coimbatore" class="service-link">SEO Services in Coimbatore</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -238,7 +238,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=coimbatore" class="btn btn-outline-primary btn-sm me-2">View All Coimbatore Services</a>
+                                            <a href="/seo-services/coimbatore" class="btn btn-outline-primary btn-sm me-2">View All Coimbatore Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -268,7 +268,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=tiruchirappalli" class="service-link">SEO Services in Tiruchirappalli</a>
+                                                    <a href="/seo-services/tiruchirappalli" class="service-link">SEO Services in Tiruchirappalli</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -291,7 +291,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=tiruchirappalli" class="btn btn-outline-primary btn-sm me-2">View All Trichy Services</a>
+                                            <a href="/seo-services/tiruchirappalli" class="btn btn-outline-primary btn-sm me-2">View All Trichy Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -318,7 +318,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=salem" class="service-link">SEO Services in Salem</a>
+                                                    <a href="/seo-services/salem" class="service-link">SEO Services in Salem</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -341,7 +341,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=salem" class="btn btn-outline-primary btn-sm me-2">View All Salem Services</a>
+                                            <a href="/seo-services/salem" class="btn btn-outline-primary btn-sm me-2">View All Salem Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -368,7 +368,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=tirunelveli" class="service-link">SEO Services in Tirunelveli</a>
+                                                    <a href="/seo-services/tirunelveli" class="service-link">SEO Services in Tirunelveli</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -391,7 +391,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=tirunelveli" class="btn btn-outline-primary btn-sm me-2">View All Tirunelveli Services</a>
+                                            <a href="/seo-services/tirunelveli" class="btn btn-outline-primary btn-sm me-2">View All Tirunelveli Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -420,7 +420,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=thoothukudi" class="service-link">SEO Services in Thoothukudi</a>
+                                                    <a href="/seo-services/thoothukudi" class="service-link">SEO Services in Thoothukudi</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -443,7 +443,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=thoothukudi" class="btn btn-outline-primary btn-sm me-2">View All Thoothukudi Services</a>
+                                            <a href="/seo-services/thoothukudi" class="btn btn-outline-primary btn-sm me-2">View All Thoothukudi Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -470,7 +470,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=dindigul" class="service-link">SEO Services in Dindigul</a>
+                                                    <a href="/seo-services/dindigul" class="service-link">SEO Services in Dindigul</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -493,7 +493,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=dindigul" class="btn btn-outline-primary btn-sm me-2">View All Dindigul Services</a>
+                                            <a href="/seo-services/dindigul" class="btn btn-outline-primary btn-sm me-2">View All Dindigul Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -520,7 +520,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=thanjavur" class="service-link">SEO Services in Thanjavur</a>
+                                                    <a href="/seo-services/thanjavur" class="service-link">SEO Services in Thanjavur</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -543,7 +543,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=thanjavur" class="btn btn-outline-primary btn-sm me-2">View All Thanjavur Services</a>
+                                            <a href="/seo-services/thanjavur" class="btn btn-outline-primary btn-sm me-2">View All Thanjavur Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -570,7 +570,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=vellore" class="service-link">SEO Services in Vellore</a>
+                                                    <a href="/seo-services/vellore" class="service-link">SEO Services in Vellore</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -593,7 +593,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=vellore" class="btn btn-outline-primary btn-sm me-2">View All Vellore Services</a>
+                                            <a href="/seo-services/vellore" class="btn btn-outline-primary btn-sm me-2">View All Vellore Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -622,7 +622,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=nagercoil" class="service-link">SEO Services in Nagercoil</a>
+                                                    <a href="/seo-services/nagercoil" class="service-link">SEO Services in Nagercoil</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -645,7 +645,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=nagercoil" class="btn btn-outline-primary btn-sm me-2">View All Nagercoil Services</a>
+                                            <a href="/seo-services/nagercoil" class="btn btn-outline-primary btn-sm me-2">View All Nagercoil Services</a>
                                         </div>
                                     </div>
                                 </div>
@@ -672,7 +672,7 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-search-plus text-primary me-2"></i>
-                                                    <a href="/seo-city?city=hosur" class="service-link">SEO Services in Hosur</a>
+                                                    <a href="/seo-services/hosur" class="service-link">SEO Services in Hosur</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
@@ -695,7 +695,7 @@
                                             </div>
                                         </div>
                                         <div class="mt-3">
-                                            <a href="/seo-city?city=hosur" class="btn btn-outline-primary btn-sm me-2">View All Hosur Services</a>
+                                            <a href="/seo-services/hosur" class="btn btn-outline-primary btn-sm me-2">View All Hosur Services</a>
                                         </div>
                                     </div>
                                 </div>
