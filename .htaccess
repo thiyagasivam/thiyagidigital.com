@@ -11,6 +11,7 @@ RewriteRule ^web-development-service/([a-z-]+)/?$ web-development-city.php?city=
 RewriteRule ^smm-service/([a-z-]+)/?$ smm-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^content-writing-service/([a-z-]+)/?$ content-writing-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^email-marketing-service/([a-z-]+)/?$ email-marketing-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^wordpress-development-service/([a-z-]+)/?$ wordpress-development-service-city.php?city=$1 [L,QSA,NC]
 
 # Dynamic sitemap redirect
 RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
