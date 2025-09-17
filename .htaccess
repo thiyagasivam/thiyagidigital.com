@@ -14,6 +14,44 @@ RewriteRule ^email-marketing-service/([a-z-]+)/?$ email-marketing-city.php?city=
 RewriteRule ^wordpress-development-service/([a-z-]+)/?$ wordpress-development-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^link-building-service/([a-z-]+)/?$ link-building-city.php?city=$1 [L,QSA,NC]
 
+# New Marketing Service City Pages
+RewriteRule ^sms-marketing-service/([a-z-]+)/?$ sms-marketing-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^affiliate-marketing-service/([a-z-]+)/?$ affiliate-marketing-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^ecommerce-marketing-service/([a-z-]+)/?$ ecommerce-marketing-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^amazon-marketing-service/([a-z-]+)/?$ amazon-marketing-city.php?city=$1 [L,QSA,NC]
+
+# Website Design Service City Pages
+RewriteRule ^basic-website-designing-service/([a-z-]+)/?$ basic-website-designing-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^responsive-website-designing-service/([a-z-]+)/?$ responsive-website-designing-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^cms-website-designing-service/([a-z-]+)/?$ cms-website-designing-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^website-redesigning-service/([a-z-]+)/?$ website-redesigning-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^ui-ux-design-service/([a-z-]+)/?$ ui-ux-design-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^website-updates-maintenance-service/([a-z-]+)/?$ website-updates-maintenance-city.php?city=$1 [L,QSA,NC]
+
+# Development Service City Pages
+RewriteRule ^woocommerce-development-service/([a-z-]+)/?$ woocommerce-development-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^shopify-development-service/([a-z-]+)/?$ shopify-development-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^magento-development-service/([a-z-]+)/?$ magento-development-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^opencart-development-service/([a-z-]+)/?$ opencart-development-city.php?city=$1 [L,QSA,NC]
+
+# Hosting & Domain Service City Pages
+RewriteRule ^web-hosting-service/([a-z-]+)/?$ web-hosting-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^domain-registration-service/([a-z-]+)/?$ domain-registration-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^cloud-hosting-service/([a-z-]+)/?$ cloud-hosting-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^vps-hosting-service/([a-z-]+)/?$ vps-hosting-city.php?city=$1 [L,QSA,NC]
+
+# eCommerce Service City Pages
+RewriteRule ^ecommerce-development-service/([a-z-]+)/?$ ecommerce-development-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^online-store-setup-service/([a-z-]+)/?$ online-store-setup-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^payment-gateway-integration-service/([a-z-]+)/?$ payment-gateway-integration-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^shopping-cart-development-service/([a-z-]+)/?$ shopping-cart-development-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^product-catalog-management-service/([a-z-]+)/?$ product-catalog-management-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^multi-vendor-marketplace-service/([a-z-]+)/?$ multi-vendor-marketplace-city.php?city=$1 [L,QSA,NC]
+
+# Design Service City Pages
+RewriteRule ^logo-design-service/([a-z-]+)/?$ logo-design-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^graphic-design-service/([a-z-]+)/?$ graphic-design-city.php?city=$1 [L,QSA,NC]
+
 # Dynamic sitemap redirect
 RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
 
