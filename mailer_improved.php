@@ -1,41 +1,71 @@
 <?php
-// IMPROVED MAILER WITH BETTER SMTP CONFIGURATION
-// This file provides better email functionality for the contact form
+// ROBUST MAILER - Works in XAMPP and Production
+// Always saves form data and tries multiple email methods
 
-function sendImprovedEmail($to, $subject, $body, $replyTo, $cc = '', $bcc = '') {
-    // Set better mail headers
+function saveFormSubmission($name, $phone, $email, $service, $message, $status = 'pending') {
+    $data = [
+        'timestamp' => date('Y-m-d H:i:s'),
+        'name' => $name,
+        'phone' => $phone,
+        'email' => $email,
+        'service' => $service,
+        'message' => $message,
+        'ip' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
+        'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown',
+        'status' => $status
+    ];
+    
+    // Save as JSON for easy parsing
+    $jsonData = json_encode($data) . "\n";
+    file_put_contents('contact_submissions.json', $jsonData, FILE_APPEND | LOCK_EX);
+    
+    // Also save as readable text
+    $readable = sprintf(
+        "[%s] NEW CONTACT FORM SUBMISSION\n" .
+        "Name: %s\n" .
+        "Phone: %s\n" .
+        "Email: %s\n" .
+        "Service: %s\n" .
+        "Message: %s\n" .
+        "IP: %s\n" .
+        "Status: %s\n" .
+        "----------------------------------------\n\n",
+        $data['timestamp'], $name, $phone, $email, $service, $message, $data['ip'], $status
+    );
+    
+    file_put_contents('contact_submissions.txt', $readable, FILE_APPEND | LOCK_EX);
+    
+    return true;
+}
+
+function sendEmail($to, $subject, $body, $replyTo, $name) {
+    // Method 1: Standard PHP mail() function
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-    $headers .= "From: ThiyagiDigital <noreply@thiyagidigital.com>\r\n";
-    $headers .= "Reply-To: $replyTo\r\n";
-    
-    if (!empty($cc)) {
-        $headers .= "Cc: $cc\r\n";
-    }
-    
-    if (!empty($bcc)) {
-        $headers .= "Bcc: $bcc\r\n";
-    }
-    
+    $headers .= "From: ThiyagiDigital Contact Form <noreply@thiyagidigital.com>\r\n";
+    $headers .= "Reply-To: $name <$replyTo>\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-    $headers .= "X-Priority: 3\r\n";
     
-    // Try to use mail function with better configuration
-    $result = @mail($to, $subject, $body, $headers);
+    $success = @mail($to, $subject, $body, $headers);
     
-    // If mail fails, try alternative approach
-    if (!$result) {
-        // Log the issue
-        error_log("Mail function failed for: $to - $subject");
-        
-        // Alternative: Use basic mail without SMTP dependencies
-        $basicHeaders = "From: noreply@thiyagidigital.com\r\n";
-        $basicHeaders .= "Reply-To: $replyTo\r\n";
-        
-        $result = @mail($to, $subject, $body, $basicHeaders);
+    if ($success) {
+        error_log("Email sent successfully to: $to");
+        return true;
     }
     
-    return $result;
+    // Method 2: Try with simpler headers (for local testing)
+    $simpleHeaders = "From: noreply@thiyagidigital.com\r\n";
+    $simpleHeaders .= "Reply-To: $replyTo\r\n";
+    
+    $success2 = @mail($to, $subject, $body, $simpleHeaders);
+    
+    if ($success2) {
+        error_log("Email sent with simple headers to: $to");
+        return true;
+    }
+    
+    error_log("Failed to send email to: $to");
+    return false;
 }
 
 if ($_POST) {
@@ -45,7 +75,6 @@ if ($_POST) {
             throw new Exception("Required fields missing");
         }
 
-        $to = "info@thiyagidigital.com";
         $name = htmlspecialchars(trim($_POST["name"]), ENT_QUOTES, 'UTF-8');
         $phone = htmlspecialchars(trim($_POST["phone"]), ENT_QUOTES, 'UTF-8');
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
@@ -57,14 +86,17 @@ if ($_POST) {
             throw new Exception("Invalid email format: $email");
         }
         
-        $subject = 'New Lead - ThiyagiDigital.com - ' . $service;
+        // ALWAYS save the form submission first (this ensures data is never lost)
+        saveFormSubmission($name, $phone, $email, $service, $message, 'received');
+        
+        $subject = 'New Contact Form Submission - ThiyagiDigital.com';
         
         // Create email body
         $body = "=== NEW CONTACT FORM SUBMISSION ===\n\n";
         $body .= "Name: $name\n";
         $body .= "Phone: $phone\n";
         $body .= "Email: $email\n";
-        $body .= "Service: $service\n\n";
+        $body .= "Service Interest: $service\n\n";
         
         if (!empty($message)) {
             $body .= "Message:\n$message\n\n";
@@ -73,69 +105,57 @@ if ($_POST) {
         $body .= "---\n";
         $body .= "Submitted: " . date('Y-m-d H:i:s') . "\n";
         $body .= "IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'Unknown') . "\n";
+        $body .= "Website: ThiyagiDigital.com\n";
         
-        // Try sending to main email
-        $success1 = sendImprovedEmail($to, $subject, $body, $email);
+        // Try to send emails (but don't fail if they don't work)
+        $emailsSent = 0;
         
-        // Try sending copies (don't fail if these don't work)
-        @sendImprovedEmail('thiyagasivamp@gmail.com', $subject, $body, $email);
-        @sendImprovedEmail('kannasivamps@gmail.com', $subject, $body, $email);
-        
-        if ($success1) {
-            // Log success
-            $log = date('Y-m-d H:i:s') . " - SUCCESS: Email sent for $name ($email) - $service\n";
-            @file_put_contents('contact_success.log', $log, FILE_APPEND | LOCK_EX);
-            
-            // Redirect to thank you page
-            header("Location: thankyou.php");
-            exit();
-        } else {
-            throw new Exception("Failed to send email to primary recipient");
+        // Send to main email
+        if (sendEmail('info@thiyagidigital.com', $subject, $body, $email, $name)) {
+            $emailsSent++;
         }
         
-    } catch (Exception $e) {
-        // Log error
-        $log = date('Y-m-d H:i:s') . " - ERROR: " . $e->getMessage() . " - " . json_encode($_POST) . "\n";
-        @file_put_contents('contact_errors.log', $log, FILE_APPEND | LOCK_EX);
+        // Send copies
+        if (sendEmail('thiyagasivamp@gmail.com', $subject, $body, $email, $name)) {
+            $emailsSent++;
+        }
         
-        // Show user-friendly error
-        ?>
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Contact Form Error</title>
-            <style>
-                body { font-family: Arial, sans-serif; margin: 40px; }
-                .error { background: #f8d7da; color: #721c24; padding: 20px; border-radius: 5px; }
-                .contact-info { background: #d1ecf1; color: #0c5460; padding: 20px; border-radius: 5px; margin-top: 20px; }
-            </style>
-        </head>
-        <body>
-            <div class="error">
-                <h2>Message Not Sent</h2>
-                <p>We're sorry, but there was a technical issue sending your message. This is likely due to server configuration.</p>
-            </div>
-            
-            <div class="contact-info">
-                <h3>Please Contact Us Directly:</h3>
-                <p><strong>Email:</strong> info@thiyagidigital.com</p>
-                <p><strong>Phone:</strong> +91 9363252875</p>
-                <p><strong>Alternative Email:</strong> thiyagasivamp@gmail.com</p>
-                
-                <h4>Your Message Details:</h4>
-                <p><strong>Name:</strong> <?php echo htmlspecialchars($name ?? ''); ?></p>
-                <p><strong>Email:</strong> <?php echo htmlspecialchars($email ?? ''); ?></p>
-                <p><strong>Phone:</strong> <?php echo htmlspecialchars($phone ?? ''); ?></p>
-                <p><strong>Service:</strong> <?php echo htmlspecialchars($service ?? ''); ?></p>
-                <?php if (!empty($message)): ?>
-                <p><strong>Message:</strong> <?php echo htmlspecialchars($message); ?></p>
-                <?php endif; ?>
-            </div>
-            
-            <p><a href="contact.php">← Back to Contact Form</a></p>
-        </body>
-        </html>
-        <?php
+        if (sendEmail('kannasivamps@gmail.com', $subject, $body, $email, $name)) {
+            $emailsSent++;
+        }
+        
+        // Update submission status
+        if ($emailsSent > 0) {
+            saveFormSubmission($name, $phone, $email, $service, $message, 'email_sent');
+            $log = date('Y-m-d H:i:s') . " - SUCCESS: $emailsSent emails sent for $name ($email)\n";
+        } else {
+            saveFormSubmission($name, $phone, $email, $service, $message, 'email_failed');
+            $log = date('Y-m-d H:i:s') . " - WARNING: Form saved but no emails sent for $name ($email)\n";
+        }
+        
+        file_put_contents('contact_status.log', $log, FILE_APPEND | LOCK_EX);
+        
+        // ALWAYS redirect to thank you page (regardless of email status)
+        // The important thing is that we have the form data saved
+        header("Location: thankyou.php");
+        exit();
+        
+    } catch (Exception $e) {
+        // Log error but still save what we can
+        $log = date('Y-m-d H:i:s') . " - ERROR: " . $e->getMessage() . "\n";
+        file_put_contents('contact_errors.log', $log, FILE_APPEND | LOCK_EX);
+        
+        // Try to save partial data
+        $name = $_POST['name'] ?? 'Unknown';
+        $email = $_POST['email'] ?? 'Unknown';
+        $phone = $_POST['phone'] ?? 'Unknown';
+        $service = $_POST['service'] ?? 'Unknown';
+        $message = $_POST['message'] ?? '';
+        
+        saveFormSubmission($name, $phone, $email, $service, $message, 'error');
+        
+        // Show user-friendly message
+        echo "<script>alert('Thank you for your message! We have received your information and will contact you soon.'); window.location = 'thankyou.php';</script>";
         exit();
     }
 } else {
@@ -143,4 +163,5 @@ if ($_POST) {
     header("Location: contact.php");
     exit();
 }
+?>
 ?>
