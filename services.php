@@ -80,7 +80,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/seo-icon.png" alt="SEO Services" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is1.png" alt="SEO Services" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="seo-services">SEO Services</a></h4>
@@ -92,7 +92,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/sem-icon.png" alt="SEM Services" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is2.png" alt="SEM Services" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="sem-services">SEM Services</a></h4>
@@ -104,7 +104,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/smm-icon.png" alt="Social Media Marketing" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is3.png" alt="Social Media Marketing" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="smm-service">Social Media Marketing</a></h4>
@@ -116,7 +116,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/content-icon.png" alt="Content Writing" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is4.png" alt="Content Writing" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="content-writing-service">Content Writing</a></h4>
@@ -128,7 +128,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/email-icon.png" alt="Email Marketing" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is5.png" alt="Email Marketing" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="email-marketing-service">Email Marketing</a></h4>
@@ -154,7 +154,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/web-dev-icon.png" alt="Web Development" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is6.png" alt="Web Development" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="web-development-service">Web Development</a></h4>
@@ -166,7 +166,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/woocommerce-icon.png" alt="WooCommerce Development" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is7.png" alt="WooCommerce Development" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="woocommerce-development-service">WooCommerce Development</a></h4>
@@ -178,7 +178,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/shopify-icon.png" alt="Shopify Development" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is8.png" alt="Shopify Development" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="shopify-development-service">Shopify Development</a></h4>
@@ -190,7 +190,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/magento-icon.png" alt="Magento Development" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is9.png" alt="Magento Development" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="magento-development-service">Magento Development</a></h4>
@@ -202,7 +202,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/opencart-icon.png" alt="OpenCart Development" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is10.png" alt="OpenCart Development" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="opencart-development-service">OpenCart Development</a></h4>
@@ -225,10 +225,10 @@ include 'header.php';
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-30">
+                <div class="col-lg-6 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/ecommerce-dev-icon.png" alt="eCommerce Development" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is11.png" alt="eCommerce Development" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="ecommerce-development-service">eCommerce Development</a></h4>
@@ -237,63 +237,15 @@ include 'header.php';
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-30">
+                <div class="col-lg-6 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/store-setup-icon.png" alt="Online Store Setup" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is12.png" alt="Online Store Setup" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="online-store-setup-service">Online Store Setup</a></h4>
                             <p>Quick and efficient online store setup services to get your business online fast.</p>
                             <a href="online-store-setup-service" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <img src="assets/img/icon/payment-gateway-icon.png" alt="Payment Gateway Integration" style="width: 60px; height: 60px;">
-                        </div>
-                        <div class="service-content">
-                            <h4><a href="payment-gateway-integration-service">Payment Gateway Integration</a></h4>
-                            <p>Secure payment processing integration for seamless customer transactions.</p>
-                            <a href="payment-gateway-integration-service" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <img src="assets/img/icon/shopping-cart-icon.png" alt="Shopping Cart Development" style="width: 60px; height: 60px;">
-                        </div>
-                        <div class="service-content">
-                            <h4><a href="shopping-cart-development-service">Shopping Cart Development</a></h4>
-                            <p>Custom shopping cart solutions for enhanced user experience and conversion rates.</p>
-                            <a href="shopping-cart-development-service" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <img src="assets/img/icon/product-catalog-icon.png" alt="Product Catalog Management" style="width: 60px; height: 60px;">
-                        </div>
-                        <div class="service-content">
-                            <h4><a href="product-catalog-management-service">Product Catalog Management</a></h4>
-                            <p>Efficient product catalog management systems for streamlined inventory control.</p>
-                            <a href="product-catalog-management-service" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-30">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <img src="assets/img/icon/marketplace-icon.png" alt="Multi-vendor Marketplace" style="width: 60px; height: 60px;">
-                        </div>
-                        <div class="service-content">
-                            <h4><a href="multi-vendor-marketplace-service">Multi-vendor Marketplace</a></h4>
-                            <p>Advanced multi-vendor marketplace development for scalable eCommerce platforms.</p>
-                            <a href="multi-vendor-marketplace-service" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -314,7 +266,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/web-hosting-icon.png" alt="Web Hosting" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is13.png" alt="Web Hosting" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="web-hosting-service">Web Hosting</a></h4>
@@ -326,7 +278,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/domain-icon.png" alt="Domain Registration" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is14.png" alt="Domain Registration" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="domain-registration-service">Domain Registration</a></h4>
@@ -338,7 +290,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/cloud-hosting-icon.png" alt="Cloud Hosting" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/is15.png" alt="Cloud Hosting" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="cloud-hosting-service">Cloud Hosting</a></h4>
@@ -350,7 +302,7 @@ include 'header.php';
                 <div class="col-lg-4 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/vps-hosting-icon.png" alt="VPS Hosting" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/ic1.png" alt="VPS Hosting" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="vps-hosting-service">VPS Hosting</a></h4>
@@ -376,7 +328,7 @@ include 'header.php';
                 <div class="col-lg-6 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/logo-design-icon.png" alt="Logo Design" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/ic2.png" alt="Logo Design" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="logo-design-service">Logo Design</a></h4>
@@ -388,7 +340,7 @@ include 'header.php';
                 <div class="col-lg-6 col-md-6 mb-30">
                     <div class="service-card">
                         <div class="service-icon">
-                            <img src="assets/img/icon/graphic-design-icon.png" alt="Graphic Design" style="width: 60px; height: 60px;">
+                            <img src="assets/img/icon/ic3.png" alt="Graphic Design" style="width: 60px; height: 60px;">
                         </div>
                         <div class="service-content">
                             <h4><a href="graphic-design-service">Graphic Design</a></h4>
