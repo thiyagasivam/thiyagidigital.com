@@ -26,7 +26,7 @@
                     <div class="menu-widget">
                         <h3 class="widget-title">Our Services</h3>
                         <ul>
-                            
+                            <li><a href="https://www.thiyagidigital.com/services">All Services</a></li>
                                         <li><a href="https://www.thiyagidigital.com/seo-services">Search Engine Optimization</a></li>
                                         <li><a href="https://www.thiyagidigital.com/smm-service">Social Media Marketing</a></li>
                                         <li><a href="https://www.thiyagidigital.com/sem-services">Search Engine Marketing</a></li>

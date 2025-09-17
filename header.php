@@ -184,8 +184,9 @@
 								<li><a href="https://www.thiyagidigital.com/about">About Us</a></li>
 								
                                 <li class="dropdown">
-                                    <a href="#">Services</a>
+                                    <a href="https://www.thiyagidigital.com/services">Services</a>
                                     <ul class="dropdown-menu clearfix">
+                                        <li><a href="https://www.thiyagidigital.com/services">All Services</a></li>
                                         <li><a href="https://www.thiyagidigital.com/seo-services">Search Engine Optimization</a></li>
                                         <li><a href="https://www.thiyagidigital.com/smm-service">Social Media Marketing</a></li>
                                         <li><a href="https://www.thiyagidigital.com/sem-services">Search Engine Marketing</a></li>
@@ -241,8 +242,9 @@
 								<li><a href="https://www.thiyagidigital.com/about">About Us</a></li>
 
                                 <li class="dropdown">
-								   <a href="#">Services</a>
+								   <a href="https://www.thiyagidigital.com/services">Services</a>
 									<ul class="dropdown-menu clearfix">
+									    <li><a href="https://www.thiyagidigital.com/services">All Services</a></li>
 									    <li><a href="https://www.thiyagidigital.com/seo-services">Search Engine Optimization</a></li>
                                         <li><a href="https://www.thiyagidigital.com/smm-service">Social Media Marketing</a></li>
                                         <li><a href="https://www.thiyagidigital.com/sem-services">Search Engine Marketing</a></li>

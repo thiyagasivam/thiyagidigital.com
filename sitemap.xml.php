@@ -65,7 +65,12 @@ $excludedFiles = [
     'marquee.php', 'project-count.php', 'certify-partner.php', 'sideform.php', 'testmonial2.php', 'new-index.php',
     // City templates (handled as pretty URLs below)
     'seo-city.php', 'smm-city.php', 'sem-city.php', 'web-development-city.php', 
-    'content-writing-city.php', 'email-marketing-city.php'
+    'content-writing-city.php', 'email-marketing-city.php',
+    // New service city templates
+    'woocommerce-development-city.php', 'shopify-development-city.php', 'magento-development-city.php', 
+    'opencart-development-city.php', 'web-hosting-city.php', 'domain-registration-city.php',
+    'cloud-hosting-city.php', 'vps-hosting-city.php', 'ecommerce-development-city.php',
+    'online-store-setup-city.php', 'logo-design-city.php', 'graphic-design-city.php'
 ];
 
 $publicPages = array_diff($files, $excludedFiles);
@@ -89,12 +94,29 @@ foreach ($publicPages as $page) {
 // 3. SERVICE PAGES (Main service pages)
 echo "\n  <!-- Main Service Pages -->\n";
 $mainServices = [
+    'services' => 'All Services',
     'seo-services' => 'Search Engine Optimization',
     'smm-service' => 'Social Media Marketing', 
     'sem-services' => 'Search Engine Marketing',
     'web-development-service' => 'Web Development',
     'content-writing-service' => 'Content Writing',
-    'email-marketing-service' => 'Email Marketing'
+    'email-marketing-service' => 'Email Marketing',
+    // Development Services
+    'woocommerce-development-service' => 'WooCommerce Development',
+    'shopify-development-service' => 'Shopify Development',
+    'magento-development-service' => 'Magento Development',
+    'opencart-development-service' => 'OpenCart Development',
+    // Hosting & Domain Services
+    'web-hosting-service' => 'Web Hosting',
+    'domain-registration-service' => 'Domain Registration',
+    'cloud-hosting-service' => 'Cloud Hosting',
+    'vps-hosting-service' => 'VPS Hosting',
+    // eCommerce Services
+    'ecommerce-development-service' => 'eCommerce Development',
+    'online-store-setup-service' => 'Online Store Setup',
+    // Design Services
+    'logo-design-service' => 'Logo Design',
+    'graphic-design-service' => 'Graphic Design'
 ];
 
 foreach ($mainServices as $serviceSlug => $serviceName) {
@@ -121,7 +143,23 @@ $serviceCityPatterns = [
     'sem-services' => 'Search Engine Marketing', 
     'web-development-service' => 'Web Development',
     'content-writing-service' => 'Content Writing',
-    'email-marketing-service' => 'Email Marketing'
+    'email-marketing-service' => 'Email Marketing',
+    // Development Services
+    'woocommerce-development-service' => 'WooCommerce Development',
+    'shopify-development-service' => 'Shopify Development',
+    'magento-development-service' => 'Magento Development',
+    'opencart-development-service' => 'OpenCart Development',
+    // Hosting & Domain Services
+    'web-hosting-service' => 'Web Hosting',
+    'domain-registration-service' => 'Domain Registration',
+    'cloud-hosting-service' => 'Cloud Hosting',
+    'vps-hosting-service' => 'VPS Hosting',
+    // eCommerce Services
+    'ecommerce-development-service' => 'eCommerce Development',
+    'online-store-setup-service' => 'Online Store Setup',
+    // Design Services
+    'logo-design-service' => 'Logo Design',
+    'graphic-design-service' => 'Graphic Design'
 ];
 
 // Extract ALL cities from seo-city.php
@@ -176,5 +214,5 @@ foreach ($additionalUrls as $url => $settings) {
 echo '</urlset>' . "\n";
 
 // Log generation for debugging
-error_log('[Dynamic Sitemap] Generated ' . (count($publicPages) + count($serviceCityPatterns) * count($citySlugs)) . ' URLs at ' . date('Y-m-d H:i:s'));
+error_log('[Dynamic Sitemap] Generated ' . (count($publicPages) + count($mainServices) + count($serviceCityPatterns) * count($citySlugs)) . ' URLs at ' . date('Y-m-d H:i:s'));
 ?>

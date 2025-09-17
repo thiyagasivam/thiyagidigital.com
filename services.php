@@ -31,6 +31,124 @@ $page_schema = [
 include 'header.php';
 ?>
 
+<style>
+.service-card {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border-color: #2c5aa0;
+}
+
+.service-icon {
+    margin-bottom: 20px;
+}
+
+.service-icon img {
+    filter: sepia(1) hue-rotate(200deg) saturate(2);
+}
+
+.service-card:hover .service-icon img {
+    filter: none;
+}
+
+.service-content h4 {
+    color: #2c5aa0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.service-content h4 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.service-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.service-link {
+    color: #2c5aa0;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.service-link:hover {
+    color: #1e3a5f;
+}
+
+.service-link i {
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-link i {
+    transform: translateX(5px);
+}
+
+.category-title {
+    color: #2c5aa0;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.category-desc {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-category {
+    position: relative;
+}
+
+.service-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
+    transform: translateX(-50%);
+}
+
+.service-category:first-child::before {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 30px;
+    }
+    
+    .category-title {
+        font-size: 24px;
+    }
+    
+    .category-desc {
+        font-size: 14px;
+    }
+}
+</style>
+
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="assets/img/bg/bread-bg.jpg">
     <div class="background_overlay"></div>
@@ -381,121 +499,3 @@ include 'header.php';
 <?php include 'project-count.php';?>
 <?php include 'certify-partner.php';?>
 <?php include 'footer.php';?>
-
-<style>
-.service-card {
-    background: #fff;
-    padding: 30px 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-    height: 100%;
-    border: 1px solid #f0f0f0;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    border-color: #2c5aa0;
-}
-
-.service-icon {
-    margin-bottom: 20px;
-}
-
-.service-icon img {
-    filter: sepia(1) hue-rotate(200deg) saturate(2);
-}
-
-.service-card:hover .service-icon img {
-    filter: none;
-}
-
-.service-content h4 {
-    color: #2c5aa0;
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.service-content h4 a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.service-content p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-.service-link {
-    color: #2c5aa0;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.service-link:hover {
-    color: #1e3a5f;
-}
-
-.service-link i {
-    margin-left: 5px;
-    transition: all 0.3s ease;
-}
-
-.service-card:hover .service-link i {
-    transform: translateX(5px);
-}
-
-.category-title {
-    color: #2c5aa0;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.category-desc {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.service-category {
-    position: relative;
-}
-
-.service-category::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 80%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
-    transform: translateX(-50%);
-}
-
-.service-category:first-child::before {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .service-card {
-        margin-bottom: 30px;
-    }
-    
-    .category-title {
-        font-size: 24px;
-    }
-    
-    .category-desc {
-        font-size: 14px;
-    }
-}
-</style>
