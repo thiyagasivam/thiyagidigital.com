@@ -98,37 +98,87 @@ include 'header.php';
 					<p>Let’s talk about your business. Fill the form, and we will reach out to you.</p>
 					<div class="bi-team-details-contact-form">
 						<!-- <form action="mailer" method="post"> -->
-						<form method="post" action="mailer.php">
+						<form method="post" action="mailer_improved.php" id="contactForm">
 							<div class="row">
 								<div class="col-md-6">
-									<input type="text" name="name" placeholder="Name">
+									<input type="text" name="name" placeholder="Name*" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" name="phone" placeholder="Phone No.">
+									<input type="tel" name="phone" placeholder="Phone No.*" required>
 								</div>
 								<div class="col-md-6">
-									<input type="text" name="email" placeholder="Email">
+									<input type="email" name="email" placeholder="Email*" required>
 								</div>
-								<div class="col-md-6 ">
-
-									<!-- <input type="text" name="subject" placeholder="Service"> -->
-								<select id="service" name="message" placeholder="Choose A Service">
-                                <option value >Choose A Service*</option>
-								<option value="seo">SEO</option>
-								<option value="sem">SMM</option>
-								<option value="sem">SEM</option>
+								<div class="col-md-6">
+								<select id="service" name="service" placeholder="Choose A Service" required>
+                                <option value="">Choose A Service*</option>
+								<option value="SEO Services">SEO Services</option>
+								<option value="Social Media Marketing">Social Media Marketing</option>
+								<option value="Search Engine Marketing">Search Engine Marketing</option>
 								<option value="Web Development">Web Development</option>
 								<option value="Content Writing">Content Writing</option>
 								<option value="Email Marketing">Email Marketing</option>
-				</select>
+								<option value="WordPress Development">WordPress Development</option>
+								<option value="eCommerce Development">eCommerce Development</option>
+								<option value="Logo Design">Logo Design</option>
+								<option value="Graphic Design">Graphic Design</option>
+								<option value="Web Hosting">Web Hosting</option>
+								<option value="Other">Other</option>
+								</select>
                                </div>
+							   <div class="col-md-12">
+								<textarea name="message" rows="4" placeholder="Your Message (Optional)"></textarea>
+							   </div>
 								<div class="col-md-12">
 									<div class="bi-submit-btn">
-										<button type="submit">Send messages</button>
+										<button type="submit" id="submitBtn">Send Message</button>
 									</div>
 								</div>
 							</div>
 						</form>
+						
+						<script>
+						document.getElementById('contactForm').addEventListener('submit', function(e) {
+							const submitBtn = document.getElementById('submitBtn');
+							const name = document.querySelector('input[name="name"]').value.trim();
+							const email = document.querySelector('input[name="email"]').value.trim();
+							const phone = document.querySelector('input[name="phone"]').value.trim();
+							const service = document.querySelector('select[name="service"]').value;
+							
+							// Basic validation
+							if (!name || !email || !phone || !service) {
+								alert('Please fill in all required fields (marked with *)');
+								e.preventDefault();
+								return;
+							}
+							
+							// Email validation
+							const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+							if (!emailRegex.test(email)) {
+								alert('Please enter a valid email address');
+								e.preventDefault();
+								return;
+							}
+							
+							// Phone validation (basic)
+							const phoneRegex = /^[\+]?[\d\s\-\(\)]{10,}$/;
+							if (!phoneRegex.test(phone)) {
+								alert('Please enter a valid phone number');
+								e.preventDefault();
+								return;
+							}
+							
+							// Disable submit button to prevent double submission
+							submitBtn.disabled = true;
+							submitBtn.innerHTML = 'Sending...';
+							
+							// Re-enable button after 5 seconds if something goes wrong
+							setTimeout(function() {
+								submitBtn.disabled = false;
+								submitBtn.innerHTML = 'Send Message';
+							}, 5000);
+						});
+						</script>
 					</div>
 				</div>
 			</div>

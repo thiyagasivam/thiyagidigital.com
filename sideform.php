@@ -13,15 +13,22 @@
         <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
       </div>
       <div class="mb-3">
-        <select class="form-select" name="message" id="message" required>
+        <select class="form-select" name="service" id="service" required>
           <option value="" disabled selected>Select Service</option>
-          <option value="seo">SEO</option>
-          <option value="sem">SMM</option>
-          <option value="sem">SEM</option>
+          <option value="SEO Services">SEO Services</option>
+          <option value="Social Media Marketing">Social Media Marketing</option>
+          <option value="Search Engine Marketing">Search Engine Marketing</option>
           <option value="Web Development">Web Development</option>
           <option value="Content Writing">Content Writing</option>
           <option value="Email Marketing">Email Marketing</option>
+          <option value="WordPress Development">WordPress Development</option>
+          <option value="eCommerce Development">eCommerce Development</option>
+          <option value="Logo Design">Logo Design</option>
+          <option value="Other">Other</option>
         </select>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" name="message" id="message" rows="3" placeholder="Your Message (Optional)"></textarea>
       </div>
       <!-- <div class="mb-3">
         <input type="text" class="form-control" id="subject" placeholder="Subject" required>
