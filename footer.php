@@ -25,43 +25,43 @@
                 <div class="hpt-footer-widget headline pera-content ul-li-block">
                     <div class="menu-widget">
                         <h3 class="widget-title">Our Services</h3>
-                        <ul style="column-count: 2; column-gap: 15px; max-height: 400px; overflow-y: auto;">
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/services">🚀 All Services</a></li>
+                        <ul>
+                            <li><a href="https://www.thiyagidigital.com/services">🚀 All Services</a></li>
                             <!-- Digital Marketing Services -->
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/seo-services">🔍 SEO Services</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/smm-service">📱 Social Media Marketing</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/sem-services">💰 Search Engine Marketing</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/content-writing-service">✍️ Content Writing</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/email-marketing-service">📧 Email Marketing</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/affiliate-marketing-service">🤝 Affiliate Marketing</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/amazon-marketing-service">📦 Amazon Marketing</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/link-building-service">🔗 Link Building</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/sms-marketing-service">📲 SMS Marketing</a></li>
+                            <li><a href="https://www.thiyagidigital.com/seo-services">🔍 SEO Services</a></li>
+                            <li><a href="https://www.thiyagidigital.com/smm-service">📱 Social Media Marketing</a></li>
+                            <li><a href="https://www.thiyagidigital.com/sem-services">💰 Search Engine Marketing</a></li>
+                            <li><a href="https://www.thiyagidigital.com/content-writing-service">✍️ Content Writing</a></li>
+                            <li><a href="https://www.thiyagidigital.com/email-marketing-service">📧 Email Marketing</a></li>
+                            <li><a href="https://www.thiyagidigital.com/affiliate-marketing-service">🤝 Affiliate Marketing</a></li>
+                            <li><a href="https://www.thiyagidigital.com/amazon-marketing-service">📦 Amazon Marketing</a></li>
+                            <li><a href="https://www.thiyagidigital.com/link-building-service">🔗 Link Building</a></li>
+                            <li><a href="https://www.thiyagidigital.com/sms-marketing-service">📲 SMS Marketing</a></li>
                             <!-- Development Services -->
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/web-development-service">💻 Web Development</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/wordpress-development-service">📝 WordPress Development</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/woocommerce-development-service">🛒 WooCommerce Development</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/shopify-development-service">🏪 Shopify Development</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/magento-development-service">🛍️ Magento Development</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/opencart-development-service">🎪 OpenCart Development</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/ecommerce-development-service">🏬 eCommerce Development</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/ecommerce-marketing-service">📈 eCommerce Marketing</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/online-store-setup-service">🔧 Online Store Setup</a></li>
+                            <li><a href="https://www.thiyagidigital.com/web-development-service">💻 Web Development</a></li>
+                            <li><a href="https://www.thiyagidigital.com/wordpress-development-service">📝 WordPress Development</a></li>
+                            <li><a href="https://www.thiyagidigital.com/woocommerce-development-service">🛒 WooCommerce Development</a></li>
+                            <li><a href="https://www.thiyagidigital.com/shopify-development-service">🏪 Shopify Development</a></li>
+                            <li><a href="https://www.thiyagidigital.com/magento-development-service">🛍️ Magento Development</a></li>
+                            <li><a href="https://www.thiyagidigital.com/opencart-development-service">🎪 OpenCart Development</a></li>
+                            <li><a href="https://www.thiyagidigital.com/ecommerce-development-service">🏬 eCommerce Development</a></li>
+                            <li><a href="https://www.thiyagidigital.com/ecommerce-marketing-service">📈 eCommerce Marketing</a></li>
+                            <li><a href="https://www.thiyagidigital.com/online-store-setup-service">🔧 Online Store Setup</a></li>
                             <!-- Website Services -->
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/basic-website-designing-service">🎨 Basic Website Design</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/responsive-website-designing-service">📱 Responsive Web Design</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/cms-website-designing-service">⚙️ CMS Website Design</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/website-redesigning-service">🔄 Website Redesigning</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/website-updates-maintenance-service">🔧 Website Maintenance</a></li>
+                            <li><a href="https://www.thiyagidigital.com/basic-website-designing-service">🎨 Basic Website Design</a></li>
+                            <li><a href="https://www.thiyagidigital.com/responsive-website-designing-service">📱 Responsive Web Design</a></li>
+                            <li><a href="https://www.thiyagidigital.com/cms-website-designing-service">⚙️ CMS Website Design</a></li>
+                            <li><a href="https://www.thiyagidigital.com/website-redesigning-service">🔄 Website Redesigning</a></li>
+                            <li><a href="https://www.thiyagidigital.com/website-updates-maintenance-service">🔧 Website Maintenance</a></li>
                             <!-- Design Services -->
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/logo-design-service">🎭 Logo Design</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/graphic-design-service">🎨 Graphic Design</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/ui-ux-design-service">🖥️ UI/UX Design</a></li>
+                            <li><a href="https://www.thiyagidigital.com/logo-design-service">🎭 Logo Design</a></li>
+                            <li><a href="https://www.thiyagidigital.com/graphic-design-service">🎨 Graphic Design</a></li>
+                            <li><a href="https://www.thiyagidigital.com/ui-ux-design-service">🖥️ UI/UX Design</a></li>
                             <!-- Hosting Services -->
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/web-hosting-service">🌐 Web Hosting</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/cloud-hosting-service">☁️ Cloud Hosting</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/vps-hosting-service">🖥️ VPS Hosting</a></li>
-                            <li style="break-inside: avoid;"><a href="https://www.thiyagidigital.com/domain-registration-service">🌍 Domain Registration</a></li>
+                            <li><a href="https://www.thiyagidigital.com/web-hosting-service">🌐 Web Hosting</a></li>
+                            <li><a href="https://www.thiyagidigital.com/cloud-hosting-service">☁️ Cloud Hosting</a></li>
+                            <li><a href="https://www.thiyagidigital.com/vps-hosting-service">🖥️ VPS Hosting</a></li>
+                            <li><a href="https://www.thiyagidigital.com/domain-registration-service">🌍 Domain Registration</a></li>
                         </ul>
                         
                     </div>
