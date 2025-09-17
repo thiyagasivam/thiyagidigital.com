@@ -70,7 +70,7 @@ if ($_POST) {
             @file_put_contents('gmail_success.log', $log, FILE_APPEND | LOCK_EX);
             
             // Redirect to thank you page
-            header("Location: thankyou.php");
+            header("Location: thankyou");
             exit();
         } else {
             throw new Exception("Gmail SMTP delivery failed");
@@ -127,7 +127,7 @@ $smtp_password = 'your-app-password'; // 16-character app password
         exit();
     }
 } else {
-    header("Location: contact.php");
+    header("Location: contact");
     exit();
 }
 ?>
