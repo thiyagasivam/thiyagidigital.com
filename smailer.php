@@ -1,8 +1,76 @@
 <?php
-// Error logging function
+// ROBUST SIDE FORM MAILER - Always saves form data, tries multiple email methods
+// This ensures no leads are lost even if email fails on XAMPP
+
+function saveFormSubmission($name, $phone, $email, $service, $message, $status = 'pending') {
+    $data = [
+        'timestamp' => date('Y-m-d H:i:s'),
+        'name' => $name,
+        'phone' => $phone,
+        'email' => $email,
+        'service' => $service,
+        'message' => $message,
+        'ip' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
+        'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown',
+        'status' => $status,
+        'form_type' => 'side_form'
+    ];
+    
+    // Save as JSON for easy parsing
+    $jsonData = json_encode($data) . "\n";
+    file_put_contents('contact_submissions.json', $jsonData, FILE_APPEND | LOCK_EX);
+    
+    // Also save as readable text
+    $readable = sprintf(
+        "[%s] SIDE FORM SUBMISSION\n" .
+        "Name: %s\n" .
+        "Phone: %s\n" .
+        "Email: %s\n" .
+        "Service: %s\n" .
+        "Message: %s\n" .
+        "IP: %s\n" .
+        "Status: %s\n" .
+        "----------------------------------------\n\n",
+        $data['timestamp'], $name, $phone, $email, $service, $message, $data['ip'], $status
+    );
+    
+    file_put_contents('contact_submissions.txt', $readable, FILE_APPEND | LOCK_EX);
+    return true;
+}
+
 function logError($message) {
-    $log = date('Y-m-d H:i:s') . " - " . $message . PHP_EOL;
+    $log = date('Y-m-d H:i:s') . " - " . $message . "\n";
     file_put_contents('sideform_errors.log', $log, FILE_APPEND | LOCK_EX);
+}
+
+function sendEmail($to, $subject, $body, $replyTo, $name) {
+    // Method 1: Standard PHP mail() with proper headers
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $headers .= "From: ThiyagiDigital Side Form <noreply@thiyagidigital.com>\r\n";
+    $headers .= "Reply-To: $name <$replyTo>\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+    
+    $success = @mail($to, $subject, $body, $headers);
+    
+    if ($success) {
+        logError("Side form email sent successfully to: $to");
+        return true;
+    }
+    
+    // Method 2: Try with simpler headers (for XAMPP/localhost)
+    $simpleHeaders = "From: noreply@thiyagidigital.com\r\n";
+    $simpleHeaders .= "Reply-To: $replyTo\r\n";
+    
+    $success2 = @mail($to, $subject, $body, $simpleHeaders);
+    
+    if ($success2) {
+        logError("Side form email sent with simple headers to: $to");
+        return true;
+    }
+    
+    logError("Failed to send side form email to: $to");
+    return false;
 }
 
 if ($_POST) {
@@ -12,23 +80,23 @@ if ($_POST) {
             throw new Exception("Required fields missing");
         }
 
-        $to = "info@thiyagidigital.com"; // Your mail here
-        $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
-        $phone = filter_var($_POST["phone"], FILTER_SANITIZE_STRING);
-        $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-        $service = isset($_POST["service"]) ? filter_var($_POST["service"], FILTER_SANITIZE_STRING) : 'Not specified';
-        $message = isset($_POST["message"]) ? filter_var($_POST["message"], FILTER_SANITIZE_STRING) : '';
+        $name = htmlspecialchars(trim($_POST["name"]), ENT_QUOTES, 'UTF-8');
+        $phone = htmlspecialchars(trim($_POST["phone"]), ENT_QUOTES, 'UTF-8');
+        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $service = isset($_POST["service"]) ? htmlspecialchars(trim($_POST["service"]), ENT_QUOTES, 'UTF-8') : 'Not specified';
+        $message = isset($_POST["message"]) ? htmlspecialchars(trim($_POST["message"]), ENT_QUOTES, 'UTF-8') : '';
         
         // Validate email format
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new Exception("Invalid email format");
+            throw new Exception("Invalid email format: $email");
         }
         
-        $subject = 'Side Form Lead - ThiyagiDigital.com - ' . $service;
-        $cc = 'thiyagasivamp@gmail.com';
-        $bcc = 'kannasivamps@gmail.com';
+        // ALWAYS save the form submission first (this ensures data is never lost)
+        saveFormSubmission($name, $phone, $email, $service, $message, 'received');
         
-        // Create a professional email body
+        $subject = 'Side Form Lead - ThiyagiDigital.com - ' . $service;
+        
+        // Create email body
         $body = "=== SIDE FORM LEAD FROM THIYAGIDIGITAL.COM ===\n\n";
         $body .= "Contact Details:\n";
         $body .= "Name: $name\n";
@@ -42,37 +110,69 @@ if ($_POST) {
         
         $body .= "=== SUBMISSION DETAILS ===\n";
         $body .= "Date: " . date('Y-m-d H:i:s') . "\n";
-        $body .= "IP Address: " . $_SERVER['REMOTE_ADDR'] . "\n";
-        $body .= "User Agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
+        $body .= "IP: " . ($_SERVER['REMOTE_ADDR'] ?? 'Unknown') . "\n";
+        $body .= "Form Type: Service Page Side Form\n";
+        $body .= "Website: ThiyagiDigital.com\n";
         
-        // Constructing the mail headers with proper from address
-        $headers = "From: noreply@thiyagidigital.com\r\n" .
-                   "Reply-To: $email\r\n" .
-                   "Cc: $cc\r\n" .
-                   "Bcc: $bcc\r\n" .
-                   "X-Mailer: PHP/" . phpversion() . "\r\n" .
-                   "Content-Type: text/plain; charset=UTF-8\r\n";
-
-        // Sending email
-        $mailSent = mail($to, $subject, $body, $headers);
+        // Try to send emails (but don't fail if they don't work)
+        $emailsSent = 0;
         
-        if ($mailSent) {
-            // Log successful submission
-            logError("SUCCESS: Side form email sent for $name ($email) - Service: $service");
-            echo "<script>alert('Thank you! Your message has been sent successfully. We will contact you soon.'); window.location = 'thankyou';</script>";
-        } else {
-            throw new Exception("Mail function returned false");
+        // Send to main email
+        if (sendEmail('info@thiyagidigital.com', $subject, $body, $email, $name)) {
+            $emailsSent++;
         }
         
-    } catch (Exception $e) {
-        // Log the error
-        logError("ERROR: " . $e->getMessage() . " - Data: " . json_encode($_POST));
+        // Send copies (don't fail if these don't work)
+        if (sendEmail('thiyagasivamp@gmail.com', $subject, $body, $email, $name)) {
+            $emailsSent++;
+        }
         
-        // Return error response
-        echo "<script>alert('Sorry, there was an error sending your message. Please try again or contact us directly at info@thiyagidigital.com or call +91 9363252875'); window.history.back();</script>";
+        if (sendEmail('kannasivamps@gmail.com', $subject, $body, $email, $name)) {
+            $emailsSent++;
+        }
+        
+        // Update submission status and log
+        if ($emailsSent > 0) {
+            saveFormSubmission($name, $phone, $email, $service, $message, 'email_sent');
+            $log = "SUCCESS: Side form - $emailsSent emails sent for $name ($email) - $service";
+        } else {
+            saveFormSubmission($name, $phone, $email, $service, $message, 'email_failed');
+            $log = "WARNING: Side form - Form saved but no emails sent for $name ($email) - $service";
+        }
+        
+        logError($log);
+        
+        // ALWAYS show success message and redirect (regardless of email status)
+        // The important thing is that we have the form data saved
+        echo "<script>
+            alert('Thank you for your interest! We have received your information and will contact you soon.');
+            window.location = 'thankyou';
+        </script>";
+        exit();
+        
+    } catch (Exception $e) {
+        // Log error but still save what we can
+        logError("ERROR: Side form - " . $e->getMessage() . " - Data: " . json_encode($_POST));
+        
+        // Try to save partial data
+        $name = $_POST['name'] ?? 'Unknown';
+        $email = $_POST['email'] ?? 'Unknown';
+        $phone = $_POST['phone'] ?? 'Unknown';
+        $service = $_POST['service'] ?? 'Unknown';
+        $message = $_POST['message'] ?? '';
+        
+        saveFormSubmission($name, $phone, $email, $service, $message, 'error');
+        
+        // Instead of showing error, redirect to thank you with the data saved
+        echo "<script>
+            alert('Thank you for your interest! We have received your information and will contact you soon.');
+            window.location = 'thankyou';
+        </script>";
+        exit();
     }
 } else {
-    // No POST data
-    echo "<script>alert('Invalid request'); window.location = 'contact.php';</script>";
+    // No POST data - redirect to home or a service page
+    echo "<script>window.location = '/';</script>";
+    exit();
 }
 ?>

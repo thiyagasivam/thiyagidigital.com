@@ -72,16 +72,24 @@
                                     <input type="text" name="name" class="form-control" placeholder="Name" required="">
                                 </div>                             
                                 <div class="form-group">
-                                    <input type="tel" name="mobile" class="form-control" placeholder="Mobile Number" pattern="[6789][0-9]{9}" required="" oninvalid="this.setCustomValidity('Place your 10 digit mobile number Ex:9876543210')" oninput="setCustomValidity('')">
+                                    <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" pattern="[6789][0-9]{9}" required="" oninvalid="this.setCustomValidity('Place your 10 digit mobile number Ex:9876543210')" oninput="setCustomValidity('')">
                                 </div>
                                 <div class="form-group">
-                                <input type="text" name="email" class="form-control" placeholder="Email" required="">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required="">
                             </div>
                             <div class="form-group email-control">
                                 <select name="service"  class="" placeholder="Service" required="">
                                 <option value="">Choose A Service*</option>
-                                <option value="website development">website development</option> 
-                                <option value="website development">website development</option>
+                                <option value="SEO Services">SEO Services</option>
+                                <option value="Social Media Marketing">Social Media Marketing</option>
+                                <option value="Search Engine Marketing">Search Engine Marketing</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Content Writing">Content Writing</option>
+                                <option value="Email Marketing">Email Marketing</option>
+                                <option value="WordPress Development">WordPress Development</option>
+                                <option value="eCommerce Development">eCommerce Development</option>
+                                <option value="Logo Design">Logo Design</option>
+                                <option value="Other">Other</option>
                                 </select>
                                 </div>                
                                  <input type="text" name="message" class="form-control" placeholder="Description" >
