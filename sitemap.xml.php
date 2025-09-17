@@ -106,6 +106,12 @@ $mainServices = [
     'shopify-development-service' => 'Shopify Development',
     'magento-development-service' => 'Magento Development',
     'opencart-development-service' => 'OpenCart Development',
+    'wordpress-development-service' => 'WordPress Development',
+    'cms-website-designing-service' => 'CMS Website Designing',
+    'basic-website-designing-service' => 'Basic Website Designing',
+    'responsive-website-designing-service' => 'Responsive Website Designing',
+    'website-redesigning-service' => 'Website Redesigning',
+    'website-updates-maintenance-service' => 'Website Updates & Maintenance',
     // Hosting & Domain Services
     'web-hosting-service' => 'Web Hosting',
     'domain-registration-service' => 'Domain Registration',
@@ -113,10 +119,17 @@ $mainServices = [
     'vps-hosting-service' => 'VPS Hosting',
     // eCommerce Services
     'ecommerce-development-service' => 'eCommerce Development',
+    'ecommerce-marketing-service' => 'eCommerce Marketing',
     'online-store-setup-service' => 'Online Store Setup',
+    // Marketing Services
+    'affiliate-marketing-service' => 'Affiliate Marketing',
+    'amazon-marketing-service' => 'Amazon Marketing',
+    'link-building-service' => 'Link Building',
+    'sms-marketing-service' => 'SMS Marketing',
     // Design Services
     'logo-design-service' => 'Logo Design',
-    'graphic-design-service' => 'Graphic Design'
+    'graphic-design-service' => 'Graphic Design',
+    'ui-ux-design-service' => 'UI/UX Design'
 ];
 
 foreach ($mainServices as $serviceSlug => $serviceName) {
@@ -149,6 +162,12 @@ $serviceCityPatterns = [
     'shopify-development-service' => 'Shopify Development',
     'magento-development-service' => 'Magento Development',
     'opencart-development-service' => 'OpenCart Development',
+    'wordpress-development-service' => 'WordPress Development',
+    'cms-website-designing-service' => 'CMS Website Designing',
+    'basic-website-designing-service' => 'Basic Website Designing',
+    'responsive-website-designing-service' => 'Responsive Website Designing',
+    'website-redesigning-service' => 'Website Redesigning',
+    'website-updates-maintenance-service' => 'Website Updates & Maintenance',
     // Hosting & Domain Services
     'web-hosting-service' => 'Web Hosting',
     'domain-registration-service' => 'Domain Registration',
@@ -156,10 +175,17 @@ $serviceCityPatterns = [
     'vps-hosting-service' => 'VPS Hosting',
     // eCommerce Services
     'ecommerce-development-service' => 'eCommerce Development',
+    'ecommerce-marketing-service' => 'eCommerce Marketing',
     'online-store-setup-service' => 'Online Store Setup',
+    // Marketing Services
+    'affiliate-marketing-service' => 'Affiliate Marketing',
+    'amazon-marketing-service' => 'Amazon Marketing',
+    'link-building-service' => 'Link Building',
+    'sms-marketing-service' => 'SMS Marketing',
     // Design Services
     'logo-design-service' => 'Logo Design',
-    'graphic-design-service' => 'Graphic Design'
+    'graphic-design-service' => 'Graphic Design',
+    'ui-ux-design-service' => 'UI/UX Design'
 ];
 
 // Extract ALL cities from seo-city.php
