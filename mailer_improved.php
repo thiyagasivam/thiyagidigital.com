@@ -137,7 +137,7 @@ if ($_POST) {
         
         // ALWAYS redirect to thank you page (regardless of email status)
         // The important thing is that we have the form data saved
-        header("Location: thankyou.php");
+        header("Location: thankyou");
         exit();
         
     } catch (Exception $e) {
@@ -155,12 +155,12 @@ if ($_POST) {
         saveFormSubmission($name, $phone, $email, $service, $message, 'error');
         
         // Show user-friendly message
-        echo "<script>alert('Thank you for your message! We have received your information and will contact you soon.'); window.location = 'thankyou.php';</script>";
+        echo "<script>alert('Thank you for your message! We have received your information and will contact you soon.'); window.location = 'thankyou';</script>";
         exit();
     }
 } else {
     // No POST data - redirect to contact page
-    header("Location: contact.php");
+    header("Location: contact");
     exit();
 }
 ?>

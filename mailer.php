@@ -59,7 +59,7 @@ if ($_POST) {
         if ($mailSent) {
             // Log successful submission
             logError("SUCCESS: Email sent for $name ($email) - Service: $service");
-            echo "<script>window.location = 'thankyou.php';</script>";
+            echo "<script>window.location = 'thankyou';</script>";
         } else {
             throw new Exception("Mail function returned false");
         }

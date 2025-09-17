@@ -59,7 +59,7 @@ if ($_POST) {
         if ($mailSent) {
             // Log successful submission
             logError("SUCCESS: Side form email sent for $name ($email) - Service: $service");
-            echo "<script>alert('Thank you! Your message has been sent successfully. We will contact you soon.'); window.location = 'thankyou.php';</script>";
+            echo "<script>alert('Thank you! Your message has been sent successfully. We will contact you soon.'); window.location = 'thankyou';</script>";
         } else {
             throw new Exception("Mail function returned false");
         }
