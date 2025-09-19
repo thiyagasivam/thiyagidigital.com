@@ -140,10 +140,6 @@
 	.bi-testimonial-item-2 .bi-testimonial-text {
 		max-width: 490px;
 	}
-	.bi-blog-item-2 .blog-img-area {
-		width: auto;
-		height: auto;
-	}
 	.bi-slider-item-3 .bi-slider-img3_2 {
 		right: -250px;
 	}
@@ -161,9 +157,6 @@
 	}
 	.bi-about-text-quote-area .quote-author {
 		margin-bottom: 30px;
-	}
-	.bi-blog-item-3 {
-		margin: 0 auto;
 	}
 	.bi-pricing-item-area-3 .bi-pricing-item-3 {
 		background-color: #1B1F28;
@@ -485,34 +478,6 @@
 		margin: 0 auto;
 		max-width: 500px;
 	}
-	.bi-blog-item {
-		margin: 0 auto;
-		max-width: 605px;
-		margin-bottom: 40px;
-	}
-	.bi-blog-item .bi-blog-text-area .bi-blog-meta {
-		transform: translateX(0);
-	}
-	.bi-blog-item .bi-blog-text-area .bi-blog-meta:before {
-		left: 0;
-		right: 0;
-		width: 95%;
-		z-index: -1;
-	}
-	.bi-blog-item .bi-blog-text-area .bi-blog-meta:after {
-		right: 15px;
-	}
-	.bi-blog-item .bi-blog-text-area .bi-blog-text {
-		padding-left: 0;
-	}
-	.bi-blog-item.right_align_content .bi-blog-meta:after {
-		left: 0px;
-	}
-	.bi-blog-item.right_align_content {
-		.row {
-			flex-direction: column-reverse;
-		}
-	}
 	.bi-faq-testimonial-content {
 		flex-wrap: wrap;
 	}
@@ -696,12 +661,6 @@
 	.bi-footer-cta-content .bi-footer-cta-text {
 		margin-bottom: 20px;
 	}
-	.bi-blog-details-text-area blockquote {
-		flex-wrap: wrap;
-	}
-	.bi-blog-details-text-area blockquote .inner-img {
-		margin-bottom: 15px;
-	}
 	.bi-career-feed-item .inner-img {
 		margin-bottom: 10px;
 	}
@@ -750,12 +709,6 @@
 	}
 	.bi-portfolio-item-3 {
 		width: 100%;
-	}
-	.bi-blog-details-text-area .bi-portfolio-details-list-img {
-		margin-bottom: 30px;
-	}
-	.bi-blog-details-author .inner-img {
-		margin-bottom: 15px;
 	}
 	.bi-portfolio-details-video-img {
 		margin-bottom: 30px;

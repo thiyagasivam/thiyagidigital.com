@@ -1,6 +1,5 @@
  <!-- faq-start -->
  <section class="hpt-faq-1-area hpt-faq-2 fix pt-120 pb-120">
-                <img class="faq-1-bg-shape-1" src="assets/img/new_home/bg-shape/blog-2-shape-1.png" alt="">
                 <div class="container h1-container">
                     <div class="row">
 

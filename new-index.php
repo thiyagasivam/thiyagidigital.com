@@ -179,7 +179,6 @@
             <!-- service-start -->
             <div class="hpt-service-2-area pt-120 pb-120 fix">
 
-                <img src="assets/img/new_home/bg-shape/blog-2-shape-1.png" alt="" class="bg-shape-1">
                 <img src="assets/img/new_home/bg-shape/service-2-bg-shape-1.png" alt="" class="bg-shape-2">
 
                 <div class="container h1-container">
