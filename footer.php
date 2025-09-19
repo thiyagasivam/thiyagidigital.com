@@ -98,8 +98,77 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- 4-Grid Services Section -->
+<div class="hpt-footer-services-grid py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative;">
+    <div class="container h1-container">
+        <div class="text-center mb-5">
+            <h2 class="text-white mb-3" style="font-size: 2.5rem; font-weight: 700;">Our Core Services</h2>
+            <p class="text-white-50" style="font-size: 1.1rem;">Comprehensive digital solutions to grow your business</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Digital Marketing -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card text-center h-100" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2.5rem 1.5rem; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.1)'">
+                    <div class="service-icon mb-3" style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="fas fa-chart-line" style="font-size: 2rem; color: #fff;"></i>
+                    </div>
+                    <h4 class="text-white mb-3" style="font-size: 1.3rem; font-weight: 600;">Digital Marketing</h4>
+                    <p class="text-white-50 mb-4" style="font-size: 0.95rem; line-height: 1.6;">SEO, SEM, Social Media Marketing, Content Marketing & Email Campaigns</p>
+                    <a href="https://www.thiyagidigital.com/seo-services" class="btn btn-outline-light btn-sm px-4 py-2" style="border-radius: 25px; font-weight: 500; transition: all 0.3s ease;">Learn More</a>
+                </div>
+            </div>
             
+            <!-- Web Development -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card text-center h-100" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2.5rem 1.5rem; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.1)'">
+                    <div class="service-icon mb-3" style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="fas fa-code" style="font-size: 2rem; color: #fff;"></i>
+                    </div>
+                    <h4 class="text-white mb-3" style="font-size: 1.3rem; font-weight: 600;">Web Development</h4>
+                    <p class="text-white-50 mb-4" style="font-size: 0.95rem; line-height: 1.6;">Custom websites, WordPress, WooCommerce, Shopify & eCommerce solutions</p>
+                    <a href="https://www.thiyagidigital.com/web-development-service" class="btn btn-outline-light btn-sm px-4 py-2" style="border-radius: 25px; font-weight: 500; transition: all 0.3s ease;">Learn More</a>
+                </div>
+            </div>
             
+            <!-- Design Services -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card text-center h-100" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2.5rem 1.5rem; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.1)'">
+                    <div class="service-icon mb-3" style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="fas fa-palette" style="font-size: 2rem; color: #fff;"></i>
+                    </div>
+                    <h4 class="text-white mb-3" style="font-size: 1.3rem; font-weight: 600;">Design Services</h4>
+                    <p class="text-white-50 mb-4" style="font-size: 0.95rem; line-height: 1.6;">Logo Design, Graphic Design, UI/UX Design & Brand Identity</p>
+                    <a href="https://www.thiyagidigital.com/graphic-design-service" class="btn btn-outline-light btn-sm px-4 py-2" style="border-radius: 25px; font-weight: 500; transition: all 0.3s ease;">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Hosting Services -->
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card text-center h-100" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2.5rem 1.5rem; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'; this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255,255,255,0.1)'">
+                    <div class="service-icon mb-3" style="width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="fas fa-server" style="font-size: 2rem; color: #fff;"></i>
+                    </div>
+                    <h4 class="text-white mb-3" style="font-size: 1.3rem; font-weight: 600;">Hosting & Domains</h4>
+                    <p class="text-white-50 mb-4" style="font-size: 0.95rem; line-height: 1.6;">Web Hosting, Cloud Hosting, VPS Hosting & Domain Registration</p>
+                    <a href="https://www.thiyagidigital.com/web-hosting-service" class="btn btn-outline-light btn-sm px-4 py-2" style="border-radius: 25px; font-weight: 500; transition: all 0.3s ease;">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="text-center mt-5">
+            <a href="https://www.thiyagidigital.com/services" class="btn btn-light btn-lg px-5 py-3" style="border-radius: 30px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 8px 25px rgba(0,0,0,0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'">
+                View All Services <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
 <div class="hpt-footer-social">
     <div class="container h1-container">
         <div class="hpt-footer-social-content ul-li">
