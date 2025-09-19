@@ -237,8 +237,61 @@ foreach ($additionalUrls as $url => $settings) {
     }
 }
 
+// Add Blog URLs
+echo "\n  <!-- Blog Pages -->\n";
+try {
+    // Include blog database if it exists
+    if (file_exists(__DIR__ . '/blog/blog-db.php')) {
+        require_once __DIR__ . '/blog/blog-db.php';
+        $blogDB = new BlogDB();
+        
+        // Blog main page
+        echo '  <url>' . "\n";
+        echo '    <loc>' . $baseUrl . 'blog/</loc>' . "\n";
+        echo '    <lastmod>' . $today . '</lastmod>' . "\n";
+        echo '    <changefreq>daily</changefreq>' . "\n";
+        echo '    <priority>0.9</priority>' . "\n";
+        echo '  </url>' . "\n";
+        
+        // All blog posts
+        $allPosts = $blogDB->getAllPosts(1000, 0); // Get all posts
+        foreach ($allPosts as $post) {
+            $postUrl = $baseUrl . 'blog/' . $post['slug'];
+            $postLastmod = date('Y-m-d', strtotime($post['updated_at']));
+            
+            echo '  <url>' . "\n";
+            echo '    <loc>' . htmlspecialchars($postUrl) . '</loc>' . "\n";
+            echo '    <lastmod>' . $postLastmod . '</lastmod>' . "\n";
+            echo '    <changefreq>weekly</changefreq>' . "\n";
+            echo '    <priority>0.8</priority>' . "\n";
+            echo '  </url>' . "\n";
+        }
+        
+        // Blog categories
+        $categories = $blogDB->getAllCategories();
+        foreach ($categories as $category) {
+            if ($category['post_count'] > 0) {
+                $categoryUrl = $baseUrl . 'blog/category/' . $category['slug'];
+                
+                echo '  <url>' . "\n";
+                echo '    <loc>' . htmlspecialchars($categoryUrl) . '</loc>' . "\n";
+                echo '    <lastmod>' . $today . '</lastmod>' . "\n";
+                echo '    <changefreq>weekly</changefreq>' . "\n";
+                echo '    <priority>0.7</priority>' . "\n";
+                echo '  </url>' . "\n";
+            }
+        }
+        
+        error_log('[Dynamic Sitemap] Added ' . count($allPosts) . ' blog posts and ' . count($categories) . ' categories to sitemap');
+    }
+} catch (Exception $e) {
+    error_log('[Dynamic Sitemap] Blog integration error: ' . $e->getMessage());
+}
+
 echo '</urlset>' . "\n";
 
 // Log generation for debugging
-error_log('[Dynamic Sitemap] Generated ' . (count($publicPages) + count($mainServices) + count($serviceCityPatterns) * count($citySlugs)) . ' URLs at ' . date('Y-m-d H:i:s'));
+$totalBlogUrls = isset($allPosts) ? count($allPosts) + count($categories) + 1 : 0;
+$totalUrls = count($publicPages) + count($mainServices) + (count($serviceCityPatterns) * count($citySlugs)) + $totalBlogUrls;
+error_log('[Dynamic Sitemap] Generated ' . $totalUrls . ' URLs (including ' . $totalBlogUrls . ' blog URLs) at ' . date('Y-m-d H:i:s'));
 ?>
