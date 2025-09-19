@@ -3,41 +3,64 @@
 // This file handles all blog-related database operations
 
 class BlogDB {
-    private $host = '127.0.0.1:3306';
+    private $host = 'localhost';
     private $dbname = 'u662933183_thiyagidigi';
     private $username = 'u662933183_thiyagidigi';
     private $password = '1K*KtzD#2Oa';
     public $pdo;
     
     public function __construct() {
-        try {
-            $this->pdo = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password);
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch(PDOException $e) {
-            // If database doesn't exist, create it
-            $this->createDatabase();
+        // Try different host configurations for shared hosting compatibility
+        $hostConfigurations = [
+            'localhost',
+            '127.0.0.1',
+            '127.0.0.1:3306'
+        ];
+        
+        $connected = false;
+        $lastError = '';
+        
+        foreach ($hostConfigurations as $host) {
+            try {
+                $this->pdo = new PDO("mysql:host={$host};dbname={$this->dbname};charset=utf8", $this->username, $this->password);
+                $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                
+                // Test the connection
+                $this->pdo->query("SELECT 1");
+                $connected = true;
+                $this->host = $host; // Update host to working one
+                break;
+                
+            } catch(PDOException $e) {
+                $lastError = $e->getMessage();
+                continue;
+            }
         }
-    }
-    
-    private function createDatabase() {
-        try {
-            $pdo = new PDO("mysql:host={$this->host};charset=utf8", $this->username, $this->password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            
-            // Create database
-            $pdo->exec("CREATE DATABASE IF NOT EXISTS {$this->dbname}");
-            
-            // Connect to the new database
-            $this->pdo = new PDO("mysql:host={$this->host};dbname={$this->dbname};charset=utf8", $this->username, $this->password);
-            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            
-            // Create tables
-            $this->createTables();
-        } catch(PDOException $e) {
-            die("Database creation failed: " . $e->getMessage());
+        
+        if (!$connected) {
+            // Check if we're in a development environment (XAMPP)
+            if (strpos($_SERVER['HTTP_HOST'] ?? '', 'localhost') !== false || 
+                strpos($_SERVER['HTTP_HOST'] ?? '', '127.0.0.1') !== false) {
+                
+                // Development mode - show detailed error
+                die("🚨 <strong>Database Connection Error</strong><br><br>" .
+                    "❌ Could not connect to the database with the provided credentials.<br><br>" .
+                    "<strong>Possible solutions:</strong><br>" .
+                    "1. Verify your database credentials are correct<br>" .
+                    "2. Ensure your database server is running<br>" .
+                    "3. Check if the database user has proper permissions<br><br>" .
+                    "<strong>Last error:</strong> " . htmlspecialchars($lastError));
+            } else {
+                // Production mode - show user-friendly error
+                die("🚨 <strong>Website Temporarily Unavailable</strong><br><br>" .
+                    "We're experiencing database connectivity issues. Please try again in a few moments.<br>" .
+                    "If this problem persists, please contact the website administrator.");
+            }
         }
+        
+        // Create tables if they don't exist (only if connection successful)
+        $this->createTables();
     }
-    
     private function createTables() {
         // Create blog_posts table
         $sql = "CREATE TABLE IF NOT EXISTS blog_posts (
