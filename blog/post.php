@@ -82,6 +82,9 @@ require_once '../header.php';
     <!-- Canonical URL -->
     <link rel="canonical" href="<?php echo $canonicalUrl; ?>">
     
+    <!-- RSS Feed Auto-discovery -->
+    <link rel="alternate" type="application/rss+xml" title="ThiyagiDigital Blog RSS Feed" href="/blog/rss">
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {

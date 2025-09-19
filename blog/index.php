@@ -51,6 +51,9 @@ $metaKeywords = "digital marketing blog, SEO tips, web development, social media
     <!-- Canonical URL -->
     <link rel="canonical" href="https://thiyagidigital.com/blog/">
     
+    <!-- RSS Feed Auto-discovery -->
+    <link rel="alternate" type="application/rss+xml" title="ThiyagiDigital Blog RSS Feed" href="/blog/rss">
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -90,7 +93,40 @@ $metaKeywords = "digital marketing blog, SEO tips, web development, social media
             font-size: 1.2rem;
             opacity: 0.9;
             max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .blog-search-form {
+            max-width: 500px;
             margin: 0 auto;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .blog-search-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .blog-search-button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-search-button:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
         }
         
         .blog-container {
@@ -408,6 +444,14 @@ $metaKeywords = "digital marketing blog, SEO tips, web development, social media
         <div class="container">
             <h1>📚 Digital Marketing Blog</h1>
             <p>Stay ahead with expert insights, proven strategies, and the latest trends in digital marketing, SEO, web development, and business growth.</p>
+            
+            <form class="blog-search-form" method="GET" action="search.php">
+                <input type="text" name="q" class="blog-search-input" 
+                       placeholder="Search articles, tips, guides..." required>
+                <button type="submit" class="blog-search-button">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
         </div>
     </section>
 
@@ -569,6 +613,25 @@ $metaKeywords = "digital marketing blog, SEO tips, web development, social media
                             Subscribe Now
                         </button>
                     </form>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">🔗 Quick Links</h3>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <a href="search.php" style="display: flex; align-items: center; gap: 10px; padding: 10px 15px; background: white; border-radius: 8px; text-decoration: none; color: #333; transition: background-color 0.3s ease;">
+                            <i class="fas fa-search" style="color: #667eea;"></i>
+                            Search Blog
+                        </a>
+                        <a href="rss.php" style="display: flex; align-items: center; gap: 10px; padding: 10px 15px; background: white; border-radius: 8px; text-decoration: none; color: #333; transition: background-color 0.3s ease;" target="_blank">
+                            <i class="fas fa-rss" style="color: #ff6600;"></i>
+                            RSS Feed
+                        </a>
+                        <a href="admin.php" style="display: flex; align-items: center; gap: 10px; padding: 10px 15px; background: white; border-radius: 8px; text-decoration: none; color: #333; transition: background-color 0.3s ease;">
+                            <i class="fas fa-cog" style="color: #28a745;"></i>
+                            Admin Panel
+                        </a>
+                    </div>
                 </div>
             </aside>
         </div>

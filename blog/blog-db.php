@@ -3,10 +3,10 @@
 // This file handles all blog-related database operations
 
 class BlogDB {
-    private $host = 'localhost';
-    private $dbname = 'thiyagidigital_blog';
-    private $username = 'root';
-    private $password = '';
+    private $host = '127.0.0.1:3306';
+    private $dbname = 'u662933183_thiyagidigi';
+    private $username = 'u662933183_thiyagidigi';
+    private $password = '1K*KtzD#2Oa';
     public $pdo;
     
     public function __construct() {
@@ -319,6 +319,24 @@ class BlogDB {
     public function getTotalPosts() {
         $sql = "SELECT COUNT(*) FROM blog_posts WHERE status = 'published'";
         return $this->pdo->query($sql)->fetchColumn();
+    }
+    
+    public function getCategoryBySlug($slug) {
+        $stmt = $this->pdo->prepare("SELECT * FROM blog_categories WHERE slug = ?");
+        $stmt->execute([$slug]);
+        return $stmt->fetch();
+    }
+    
+    public function getTotalPostsByCategory($categorySlug) {
+        $sql = "
+            SELECT COUNT(*) 
+            FROM blog_posts p 
+            LEFT JOIN blog_categories c ON p.category_id = c.id 
+            WHERE p.status = 'published' AND c.slug = ?
+        ";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$categorySlug]);
+        return $stmt->fetchColumn();
     }
 }
 ?>

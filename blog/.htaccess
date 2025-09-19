@@ -1,12 +1,19 @@
 RewriteEngine On
 
+# RSS Feed
+RewriteRule ^rss/?$ rss.php [L,QSA]
+RewriteRule ^feed/?$ rss.php [L,QSA]
+
+# Search functionality
+RewriteRule ^search/?$ search.php [L,QSA]
+
 # Blog post URLs (slug without .php)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([a-z0-9\-]+)/?$ post.php?slug=$1 [L,QSA]
 
 # Category URLs
-RewriteRule ^category/([a-z0-9\-]+)/?$ category/index.php?category=$1 [L,QSA]
+RewriteRule ^category/([a-z0-9\-]+)/?$ category.php?category=$1 [L,QSA]
 
 # Redirect .php extensions to clean URLs
 RewriteCond %{THE_REQUEST} \s/+blog/([^.\s?]*?)\.php[\s?] [NC]
