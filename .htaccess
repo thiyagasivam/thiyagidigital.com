@@ -22,7 +22,7 @@ RewriteRule ^amazon-marketing-service/([a-z-]+)/?$ amazon-marketing-city.php?cit
 
 # Website Design Service City Pages
 RewriteRule ^basic-website-designing-service/([a-z-]+)/?$ basic-website-designing-city.php?city=$1 [L,QSA,NC]
-RewriteRule ^responsive-website-designing-service/([a-z-]+)/?$ responsive-website-designing-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^responsive-website-designing-service/([a-z-]+)/?$ responsive-website-designing-service-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^cms-website-designing-service/([a-z-]+)/?$ cms-website-designing-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^cms-website-designing/([a-z-]+)/?$ cms-website-designing-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^website-redesigning-service/([a-z-]+)/?$ website-redesigning-city.php?city=$1 [L,QSA,NC]
