@@ -1534,6 +1534,8 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge the original cities with the new cities
+$supportedCities = array_merge($supportedCities, $newCities);
 
 // Check if city is supported
 if (!array_key_exists($city_lower, $supportedCities)) {

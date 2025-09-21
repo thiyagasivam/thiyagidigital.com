@@ -1534,6 +1534,9 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge the original cities with the new cities
+$supportedCities = array_merge($supportedCities, $newCities);
+
 // Redirect to main email marketing page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
     header("Location: /email-marketing-service.php");
