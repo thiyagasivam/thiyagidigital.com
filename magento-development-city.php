@@ -799,7 +799,6 @@ $supportedCities = [
     'queretaro' => ['name' => 'QuerÃ©taro', 'state' => 'QuerÃ©taro'],
     'merida' => ['name' => 'MÃ©rida', 'state' => 'YucatÃ¡n']
 ];
-$supportedCities = array_merge($supportedCities, $newCities);
 
 // New list of cities/districts/states from the user's request
 $newCities = [
