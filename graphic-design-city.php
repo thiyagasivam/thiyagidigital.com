@@ -7,7 +7,7 @@ $city_formatted = ucwords(str_replace('-', ' ', $city));
 $page_title = "Graphic Design Services in $city_formatted | ThiyagiDigital";
 $page_description = "Professional graphic design services in $city_formatted. Creative brochure design, banner design, social media graphics, and marketing materials for businesses in $city_formatted.";
 $page_keywords = "graphic design $city_formatted, creative design services $city_formatted, brochure design $city_formatted, banner design $city_formatted, marketing materials design $city_formatted";
-$supportedCities = array_merge($supportedCities, $newCities);
+
 // List of major cities for tabs
 $supportedCities = [
 
@@ -1542,6 +1542,17 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge supported cities with comprehensive cities
+$supportedCities = array_merge($supportedCities, $newCities);
+
+// Create city_lower for validation
+$city_lower = strtolower(str_replace(' ', '-', $city_formatted));
+
+// Check if city is supported
+if (!array_key_exists($city_lower, $supportedCities)) {
+    header("Location: graphic-design-service.php");
+    exit();
+}
 
 include 'header.php';
 ?>

@@ -10,7 +10,7 @@ $city = isset($_GET['city']) ? ucwords(str_replace('-', ' ', $_GET['city'])) : '
 $page_title = str_replace('{city}', $city, $page_title);
 $page_description = str_replace('{city}', $city, $page_description);
 $page_keywords = str_replace('{city}', $city, $page_keywords);
-$supportedCities = array_merge($supportedCities, $newCities);
+
 // List of major cities for tabs
 $supportedCities = [    // Major cities
     'chennai' => ['name' => 'Chennai', 'state' => 'Tamil Nadu'],

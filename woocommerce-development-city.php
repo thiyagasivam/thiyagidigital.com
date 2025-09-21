@@ -10,7 +10,7 @@ $city = isset($_GET['city']) ? ucwords(str_replace('-', ' ', $_GET['city'])) : '
 $page_title = str_replace('{city}', $city, $page_title);
 $page_description = str_replace('{city}', $city, $page_description);
 $page_keywords = str_replace('{city}', $city, $page_keywords);
-$supportedCities = array_merge($supportedCities, $newCities);
+
 // List of major cities for tabs
 $supportedCities = [
 
@@ -1545,6 +1545,17 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge supported cities with comprehensive cities  
+$supportedCities = array_merge($supportedCities, $newCities);
+
+// Create city_lower for validation
+$city_lower = strtolower(str_replace(' ', '-', $city));
+
+// Check if city is supported
+if (!array_key_exists($city_lower, $supportedCities)) {
+    header("Location: woocommerce-development-service.php");
+    exit();
+}
 
 include 'header.php';
 ?>

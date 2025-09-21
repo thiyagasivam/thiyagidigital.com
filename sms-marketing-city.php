@@ -2,7 +2,7 @@
 // City-specific SMS Marketing page
 $city = isset($_GET['city']) ? ucwords(str_replace('-', ' ', $_GET['city'])) : 'Chennai';
 $city_lower = strtolower(str_replace(' ', '-', $city));
-$supportedCities = array_merge($supportedCities, $newCities);
+
 // Supported cities array (comprehensive list)
 $supportedCities = [
 
