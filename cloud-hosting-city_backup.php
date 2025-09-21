@@ -803,13 +803,13 @@ $fullCityName = $cityData['name'];
 $stateName = $cityData['state'];
 
 // Dynamic SEO variables for this city page
-$page_title = "Professional Cloud Hosting Services in {$fullCityName} | ThiyagiDigital";
-$page_description = "Scalable cloud hosting solutions for {$fullCityName} businesses. Auto-scaling infrastructure and reliable cloud services in {$stateName}.";
-$page_keywords = "cloud hosting {$fullCityName}, cloud server {$fullCityName}, scalable hosting {$fullCityName}";
-$canonical_url = "https://www.thiyagidigital.com/cloud-hosting-service/{$citySlug}";
+$page_title = "Professional Email Marketing Services in {$fullCityName} | ThiyagiDigital";
+$page_description = "Targeted email marketing solutions for {$fullCityName} businesses. Drive engagement and conversions with our localized email campaigns in {$stateName}.";
+$page_keywords = "email marketing {$fullCityName}, email campaigns {$fullCityName}, email automation {$fullCityName}";
+$canonical_url = "https://www.thiyagidigital.com/email-marketing-service/{$citySlug}";
 // BreadcrumbList + FAQPage JSON-LD via @graph
-$serviceName = 'Cloud Hosting';
-$serviceUrl = 'https://www.thiyagidigital.com/cloud-hosting.php';
+$serviceName = 'Email Marketing';
+$serviceUrl = 'https://www.thiyagidigital.com/email-marketing.php';
 $breadcrumbSchema = [
     '@type' => 'BreadcrumbList',
     'itemListElement' => [
@@ -874,11 +874,11 @@ $page_schema = [
     <div class="background_overlay"></div>
     <div class="container">
         <div class="bi-breadcrumbs-content headline ul-li text-center">
-            <h1 style="color: white"><b>Best Cloud Hosting Services in <?php echo $fullCityName; ?></b></h1><br>
+            <h1 style="color: white"><b>Best Email Marketing Services in <?php echo $fullCityName; ?></b></h1><br>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="#">Services</a></li>
-                <li style="color: white">Cloud Hosting in <?php echo $fullCityName; ?></li>
+                <li style="color: white">Email Marketing in <?php echo $fullCityName; ?></li>
             </ul>
         </div>
     </div>
@@ -896,19 +896,19 @@ $page_schema = [
                             <img src="/assets/img/service/serd1.jpg" alt="Email Marketing Services in <?php echo $fullCityName; ?>">
                         </div>
                         <div class="bi-service-details-text headline pera-content">
-                            <h3>Cloud Hosting in <?php echo $fullCityName; ?></h3>
+                            <h3>Email Marketing in <?php echo $fullCityName; ?></h3>
 
-                            <p>Scale your business to new heights with advanced Cloud Hosting Services in <?php echo $fullCityName; ?> from ThiyagiDigital. We provide flexible, scalable cloud infrastructure that adapts to your business needs, ensuring optimal performance and cost-effectiveness for businesses across <?php echo $fullCityName; ?>.</p>
+                            <p>In <?php echo $fullCityName; ?>'s competitive business environment, email marketing remains one of the most effective ways to reach and engage your target audience. Our localized email marketing services help <?php echo $fullCityName; ?> businesses create campaigns that resonate with local customers while driving measurable results.</p>
 
-                            <p>Our <?php echo $fullCityName; ?>-based cloud hosting solutions combine cutting-edge technology with local support to deliver enterprise-grade infrastructure. From automatic scaling to load balancing, we ensure your applications perform excellently regardless of traffic fluctuations or resource demands in the <?php echo $stateName; ?> market.</p>
+                            <p>Our <?php echo $fullCityName; ?>-focused email strategies combine global best practices with local market insights. We understand the unique preferences and behaviors of <?php echo $stateName; ?> audiences, allowing us to craft email campaigns that achieve higher open rates, click-through rates, and conversions for <?php echo $fullCityName; ?> businesses.</p>
 
-                            <p>What makes us the preferred cloud hosting provider in <?php echo $fullCityName; ?> is our commitment to scalability, reliability, and performance. We offer pay-as-you-use pricing, 99.99% uptime SLA, advanced security, and local technical support to ensure your cloud journey is successful and cost-effective.</p>
+                            <p>For <?php echo $fullCityName; ?> companies, we create email content that speaks directly to your local customers. Whether it's incorporating regional references, local event tie-ins, or vernacular language options, we ensure your emails feel personal and relevant to <?php echo $fullCityName; ?> recipients.</p>
 
-                            <h4>"Powering Business Growth Through Scalable Cloud Infrastructure in <?php echo $fullCityName; ?>"</h4>
+                            <h4>"Driving Results Through Targeted Email Campaigns in <?php echo $fullCityName; ?>"</h4>
 
-                            <p>We go beyond basic web hosting. Our <?php echo $fullCityName; ?> cloud hosting services include automatic scaling, load balancing, advanced security features, and real-time monitoring tailored to <?php echo $stateName; ?> business requirements. We help you build robust digital infrastructure that grows with your <?php echo $fullCityName; ?> business needs.</p>
+                            <p>We go beyond basic email blasts. Our <?php echo $fullCityName; ?> email marketing services include advanced segmentation based on location-specific data, automated nurture sequences for local leads, and performance tracking tailored to <?php echo $stateName; ?> market benchmarks. We help you build lasting relationships with your <?php echo $fullCityName; ?> customer base through strategic email communication.</p>
 
-                            <p>Whether you're a <?php echo $fullCityName; ?>-based startup looking to scale rapidly or an established enterprise needing robust cloud infrastructure in <?php echo $stateName; ?>, our cloud hosting experts have the technical expertise to deliver solutions that drive business growth. Partner with us to experience the future of hosting with <?php echo $fullCityName; ?>'s leading cloud hosting services.</p>
+                            <p>Whether you're a <?php echo $fullCityName; ?>-based retailer looking to boost local sales or a service provider aiming to nurture <?php echo $stateName; ?> leads, our email marketing experts have the local knowledge and technical expertise to deliver campaigns that work. Partner with us to transform your email marketing into a powerful growth channel for your <?php echo $fullCityName; ?> business.</p>
 
                 
                             <div class="bi-faq-content-area">
@@ -930,13 +930,13 @@ $page_schema = [
                                     <div class="accordion-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
                                         <h2 class="accordion-header" id="heading12">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                                                <span>Why choose cloud hosting services in <?php echo $fullCityName; ?>?</span>
+                                                <span>What email marketing platforms work best in <?php echo $fullCityName; ?>?</span>
                                             </button>
                                         </h2>
                                         <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample_31">
                                             <div class="accordion-body">
                                                 <div class="bi-faq-text">
-                                                For <?php echo $fullCityName; ?> businesses, our cloud hosting services offer local technical support, better latency for regional users, competitive pricing, and personalized service for businesses looking to scale efficiently with reliable cloud infrastructure.
+                                                For <?php echo $fullCityName; ?> businesses, we recommend and work with platforms like Mailchimp, Sendinblue, and HubSpot that offer excellent deliverability in <?php echo $stateName; ?>, along with features for local audience segmentation and regional performance tracking.
                                                 </div>
                                             </div>
                                         </div>
@@ -944,13 +944,13 @@ $page_schema = [
                                     <div class="accordion-item wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
                                         <h2 class="accordion-header" id="heading13">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                                                <span>How quickly can I scale cloud resources in <?php echo $fullCityName; ?>?</span>
+                                                <span>Can you help build email lists for <?php echo $fullCityName; ?> businesses?</span>
                                             </button>
                                         </h2>
                                         <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionExample_31">
                                             <div class="accordion-body">
                                                 <div class="bi-faq-text">
-                                                Yes, cloud resources can be scaled instantly based on demand. Auto-scaling happens in real-time, while manual scaling can be done within minutes through our control panel or API for <?php echo $fullCityName; ?> businesses.
+                                                Yes, we implement ethical list-building strategies specifically for <?php echo $fullCityName; ?> audiences, including localized lead magnets, event-based signups, and permission-based collection methods compliant with <?php echo $stateName; ?> data protection norms.
                                                 </div>
                                             </div>
                                         </div>
