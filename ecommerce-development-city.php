@@ -1683,20 +1683,7 @@ include 'header.php';
 <!-- End of Service Details section
 	============================================= -->
 
-	<!-- Cities Selection Section -->
-	<section class="cities-section">
-		<div class="container">
-			<h3 class="text-center mb-4">eCommerce Development Services in Major Cities</h3>
-			<div class="cities-grid">
-				<?php foreach($major_cities as $major_city): ?>
-					<a href="/ecommerce-development/<?php echo strtolower(str_replace(' ', '-', $major_city)); ?>" 
-					   class="city-link <?php echo ($city == $major_city) ? 'active' : ''; ?>">
-						<?php echo $major_city; ?>
-					</a>
-				<?php endforeach; ?>
-			</div>
-		</div>
-	</section>
+	
 
 	<?php include 'testmonial2.php';?>
 	<?php include 'client-logo.php';?>
