@@ -7,7 +7,7 @@ $city_formatted = ucwords(str_replace('-', ' ', $city));
 $page_title = "Logo Design Services in $city_formatted | ThiyagiDigital";
 $page_description = "Professional logo design services in $city_formatted. Custom logo creation, brand identity design, and visual branding solutions for businesses in $city_formatted.";
 $page_keywords = "logo design $city_formatted, brand logo design services $city_formatted, custom logo creation $city_formatted, business logo design $city_formatted";
-$supportedCities = array_merge($supportedCities, $newCities);
+
 // List of major cities for tabs
 $supportedCities = [
     // Major cities
@@ -1541,6 +1541,17 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge supported cities with comprehensive cities
+$supportedCities = array_merge($supportedCities, $newCities);
+
+// Create city_lower for validation
+$city_lower = strtolower(str_replace(' ', '-', $city_formatted));
+
+// Check if city is supported
+if (!array_key_exists($city_lower, $supportedCities)) {
+    header("Location: logo-design-service.php");
+    exit();
+}
 
 include 'header.php';
 ?>

@@ -3,7 +3,7 @@
 // Get city name from URL and sanitize it
 $citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
 $cityName = ucwords(str_replace('-', ' ', $citySlug));
-$supportedCities = array_merge($supportedCities, $newCities);
+
 $supportedCities = [    // Major cities
     'chennai' => ['name' => 'Chennai', 'state' => 'Tamil Nadu'],
     'madurai' => ['name' => 'Madurai', 'state' => 'Tamil Nadu'],
@@ -1535,6 +1535,8 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge supported cities with comprehensive cities
+$supportedCities = array_merge($supportedCities, $newCities);
 
 // Redirect to main Link Building service page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
