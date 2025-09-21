@@ -8,6 +8,16 @@ $page_title = "Graphic Design Services in $city_formatted | ThiyagiDigital";
 $page_description = "Professional graphic design services in $city_formatted. Creative brochure design, banner design, social media graphics, and marketing materials for businesses in $city_formatted.";
 $page_keywords = "graphic design $city_formatted, creative design services $city_formatted, brochure design $city_formatted, banner design $city_formatted, marketing materials design $city_formatted";
 
+// List of major cities for tabs
+$major_cities = [
+    'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Ahmedabad', 'Chennai', 'Kolkata', 'Surat', 'Pune', 'Jaipur',
+    'Lucknow', 'Kanpur', 'Nagpur', 'Indore', 'Thane', 'Bhopal', 'Visakhapatnam', 'Pimpri-Chinchwad', 'Patna', 'Vadodara',
+    'Ghaziabad', 'Ludhiana', 'Agra', 'Nashik', 'Faridabad', 'Meerut', 'Rajkot', 'Kalyan-Dombivli', 'Vasai-Virar', 'Varanasi',
+    // International Cities
+    'New York', 'Los Angeles', 'Chicago', 'Toronto', 'London', 'Manchester', 'Berlin', 'Paris', 'Tokyo', 'Singapore',
+    'Dubai', 'Sydney', 'Melbourne', 'São Paulo', 'Mexico City'
+];
+
 include 'header.php';
 ?>
 

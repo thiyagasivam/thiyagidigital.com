@@ -68,7 +68,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h1 style="color: white"><b>Best SEO Services in Chennai - ThiyagiDigital</b></h1><br>
+				<h1 style="color: white"><b>Best SEO Services - ThiyagiDigital</b></h1><br>
 				<ul>
 					<li><a href="/">Home</a></li>
 					<li>Services</li>

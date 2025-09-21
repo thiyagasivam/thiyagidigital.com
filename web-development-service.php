@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Web Development Services | ThiyagiDigital';
-$page_description = 'Custom web development in Chennai: responsive, fast, SEO-friendly websites tailored to your business by ThiyagiDigital.';
+$page_description = 'Custom web development: responsive, fast, SEO-friendly websites tailored to your business by ThiyagiDigital.';
 $page_keywords = 'web development Chennai, website design, responsive websites, custom development';
 include 'header.php';
 ?>
@@ -11,7 +11,7 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h1 style="color: white"><b>Best Web Development Services in Chennai</b></h1><br>
+				<h1 style="color: white"><b>Best Web Development Services</b></h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>Services</li>

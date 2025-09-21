@@ -3,7 +3,7 @@
 // Get city name from URL and sanitize it
 $citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
 $cityName = ucwords(str_replace('-', ' ', $citySlug));
-// List of supported cities (Tamil Nadu) - Existing list from Pasted_Text_1756571897409.txt
+
 $supportedCities = [
     // Major cities
     'chennai' => ['name' => 'Chennai', 'state' => 'Tamil Nadu'],
@@ -368,432 +368,6 @@ $supportedCities = [
     'tiruchuli' => ['name' => 'Tiruchuli', 'state' => 'Tamil Nadu'],
     'vembakkottai' => ['name' => 'Vembakkottai', 'state' => 'Tamil Nadu'],
     'watrap' => ['name' => 'Watrap', 'state' => 'Tamil Nadu'],
-    
-    // North America - United States Cities
-    // Major Metropolitan Areas
-    'new-york' => ['name' => 'New York', 'state' => 'New York'],
-    'los-angeles' => ['name' => 'Los Angeles', 'state' => 'California'],
-    'chicago' => ['name' => 'Chicago', 'state' => 'Illinois'],
-    'houston' => ['name' => 'Houston', 'state' => 'Texas'],
-    'phoenix' => ['name' => 'Phoenix', 'state' => 'Arizona'],
-    'philadelphia' => ['name' => 'Philadelphia', 'state' => 'Pennsylvania'],
-    'san-antonio' => ['name' => 'San Antonio', 'state' => 'Texas'],
-    'san-diego' => ['name' => 'San Diego', 'state' => 'California'],
-    'dallas' => ['name' => 'Dallas', 'state' => 'Texas'],
-    'austin' => ['name' => 'Austin', 'state' => 'Texas'],
-    'san-jose' => ['name' => 'San Jose', 'state' => 'California'],
-    'fort-worth' => ['name' => 'Fort Worth', 'state' => 'Texas'],
-    'jacksonville' => ['name' => 'Jacksonville', 'state' => 'Florida'],
-    'charlotte' => ['name' => 'Charlotte', 'state' => 'North Carolina'],
-    'san-francisco' => ['name' => 'San Francisco', 'state' => 'California'],
-    'indianapolis' => ['name' => 'Indianapolis', 'state' => 'Indiana'],
-    'seattle' => ['name' => 'Seattle', 'state' => 'Washington'],
-    'denver' => ['name' => 'Denver', 'state' => 'Colorado'],
-    'boston' => ['name' => 'Boston', 'state' => 'Massachusetts'],
-    'el-paso' => ['name' => 'El Paso', 'state' => 'Texas'],
-    'detroit' => ['name' => 'Detroit', 'state' => 'Michigan'],
-    'nashville' => ['name' => 'Nashville', 'state' => 'Tennessee'],
-    'portland' => ['name' => 'Portland', 'state' => 'Oregon'],
-    'memphis' => ['name' => 'Memphis', 'state' => 'Tennessee'],
-    'oklahoma-city' => ['name' => 'Oklahoma City', 'state' => 'Oklahoma'],
-    'las-vegas' => ['name' => 'Las Vegas', 'state' => 'Nevada'],
-    'louisville' => ['name' => 'Louisville', 'state' => 'Kentucky'],
-    'baltimore' => ['name' => 'Baltimore', 'state' => 'Maryland'],
-    'milwaukee' => ['name' => 'Milwaukee', 'state' => 'Wisconsin'],
-    'albuquerque' => ['name' => 'Albuquerque', 'state' => 'New Mexico'],
-    'tucson' => ['name' => 'Tucson', 'state' => 'Arizona'],
-    'fresno' => ['name' => 'Fresno', 'state' => 'California'],
-    'sacramento' => ['name' => 'Sacramento', 'state' => 'California'],
-    'kansas-city' => ['name' => 'Kansas City', 'state' => 'Missouri'],
-    'mesa' => ['name' => 'Mesa', 'state' => 'Arizona'],
-    'atlanta' => ['name' => 'Atlanta', 'state' => 'Georgia'],
-    'omaha' => ['name' => 'Omaha', 'state' => 'Nebraska'],
-    'raleigh' => ['name' => 'Raleigh', 'state' => 'North Carolina'],
-    'miami' => ['name' => 'Miami', 'state' => 'Florida'],
-    'long-beach' => ['name' => 'Long Beach', 'state' => 'California'],
-    'virginia-beach' => ['name' => 'Virginia Beach', 'state' => 'Virginia'],
-    'oakland' => ['name' => 'Oakland', 'state' => 'California'],
-    'minneapolis' => ['name' => 'Minneapolis', 'state' => 'Minnesota'],
-    'tulsa' => ['name' => 'Tulsa', 'state' => 'Oklahoma'],
-    'arlington' => ['name' => 'Arlington', 'state' => 'Texas'],
-    'new-orleans' => ['name' => 'New Orleans', 'state' => 'Louisiana'],
-    'wichita' => ['name' => 'Wichita', 'state' => 'Kansas'],
-    'cleveland' => ['name' => 'Cleveland', 'state' => 'Ohio'],
-    'tampa' => ['name' => 'Tampa', 'state' => 'Florida'],
-    'bakersfield' => ['name' => 'Bakersfield', 'state' => 'California'],
-    'aurora' => ['name' => 'Aurora', 'state' => 'Colorado'],
-    'anaheim' => ['name' => 'Anaheim', 'state' => 'California'],
-    'honolulu' => ['name' => 'Honolulu', 'state' => 'Hawaii'],
-    'santa-ana' => ['name' => 'Santa Ana', 'state' => 'California'],
-    'corpus-christi' => ['name' => 'Corpus Christi', 'state' => 'Texas'],
-    'riverside' => ['name' => 'Riverside', 'state' => 'California'],
-    'lexington' => ['name' => 'Lexington', 'state' => 'Kentucky'],
-    'stockton' => ['name' => 'Stockton', 'state' => 'California'],
-    'henderson' => ['name' => 'Henderson', 'state' => 'Nevada'],
-    'saint-paul' => ['name' => 'Saint Paul', 'state' => 'Minnesota'],
-    'st-louis' => ['name' => 'St. Louis', 'state' => 'Missouri'],
-    'cincinnati' => ['name' => 'Cincinnati', 'state' => 'Ohio'],
-    'pittsburgh' => ['name' => 'Pittsburgh', 'state' => 'Pennsylvania'],
-    'greensboro' => ['name' => 'Greensboro', 'state' => 'North Carolina'],
-    'anchorage' => ['name' => 'Anchorage', 'state' => 'Alaska'],
-    'plano' => ['name' => 'Plano', 'state' => 'Texas'],
-    'lincoln' => ['name' => 'Lincoln', 'state' => 'Nebraska'],
-    'orlando' => ['name' => 'Orlando', 'state' => 'Florida'],
-    'irvine' => ['name' => 'Irvine', 'state' => 'California'],
-    'newark' => ['name' => 'Newark', 'state' => 'New Jersey'],
-    'durham' => ['name' => 'Durham', 'state' => 'North Carolina'],
-    'chula-vista' => ['name' => 'Chula Vista', 'state' => 'California'],
-    'toledo' => ['name' => 'Toledo', 'state' => 'Ohio'],
-    'fort-wayne' => ['name' => 'Fort Wayne', 'state' => 'Indiana'],
-    'st-petersburg' => ['name' => 'St. Petersburg', 'state' => 'Florida'],
-    'laredo' => ['name' => 'Laredo', 'state' => 'Texas'],
-    'jersey-city' => ['name' => 'Jersey City', 'state' => 'New Jersey'],
-    'chandler' => ['name' => 'Chandler', 'state' => 'Arizona'],
-    'madison' => ['name' => 'Madison', 'state' => 'Wisconsin'],
-    'lubbock' => ['name' => 'Lubbock', 'state' => 'Texas'],
-    'buffalo' => ['name' => 'Buffalo', 'state' => 'New York'],
-    'gilbert' => ['name' => 'Gilbert', 'state' => 'Arizona'],
-    'glendale' => ['name' => 'Glendale', 'state' => 'Arizona'],
-    'north-las-vegas' => ['name' => 'North Las Vegas', 'state' => 'Nevada'],
-    'winston-salem' => ['name' => 'Winston-Salem', 'state' => 'North Carolina'],
-    'chesapeake' => ['name' => 'Chesapeake', 'state' => 'Virginia'],
-    'norfolk' => ['name' => 'Norfolk', 'state' => 'Virginia'],
-    'fremont' => ['name' => 'Fremont', 'state' => 'California'],
-    'garland' => ['name' => 'Garland', 'state' => 'Texas'],
-    'irving' => ['name' => 'Irving', 'state' => 'Texas'],
-    'hialeah' => ['name' => 'Hialeah', 'state' => 'Florida'],
-    'richmond' => ['name' => 'Richmond', 'state' => 'Virginia'],
-    'boise' => ['name' => 'Boise', 'state' => 'Idaho'],
-    'spokane' => ['name' => 'Spokane', 'state' => 'Washington'],
-    'baton-rouge' => ['name' => 'Baton Rouge', 'state' => 'Louisiana'],
-    
-    // Canada
-    'toronto' => ['name' => 'Toronto', 'state' => 'Ontario'],
-    'montreal' => ['name' => 'Montreal', 'state' => 'Quebec'],
-    'vancouver' => ['name' => 'Vancouver', 'state' => 'British Columbia'],
-    'calgary' => ['name' => 'Calgary', 'state' => 'Alberta'],
-    'ottawa' => ['name' => 'Ottawa', 'state' => 'Ontario'],
-    'edmonton' => ['name' => 'Edmonton', 'state' => 'Alberta'],
-    'winnipeg' => ['name' => 'Winnipeg', 'state' => 'Manitoba'],
-    'quebec-city' => ['name' => 'Quebec City', 'state' => 'Quebec'],
-    'hamilton' => ['name' => 'Hamilton', 'state' => 'Ontario'],
-    'halifax' => ['name' => 'Halifax', 'state' => 'Nova Scotia'],
-    
-    // Europe - United Kingdom
-    'london' => ['name' => 'London', 'state' => 'England'],
-    'manchester' => ['name' => 'Manchester', 'state' => 'England'],
-    'birmingham' => ['name' => 'Birmingham', 'state' => 'England'],
-    'glasgow' => ['name' => 'Glasgow', 'state' => 'Scotland'],
-    'liverpool' => ['name' => 'Liverpool', 'state' => 'England'],
-    'edinburgh' => ['name' => 'Edinburgh', 'state' => 'Scotland'],
-    'bristol' => ['name' => 'Bristol', 'state' => 'England'],
-    'cardiff' => ['name' => 'Cardiff', 'state' => 'Wales'],
-    'leeds' => ['name' => 'Leeds', 'state' => 'England'],
-    'belfast' => ['name' => 'Belfast', 'state' => 'Northern Ireland'],
-    
-    // Europe - Germany
-    'berlin' => ['name' => 'Berlin', 'state' => 'Berlin'],
-    'hamburg' => ['name' => 'Hamburg', 'state' => 'Hamburg'],
-    'munich' => ['name' => 'Munich', 'state' => 'Bavaria'],
-    'cologne' => ['name' => 'Cologne', 'state' => 'North Rhine-Westphalia'],
-    'frankfurt' => ['name' => 'Frankfurt', 'state' => 'Hesse'],
-    'stuttgart' => ['name' => 'Stuttgart', 'state' => 'Baden-Württemberg'],
-    'dusseldorf' => ['name' => 'Dusseldorf', 'state' => 'North Rhine-Westphalia'],
-    'dortmund' => ['name' => 'Dortmund', 'state' => 'North Rhine-Westphalia'],
-    'essen' => ['name' => 'Essen', 'state' => 'North Rhine-Westphalia'],
-    'leipzig' => ['name' => 'Leipzig', 'state' => 'Saxony'],
-    
-    // Europe - France
-    'paris' => ['name' => 'Paris', 'state' => 'Île-de-France'],
-    'marseille' => ['name' => 'Marseille', 'state' => 'Provence-Alpes-Côte d\'Azur'],
-    'lyon' => ['name' => 'Lyon', 'state' => 'Auvergne-Rhône-Alpes'],
-    'toulouse' => ['name' => 'Toulouse', 'state' => 'Occitanie'],
-    'nice' => ['name' => 'Nice', 'state' => 'Provence-Alpes-Côte d\'Azur'],
-    'nantes' => ['name' => 'Nantes', 'state' => 'Pays de la Loire'],
-    'strasbourg' => ['name' => 'Strasbourg', 'state' => 'Grand Est'],
-    'montpellier' => ['name' => 'Montpellier', 'state' => 'Occitanie'],
-    'bordeaux' => ['name' => 'Bordeaux', 'state' => 'Nouvelle-Aquitaine'],
-    'lille' => ['name' => 'Lille', 'state' => 'Hauts-de-France'],
-    
-    // Europe - Italy
-    'rome' => ['name' => 'Rome', 'state' => 'Lazio'],
-    'milan' => ['name' => 'Milan', 'state' => 'Lombardy'],
-    'naples' => ['name' => 'Naples', 'state' => 'Campania'],
-    'turin' => ['name' => 'Turin', 'state' => 'Piedmont'],
-    'palermo' => ['name' => 'Palermo', 'state' => 'Sicily'],
-    'genoa' => ['name' => 'Genoa', 'state' => 'Liguria'],
-    'bologna' => ['name' => 'Bologna', 'state' => 'Emilia-Romagna'],
-    'florence' => ['name' => 'Florence', 'state' => 'Tuscany'],
-    'bari' => ['name' => 'Bari', 'state' => 'Apulia'],
-    'catania' => ['name' => 'Catania', 'state' => 'Sicily'],
-    
-    // Europe - Spain
-    'madrid' => ['name' => 'Madrid', 'state' => 'Community of Madrid'],
-    'barcelona' => ['name' => 'Barcelona', 'state' => 'Catalonia'],
-    'valencia' => ['name' => 'Valencia', 'state' => 'Valencia'],
-    'seville' => ['name' => 'Seville', 'state' => 'Andalusia'],
-    'zaragoza' => ['name' => 'Zaragoza', 'state' => 'Aragon'],
-    'malaga' => ['name' => 'Malaga', 'state' => 'Andalusia'],
-    'murcia' => ['name' => 'Murcia', 'state' => 'Region of Murcia'],
-    'palma' => ['name' => 'Palma', 'state' => 'Balearic Islands'],
-    'las-palmas' => ['name' => 'Las Palmas', 'state' => 'Canary Islands'],
-    'bilbao' => ['name' => 'Bilbao', 'state' => 'Basque Country'],
-    
-    // Europe - Netherlands
-    'amsterdam' => ['name' => 'Amsterdam', 'state' => 'North Holland'],
-    'rotterdam' => ['name' => 'Rotterdam', 'state' => 'South Holland'],
-    'the-hague' => ['name' => 'The Hague', 'state' => 'South Holland'],
-    'utrecht' => ['name' => 'Utrecht', 'state' => 'Utrecht'],
-    'eindhoven' => ['name' => 'Eindhoven', 'state' => 'North Brabant'],
-    'tilburg' => ['name' => 'Tilburg', 'state' => 'North Brabant'],
-    'groningen' => ['name' => 'Groningen', 'state' => 'Groningen'],
-    'almere' => ['name' => 'Almere', 'state' => 'Flevoland'],
-    'breda' => ['name' => 'Breda', 'state' => 'North Brabant'],
-    'nijmegen' => ['name' => 'Nijmegen', 'state' => 'Gelderland'],
-    
-    // Europe - Sweden
-    'stockholm' => ['name' => 'Stockholm', 'state' => 'Stockholm County'],
-    'gothenburg' => ['name' => 'Gothenburg', 'state' => 'Västra Götaland County'],
-    'malmo' => ['name' => 'Malmo', 'state' => 'Skåne County'],
-    'uppsala' => ['name' => 'Uppsala', 'state' => 'Uppsala County'],
-    'vasteras' => ['name' => 'Vasteras', 'state' => 'Västmanland County'],
-    'orebro' => ['name' => 'Orebro', 'state' => 'Örebro County'],
-    'linkoping' => ['name' => 'Linkoping', 'state' => 'Östergötland County'],
-    'helsingborg' => ['name' => 'Helsingborg', 'state' => 'Skåne County'],
-    'jonkoping' => ['name' => 'Jonkoping', 'state' => 'Jönköping County'],
-    'norrkoping' => ['name' => 'Norrkoping', 'state' => 'Östergötland County'],
-    
-    // Europe - Switzerland
-    'zurich' => ['name' => 'Zurich', 'state' => 'Zurich'],
-    'geneva' => ['name' => 'Geneva', 'state' => 'Geneva'],
-    'basel' => ['name' => 'Basel', 'state' => 'Basel-Stadt'],
-    'lausanne' => ['name' => 'Lausanne', 'state' => 'Vaud'],
-    'bern' => ['name' => 'Bern', 'state' => 'Bern'],
-    'winterthur' => ['name' => 'Winterthur', 'state' => 'Zurich'],
-    'lucerne' => ['name' => 'Lucerne', 'state' => 'Lucerne'],
-    'st-gallen' => ['name' => 'St. Gallen', 'state' => 'St. Gallen'],
-    'lugano' => ['name' => 'Lugano', 'state' => 'Ticino'],
-    'biel' => ['name' => 'Biel', 'state' => 'Bern'],
-    
-    // Europe - Poland
-    'warsaw' => ['name' => 'Warsaw', 'state' => 'Masovian Voivodeship'],
-    'krakow' => ['name' => 'Krakow', 'state' => 'Lesser Poland Voivodeship'],
-    'lodz' => ['name' => 'Lodz', 'state' => 'Łódź Voivodeship'],
-    'wroclaw' => ['name' => 'Wroclaw', 'state' => 'Lower Silesian Voivodeship'],
-    'poznan' => ['name' => 'Poznan', 'state' => 'Greater Poland Voivodeship'],
-    'gdansk' => ['name' => 'Gdansk', 'state' => 'Pomeranian Voivodeship'],
-    'szczecin' => ['name' => 'Szczecin', 'state' => 'West Pomeranian Voivodeship'],
-    'bydgoszcz' => ['name' => 'Bydgoszcz', 'state' => 'Kuyavian-Pomeranian Voivodeship'],
-    'lublin' => ['name' => 'Lublin', 'state' => 'Lublin Voivodeship'],
-    'katowice' => ['name' => 'Katowice', 'state' => 'Silesian Voivodeship'],
-    
-    // Europe - Russia
-    'moscow' => ['name' => 'Moscow', 'state' => 'Moscow'],
-    'saint-petersburg' => ['name' => 'Saint Petersburg', 'state' => 'Saint Petersburg'],
-    'novosibirsk' => ['name' => 'Novosibirsk', 'state' => 'Novosibirsk Oblast'],
-    'yekaterinburg' => ['name' => 'Yekaterinburg', 'state' => 'Sverdlovsk Oblast'],
-    'nizhny-novgorod' => ['name' => 'Nizhny Novgorod', 'state' => 'Nizhny Novgorod Oblast'],
-    'kazan' => ['name' => 'Kazan', 'state' => 'Tatarstan'],
-    'chelyabinsk' => ['name' => 'Chelyabinsk', 'state' => 'Chelyabinsk Oblast'],
-    'omsk' => ['name' => 'Omsk', 'state' => 'Omsk Oblast'],
-    'samara' => ['name' => 'Samara', 'state' => 'Samara Oblast'],
-    'rostov-on-don' => ['name' => 'Rostov-on-Don', 'state' => 'Rostov Oblast'],
-    
-    // Asia - China
-    'beijing' => ['name' => 'Beijing', 'state' => 'Beijing Municipality'],
-    'shanghai' => ['name' => 'Shanghai', 'state' => 'Shanghai Municipality'],
-    'guangzhou' => ['name' => 'Guangzhou', 'state' => 'Guangdong'],
-    'shenzhen' => ['name' => 'Shenzhen', 'state' => 'Guangdong'],
-    'tianjin' => ['name' => 'Tianjin', 'state' => 'Tianjin Municipality'],
-    'wuhan' => ['name' => 'Wuhan', 'state' => 'Hubei'],
-    'dongguan' => ['name' => 'Dongguan', 'state' => 'Guangdong'],
-    'chengdu' => ['name' => 'Chengdu', 'state' => 'Sichuan'],
-    'nanjing' => ['name' => 'Nanjing', 'state' => 'Jiangsu'],
-    'chongqing' => ['name' => 'Chongqing', 'state' => 'Chongqing Municipality'],
-    
-    // Asia - Japan
-    'tokyo' => ['name' => 'Tokyo', 'state' => 'Tokyo Metropolis'],
-    'yokohama' => ['name' => 'Yokohama', 'state' => 'Kanagawa'],
-    'osaka' => ['name' => 'Osaka', 'state' => 'Osaka'],
-    'nagoya' => ['name' => 'Nagoya', 'state' => 'Aichi'],
-    'sapporo' => ['name' => 'Sapporo', 'state' => 'Hokkaido'],
-    'fukuoka' => ['name' => 'Fukuoka', 'state' => 'Fukuoka'],
-    'kobe' => ['name' => 'Kobe', 'state' => 'Hyogo'],
-    'kawasaki' => ['name' => 'Kawasaki', 'state' => 'Kanagawa'],
-    'kyoto' => ['name' => 'Kyoto', 'state' => 'Kyoto'],
-    'saitama' => ['name' => 'Saitama', 'state' => 'Saitama'],
-    
-    // Asia - South Korea
-    'seoul' => ['name' => 'Seoul', 'state' => 'Seoul Special City'],
-    'busan' => ['name' => 'Busan', 'state' => 'Busan Metropolitan City'],
-    'incheon' => ['name' => 'Incheon', 'state' => 'Incheon Metropolitan City'],
-    'daegu' => ['name' => 'Daegu', 'state' => 'Daegu Metropolitan City'],
-    'daejeon' => ['name' => 'Daejeon', 'state' => 'Daejeon Metropolitan City'],
-    'gwangju' => ['name' => 'Gwangju', 'state' => 'Gwangju Metropolitan City'],
-    'suwon' => ['name' => 'Suwon', 'state' => 'Gyeonggi'],
-    'ulsan' => ['name' => 'Ulsan', 'state' => 'Ulsan Metropolitan City'],
-    'changwon' => ['name' => 'Changwon', 'state' => 'South Gyeongsang'],
-    'goyang' => ['name' => 'Goyang', 'state' => 'Gyeonggi'],
-    
-    // Asia - Indonesia
-    'jakarta' => ['name' => 'Jakarta', 'state' => 'DKI Jakarta'],
-    'surabaya' => ['name' => 'Surabaya', 'state' => 'East Java'],
-    'bandung' => ['name' => 'Bandung', 'state' => 'West Java'],
-    'bekasi' => ['name' => 'Bekasi', 'state' => 'West Java'],
-    'medan' => ['name' => 'Medan', 'state' => 'North Sumatra'],
-    'tangerang' => ['name' => 'Tangerang', 'state' => 'Banten'],
-    'depok' => ['name' => 'Depok', 'state' => 'West Java'],
-    'semarang' => ['name' => 'Semarang', 'state' => 'Central Java'],
-    'palembang' => ['name' => 'Palembang', 'state' => 'South Sumatra'],
-    'makassar' => ['name' => 'Makassar', 'state' => 'South Sulawesi'],
-    
-    // Asia - Malaysia
-    'kuala-lumpur' => ['name' => 'Kuala Lumpur', 'state' => 'Federal Territory of Kuala Lumpur'],
-    'george-town' => ['name' => 'George Town', 'state' => 'Penang'],
-    'ipoh' => ['name' => 'Ipoh', 'state' => 'Perak'],
-    'shah-alam' => ['name' => 'Shah Alam', 'state' => 'Selangor'],
-    'petaling-jaya' => ['name' => 'Petaling Jaya', 'state' => 'Selangor'],
-    'klang' => ['name' => 'Klang', 'state' => 'Selangor'],
-    'johor-bahru' => ['name' => 'Johor Bahru', 'state' => 'Johor'],
-    'subang-jaya' => ['name' => 'Subang Jaya', 'state' => 'Selangor'],
-    'kota-kinabalu' => ['name' => 'Kota Kinabalu', 'state' => 'Sabah'],
-    'kuching' => ['name' => 'Kuching', 'state' => 'Sarawak'],
-    
-    // Asia - Thailand
-    'bangkok' => ['name' => 'Bangkok', 'state' => 'Bangkok'],
-    'samut-prakan' => ['name' => 'Samut Prakan', 'state' => 'Samut Prakan'],
-    'mueang-nonthaburi' => ['name' => 'Mueang Nonthaburi', 'state' => 'Nonthaburi'],
-    'udon-thani' => ['name' => 'Udon Thani', 'state' => 'Udon Thani'],
-    'chon-buri' => ['name' => 'Chon Buri', 'state' => 'Chonburi'],
-    'nakhon-ratchasima' => ['name' => 'Nakhon Ratchasima', 'state' => 'Nakhon Ratchasima'],
-    'chiang-mai' => ['name' => 'Chiang Mai', 'state' => 'Chiang Mai'],
-    'hat-yai' => ['name' => 'Hat Yai', 'state' => 'Songkhla'],
-    'pak-kret' => ['name' => 'Pak Kret', 'state' => 'Nonthaburi'],
-    'si-racha' => ['name' => 'Si Racha', 'state' => 'Chonburi'],
-    
-    // Asia - Vietnam
-    'ho-chi-minh-city' => ['name' => 'Ho Chi Minh City', 'state' => 'Ho Chi Minh City'],
-    'hanoi' => ['name' => 'Hanoi', 'state' => 'Hanoi'],
-    'haiphong' => ['name' => 'Haiphong', 'state' => 'Haiphong'],
-    'da-nang' => ['name' => 'Da Nang', 'state' => 'Da Nang'],
-    'can-tho' => ['name' => 'Can Tho', 'state' => 'Can Tho'],
-    'bien-hoa' => ['name' => 'Bien Hoa', 'state' => 'Dong Nai'],
-    'hue' => ['name' => 'Hue', 'state' => 'Thua Thien Hue'],
-    'nha-trang' => ['name' => 'Nha Trang', 'state' => 'Khanh Hoa'],
-    'buon-ma-thuot' => ['name' => 'Buon Ma Thuot', 'state' => 'Dak Lak'],
-    'vung-tau' => ['name' => 'Vung Tau', 'state' => 'Ba Ria-Vung Tau'],
-    
-    // Asia - Taiwan
-    'taipei' => ['name' => 'Taipei', 'state' => 'Taipei'],
-    'kaohsiung' => ['name' => 'Kaohsiung', 'state' => 'Kaohsiung'],
-    'taichung' => ['name' => 'Taichung', 'state' => 'Taichung'],
-    'tainan' => ['name' => 'Tainan', 'state' => 'Tainan'],
-    'taoyuan' => ['name' => 'Taoyuan', 'state' => 'Taoyuan'],
-    'hsinchu' => ['name' => 'Hsinchu', 'state' => 'Hsinchu'],
-    'keelung' => ['name' => 'Keelung', 'state' => 'Keelung'],
-    'chiayi' => ['name' => 'Chiayi', 'state' => 'Chiayi'],
-    'changhua' => ['name' => 'Changhua', 'state' => 'Changhua'],
-    'pingtung' => ['name' => 'Pingtung', 'state' => 'Pingtung'],
-    
-    // Asia - Philippines
-    'manila' => ['name' => 'Manila', 'state' => 'Metro Manila'],
-    'quezon-city' => ['name' => 'Quezon City', 'state' => 'Metro Manila'],
-    'davao-city' => ['name' => 'Davao City', 'state' => 'Davao del Sur'],
-    'caloocan' => ['name' => 'Caloocan', 'state' => 'Metro Manila'],
-    'cebu-city' => ['name' => 'Cebu City', 'state' => 'Cebu'],
-    'zamboanga-city' => ['name' => 'Zamboanga City', 'state' => 'Zamboanga del Sur'],
-    'antipolo' => ['name' => 'Antipolo', 'state' => 'Rizal'],
-    'pasig' => ['name' => 'Pasig', 'state' => 'Metro Manila'],
-    'taguig' => ['name' => 'Taguig', 'state' => 'Metro Manila'],
-    'cagayan-de-oro' => ['name' => 'Cagayan de Oro', 'state' => 'Misamis Oriental'],
-    
-    // Middle East & Africa - Saudi Arabia
-    'riyadh' => ['name' => 'Riyadh', 'state' => 'Riyadh Region'],
-    'jeddah' => ['name' => 'Jeddah', 'state' => 'Makkah Region'],
-    'mecca' => ['name' => 'Mecca', 'state' => 'Makkah Region'],
-    'medina' => ['name' => 'Medina', 'state' => 'Al Madinah Region'],
-    'dammam' => ['name' => 'Dammam', 'state' => 'Eastern Province'],
-    'khobar' => ['name' => 'Khobar', 'state' => 'Eastern Province'],
-    'taif' => ['name' => 'Taif', 'state' => 'Makkah Region'],
-    'tabuk' => ['name' => 'Tabuk', 'state' => 'Tabuk Region'],
-    'buraidah' => ['name' => 'Buraidah', 'state' => 'Al-Qassim Region'],
-    'khamis-mushait' => ['name' => 'Khamis Mushait', 'state' => 'Asir Region'],
-    
-    // Middle East & Africa - UAE
-    'dubai' => ['name' => 'Dubai', 'state' => 'Dubai'],
-    'abu-dhabi' => ['name' => 'Abu Dhabi', 'state' => 'Abu Dhabi'],
-    'sharjah' => ['name' => 'Sharjah', 'state' => 'Sharjah'],
-    'al-ain' => ['name' => 'Al Ain', 'state' => 'Abu Dhabi'],
-    'ajman' => ['name' => 'Ajman', 'state' => 'Ajman'],
-    'ras-al-khaimah' => ['name' => 'Ras Al Khaimah', 'state' => 'Ras Al Khaimah'],
-    'fujairah' => ['name' => 'Fujairah', 'state' => 'Fujairah'],
-    'umm-al-quwain' => ['name' => 'Umm Al Quwain', 'state' => 'Umm Al Quwain'],
-    'al-dhafra' => ['name' => 'Al Dhafra', 'state' => 'Abu Dhabi'],
-    'kalba' => ['name' => 'Kalba', 'state' => 'Sharjah'],
-    
-    // Middle East & Africa - Turkey
-    'istanbul' => ['name' => 'Istanbul', 'state' => 'Istanbul'],
-    'ankara' => ['name' => 'Ankara', 'state' => 'Ankara'],
-    'izmir' => ['name' => 'Izmir', 'state' => 'Izmir'],
-    'bursa' => ['name' => 'Bursa', 'state' => 'Bursa'],
-    'adana' => ['name' => 'Adana', 'state' => 'Adana'],
-    'gaziantep' => ['name' => 'Gaziantep', 'state' => 'Gaziantep'],
-    'konya' => ['name' => 'Konya', 'state' => 'Konya'],
-    'antalya' => ['name' => 'Antalya', 'state' => 'Antalya'],
-    'diyarbakir' => ['name' => 'Diyarbakir', 'state' => 'Diyarbakir'],
-    'mersin' => ['name' => 'Mersin', 'state' => 'Mersin'],
-    
-    // Middle East & Africa - South Africa
-    'cape-town' => ['name' => 'Cape Town', 'state' => 'Western Cape'],
-    'johannesburg' => ['name' => 'Johannesburg', 'state' => 'Gauteng'],
-    'durban' => ['name' => 'Durban', 'state' => 'KwaZulu-Natal'],
-    'pretoria' => ['name' => 'Pretoria', 'state' => 'Gauteng'],
-    'port-elizabeth' => ['name' => 'Port Elizabeth', 'state' => 'Eastern Cape'],
-    'pietermaritzburg' => ['name' => 'Pietermaritzburg', 'state' => 'KwaZulu-Natal'],
-    'benoni' => ['name' => 'Benoni', 'state' => 'Gauteng'],
-    'tembisa' => ['name' => 'Tembisa', 'state' => 'Gauteng'],
-    'east-london' => ['name' => 'East London', 'state' => 'Eastern Cape'],
-    'vereeniging' => ['name' => 'Vereeniging', 'state' => 'Gauteng'],
-    
-    // South America - Brazil
-    'sao-paulo' => ['name' => 'São Paulo', 'state' => 'São Paulo'],
-    'rio-de-janeiro' => ['name' => 'Rio de Janeiro', 'state' => 'Rio de Janeiro'],
-    'brasilia' => ['name' => 'Brasília', 'state' => 'Federal District'],
-    'salvador' => ['name' => 'Salvador', 'state' => 'Bahia'],
-    'fortaleza' => ['name' => 'Fortaleza', 'state' => 'Ceará'],
-    'belo-horizonte' => ['name' => 'Belo Horizonte', 'state' => 'Minas Gerais'],
-    'manaus' => ['name' => 'Manaus', 'state' => 'Amazonas'],
-    'curitiba' => ['name' => 'Curitiba', 'state' => 'Paraná'],
-    'recife' => ['name' => 'Recife', 'state' => 'Pernambuco'],
-    'porto-alegre' => ['name' => 'Porto Alegre', 'state' => 'Rio Grande do Sul'],
-    
-    // South America - Argentina
-    'buenos-aires' => ['name' => 'Buenos Aires', 'state' => 'Buenos Aires'],
-    'cordoba' => ['name' => 'Córdoba', 'state' => 'Córdoba'],
-    'rosario' => ['name' => 'Rosario', 'state' => 'Santa Fe'],
-    'mendoza' => ['name' => 'Mendoza', 'state' => 'Mendoza'],
-    'tucuman' => ['name' => 'Tucumán', 'state' => 'Tucumán'],
-    'la-plata' => ['name' => 'La Plata', 'state' => 'Buenos Aires'],
-    'mar-del-plata' => ['name' => 'Mar del Plata', 'state' => 'Buenos Aires'],
-    'salta' => ['name' => 'Salta', 'state' => 'Salta'],
-    'santa-fe' => ['name' => 'Santa Fe', 'state' => 'Santa Fe'],
-    'san-juan' => ['name' => 'San Juan', 'state' => 'San Juan'],
-    
-    // South America - Mexico
-    'mexico-city' => ['name' => 'Mexico City', 'state' => 'Mexico City'],
-    'guadalajara' => ['name' => 'Guadalajara', 'state' => 'Jalisco'],
-    'monterrey' => ['name' => 'Monterrey', 'state' => 'Nuevo León'],
-    'puebla' => ['name' => 'Puebla', 'state' => 'Puebla'],
-    'tijuana' => ['name' => 'Tijuana', 'state' => 'Baja California'],
-    'leon' => ['name' => 'León', 'state' => 'Guanajuato'],
-    'juarez' => ['name' => 'Juárez', 'state' => 'Chihuahua'],
-    'torreon' => ['name' => 'Torreón', 'state' => 'Coahuila'],
-    'queretaro' => ['name' => 'Querétaro', 'state' => 'Querétaro'],
-    'merida' => ['name' => 'Mérida', 'state' => 'Yucatán']
-];
-
-// New list of cities/districts/states from the user's request
-$newCities = [
     'nicobar' => ['name' => 'Nicobar', 'state' => 'Andaman and Nicobar Islands'],
     'north-middle-andaman' => ['name' => 'North Middle Andaman', 'state' => 'Andaman and Nicobar Islands'],
     'south-andaman' => ['name' => 'South Andaman', 'state' => 'Andaman and Nicobar Islands'],
@@ -1536,27 +1110,25 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
-// Merge the new cities/districts/states into the existing supportedCities array
-$supportedCities = array_merge($supportedCities, $newCities);
-
-// Redirect to main SEO page if city not found
+// Redirect to main SEM page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
-    header("Location: /seo-services");
+    header("Location: /sem-services.php");
     exit();
 }
+
 // Get city data
 $cityData = $supportedCities[$citySlug];
 $fullCityName = $cityData['name'];
 $stateName = $cityData['state'];
+
 // Dynamic SEO variables for this city page
-$page_title = "Best SEO Services in {$fullCityName} | ThiyagiDigital";
-$page_description = "Professional SEO services in {$fullCityName}, {$stateName}. Boost your local search rankings with our expert SEO strategies.";
-$page_keywords = "SEO services {$fullCityName}, digital marketing {$fullCityName}, local SEO {$fullCityName}";
-$canonical_url = "https://www.thiyagidigital.com/seo-services/{$citySlug}";
-// $og_image = '/assets/img/service/serd1.jpg';
-// Add BreadcrumbList + FAQPage JSON-LD via @graph
-$serviceName = 'SEO Services';
-$serviceUrl = 'https://www.thiyagidigital.com/seo-services.php';
+$page_title = "Best SEM Services in {$fullCityName} | ThiyagiDigital";
+$page_description = "Professional SEM services in {$fullCityName}. Drive targeted traffic and increase conversions with our expert Search Engine Marketing strategies in {$stateName}.";
+$page_keywords = "SEM services {$fullCityName}, PPC advertising {$fullCityName}, Google Ads {$fullCityName}, digital marketing {$fullCityName}";
+$canonical_url = "https://www.thiyagidigital.com/sem-services/{$citySlug}";
+// BreadcrumbList + FAQPage JSON-LD via @graph
+$serviceName = 'Search Engine Marketing';
+$serviceUrl = 'https://www.thiyagidigital.com/sem-services.php';
 $breadcrumbSchema = [
     '@type' => 'BreadcrumbList',
     'itemListElement' => [
@@ -1585,26 +1157,26 @@ $faqSchema = [
     'mainEntity' => [
         [
             '@type' => 'Question',
-            'name' => 'What is SEO?',
+            'name' => 'What is SEM?',
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => "SEO, or Search Engine Optimization, improves website visibility and rankings on search engines for queries like 'SEO services in {$fullCityName}'."
+                'text' => "SEM uses paid ads (like Google Ads) to reach customers searching in {$fullCityName}, delivering immediate visibility."
             ]
         ],
         [
             '@type' => 'Question',
-            'name' => "Why is local SEO important for {$fullCityName} businesses?",
+            'name' => "Why choose SEM for my {$fullCityName} business?",
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => "Local SEO increases your visibility in {$fullCityName}, attracting targeted local traffic and boosting leads and revenue."
+                'text' => "SEM provides precise local targeting, measurable results, and fast traffic for {$fullCityName} businesses."
             ]
         ],
         [
             '@type' => 'Question',
-            'name' => "How long does it take to see SEO results in {$fullCityName}?",
+            'name' => "How quickly can I see SEM results in {$fullCityName}?",
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => 'Timelines vary, but many businesses notice improvements within 4â€“6 months, with ongoing optimization for sustained growth.'
+                'text' => 'Ads can start appearing within 24 hours of launch; optimization continues to improve performance.'
             ]
         ]
     ]
@@ -1615,21 +1187,23 @@ $page_schema = [
 ];
 ?>
 <?php include 'header.php';?>
+	
 <!-- Start of breadcrumb section -->
 <section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">
     <div class="background_overlay"></div>
     <div class="container">
         <div class="bi-breadcrumbs-content headline ul-li text-center">
-            <h1 style="color: white"><b>Best SEO Services in <?php echo $fullCityName; ?> - ThiyagiDigital</b></h1><br>
+            <h1 style="color: white"><b>Best Search Engine Marketing Services in <?php echo $fullCityName; ?></b></h1><br>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="#">Services</a></li>
-                <li style="color: white">SEO in <?php echo $fullCityName; ?></li>
+                <li style="color: white">SEM in <?php echo $fullCityName; ?></li>
             </ul>
         </div>
     </div>
-</section>
+</section>	
 <!-- End of breadcrumb section -->
+
 <!-- Start of Service Details section -->
 <section id="bi-service-details" class="bi-service-details-section inner-page-padding">
     <div class="container">
@@ -1638,29 +1212,36 @@ $page_schema = [
                 <div class="col-lg-8">
                     <div class="bi-service-details-text-area">
                         <div class="bi-service-details-img">
-                            <img src="/assets/img/service/serd1.jpg" alt="SEO Services in <?php echo $fullCityName; ?>">
+                            <img src="/assets/img/service/serd1.jpg" alt="SEM Services in <?php echo $fullCityName; ?>">
                         </div>
                         <div class="bi-service-details-text headline pera-content">
-                            <h3>Search Engine Optimization in <?php echo $fullCityName; ?></h3>
-                            <p>In the digital landscape of <?php echo $fullCityName; ?>, visibility is key, and that's where our Search Engine Optimization (SEO) services come into play. At ThiyagiDigital, we specialize in propelling your <?php echo $fullCityName; ?> business to the top of search engine results, ensuring your brand stands out in the competitive online arena.</p>
-                            <p>Our seasoned SEO experts in <?php echo $fullCityName; ?> employ a strategic approach, conducting in-depth keyword research specific to your area, optimizing on-page elements, and building high-quality backlinks to enhance your website's authority for local searches.</p>
-                            <p>We don't believe in one-size-fits-all solutions. Each <?php echo $fullCityName; ?> client receives a tailored SEO strategy crafted to address specific business goals and local market nuances. Whether you're aiming to boost visibility in <?php echo $fullCityName; ?> or reach a regional audience, we have the expertise to make it happen.</p>
-                            <h4>"Elevate Your <?php echo $fullCityName; ?> Online Presence with Our SEO Services"</h4>
-                            <p>We place a higher priority on producing observable results than rankings. Our all-inclusive SEO services for <?php echo $fullCityName; ?> businesses are made to improve user experience as well as organic traffic, which will raise conversions and support long-term business success in <?php echo $stateName; ?>.</p>
-                            <p>Partner with us, and let's unlock the full potential of your online presence in <?php echo $fullCityName; ?>. Dominate search engine results, attract your target audience, and watch your business thrive in the digital realm. Invest in SEO with Thiyagidigitalâ€”where visibility transforms into profitability.</p>
-                            <h4>Frequently Asked Questions About SEO in <?php echo $fullCityName; ?></h4>
+                            <h3>Search Engine Marketing in <?php echo $fullCityName; ?></h3>
+
+                            <p>In the competitive digital landscape of <?php echo $fullCityName; ?>, achieving immediate visibility on search engines is crucial, and that's where our Search Engine Marketing (SEM) services excel. At ThiyagiDigital, we specialize in crafting strategic SEM campaigns that propel your <?php echo $fullCityName; ?> business to the top of search engine results, ensuring maximum exposure and driving targeted local traffic.</p>
+
+                            <p>Our SEM approach for <?php echo $fullCityName; ?> businesses combines the power of paid advertising with precise geographic targeting. We leverage platforms like Google Ads to create compelling ad campaigns that reach potential customers in <?php echo $fullCityName; ?> exactly when they're searching for products or services you offer.</p>
+
+                            <p>What sets our <?php echo $fullCityName; ?> SEM services apart is our data-driven methodology. We continuously monitor and analyze campaign performance specific to the <?php echo $fullCityName; ?> market, adjusting strategies to optimize for local conversions and maximize your return on investment.</p>
+
+                            <h4>"Boost Your <?php echo $fullCityName; ?> Visibility with Targeted SEM Campaigns"</h4>
+
+                            <p>Whether you're looking to increase local sales, boost website traffic from <?php echo $fullCityName; ?> residents, or promote a specific product/service in the <?php echo $stateName; ?> region, our SEM experts tailor campaigns to your unique goals. We focus on cost-effective strategies that ensure every marketing dollar delivers measurable results for your <?php echo $fullCityName; ?> business.</p>
+
+                            <p>Partner with us to dominate search engine results in <?php echo $fullCityName; ?>, reach your ideal local audience, and watch your business grow. Invest in SEM with ThiyagiDigital - where targeted visibility transforms into profitability.</p>
+
+                            <h4>Frequently Asked Questions About SEM in <?php echo $fullCityName; ?></h4>
                             <div class="bi-faq-content-area">
                                 <div class="accordion" id="accordionExample_31">
                                     <div class="accordion-item wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1000ms">
                                         <h2 class="accordion-header" id="heading10">
                                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
-                                                <span>What is SEO?</span>
+                                                <span>What is SEM?</span>
                                             </button>
                                         </h2>
                                         <div id="collapse10" class="accordion-collapse collapse show" aria-labelledby="heading10" data-bs-parent="#accordionExample_31">
                                             <div class="accordion-body">
                                                 <div class="bi-faq-text">
-                                                SEO, or Search Engine Optimization, is the process of optimizing websites to improve visibility and rankings on search engines for terms like "SEO services in <?php echo $fullCityName; ?>".
+                                                SEM (Search Engine Marketing) is online advertising that increases visibility on search engines for terms like "SEM services in <?php echo $fullCityName; ?>", driving targeted traffic through paid campaigns.
                                                 </div>
                                             </div>
                                         </div>
@@ -1668,13 +1249,13 @@ $page_schema = [
                                     <div class="accordion-item wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
                                         <h2 class="accordion-header" id="heading12">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                                                <span>Why is local SEO important for <?php echo $fullCityName; ?> businesses?</span>
+                                                <span>Why choose SEM for my <?php echo $fullCityName; ?> business?</span>
                                             </button>
                                         </h2>
                                         <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionExample_31">
                                             <div class="accordion-body">
                                                 <div class="bi-faq-text">
-                                                Local SEO enhances your visibility in <?php echo $fullCityName; ?>, attracts targeted local traffic, and boosts credibility among <?php echo $fullCityName; ?> customers, ultimately contributing to increased leads and revenue.
+                                                SEM provides immediate visibility in <?php echo $fullCityName; ?>, precise local audience targeting, and measurable results - making it the fastest way to reach customers searching for your products/services in <?php echo $fullCityName; ?>.
                                                 </div>
                                             </div>
                                         </div>
@@ -1682,13 +1263,13 @@ $page_schema = [
                                     <div class="accordion-item wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
                                         <h2 class="accordion-header" id="heading13">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                                                <span>How long does it take to see SEO results in <?php echo $fullCityName; ?>?</span>
+                                                <span>How quickly can I see SEM results in <?php echo $fullCityName; ?>?</span>
                                             </button>
                                         </h2>
                                         <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionExample_31">
                                             <div class="accordion-body">
                                                 <div class="bi-faq-text">
-                                                SEO timelines vary for <?php echo $fullCityName; ?> businesses, but noticeable improvements often occur in 4-6 months; sustained success involves ongoing optimization efforts tailored to the <?php echo $fullCityName; ?> market.
+                                                Unlike SEO, SEM delivers immediate results. Your ads can start appearing in <?php echo $fullCityName; ?> search results within 24 hours of campaign launch, with optimization ongoing for continuous improvement.
                                                 </div>
                                             </div>
                                         </div>
@@ -1699,54 +1280,42 @@ $page_schema = [
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="bi-single-sidebar">
+                    <div class="bi-single-sidebar">							
                         <div class="container">
                             <?php include 'sideform.php';?>
                             <?php include 'mainservice-sidebar.php';?>
                             <div class="bi-single-sidebar-item">
                                 <div class="bi-sidebar-contact-widget headline">
                                     <h3 class="widget-title">Serving <?php echo $fullCityName; ?> Area</h3>
-                                    <p>We provide specialized SEO services for businesses in <?php echo $fullCityName; ?>, <?php echo $stateName; ?>.</p>
+                                    <p>We provide specialized SEM services for businesses in <?php echo $fullCityName; ?>, <?php echo $stateName; ?>.</p>
                                 </div>
                             </div>
                             <div class="bi-single-sidebar-item">
                                 <div class="bi-sidebar-contact-widget headline">
-                                    <h3 class="widget-title">Quick FAQs: SEO in <?php echo $fullCityName; ?></h3>
+                                    <h3 class="widget-title">Quick FAQs: SEM in <?php echo $fullCityName; ?></h3>
                                     <div class="bi-faq-content-area">
-                                        <div class="accordion" id="accordionSidebarSEO">
+                                        <div class="accordion" id="accordionSidebarSEM">
                                             <div class="accordion-item">
-                                                <h2 class="accordion-header" id="sfaq1">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq1c" aria-expanded="false" aria-controls="sfaq1c">
-                                                        What is SEO?
+                                                <h2 class="accordion-header" id="semfaq1">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#semfaq1c" aria-expanded="false" aria-controls="semfaq1c">
+                                                        What is SEM?
                                                     </button>
                                                 </h2>
-                                                <div id="sfaq1c" class="accordion-collapse collapse" aria-labelledby="sfaq1" data-bs-parent="#accordionSidebarSEO">
+                                                <div id="semfaq1c" class="accordion-collapse collapse" aria-labelledby="semfaq1" data-bs-parent="#accordionSidebarSEM">
                                                     <div class="accordion-body">
-                                                        SEO improves your websiteâ€™s visibility on search engines for local terms like â€œSEO services in <?php echo $fullCityName; ?>â€.
+                                                        Search Engine Marketing uses paid ads (like Google Ads) to reach customers in <?php echo $fullCityName; ?>.
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="accordion-item">
-                                                <h2 class="accordion-header" id="sfaq2">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq2c" aria-expanded="false" aria-controls="sfaq2c">
-                                                        Why is local SEO important?
+                                                <h2 class="accordion-header" id="semfaq2">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#semfaq2c" aria-expanded="false" aria-controls="semfaq2c">
+                                                        What budget do I need?
                                                     </button>
                                                 </h2>
-                                                <div id="sfaq2c" class="accordion-collapse collapse" aria-labelledby="sfaq2" data-bs-parent="#accordionSidebarSEO">
+                                                <div id="semfaq2c" class="accordion-collapse collapse" aria-labelledby="semfaq2" data-bs-parent="#accordionSidebarSEM">
                                                     <div class="accordion-body">
-                                                        It helps businesses in <?php echo $fullCityName; ?> reach nearby customers, boosting relevant traffic and leads.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="sfaq3">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq3c" aria-expanded="false" aria-controls="sfaq3c">
-                                                        How long to see results?
-                                                    </button>
-                                                </h2>
-                                                <div id="sfaq3c" class="accordion-collapse collapse" aria-labelledby="sfaq3" data-bs-parent="#accordionSidebarSEO">
-                                                    <div class="accordion-body">
-                                                        Typically 4â€“6 months, depending on competition in <?php echo $fullCityName; ?> and your siteâ€™s starting point.
+                                                        We tailor budgets based on competition and goals in <?php echo $fullCityName; ?>; even modest budgets can work.
                                                     </div>
                                                 </div>
                                             </div>
@@ -1755,7 +1324,7 @@ $page_schema = [
                                 </div>
                             </div>
                             <?php include 'callservice-sidebar.php';?>
-                        </div>
+                        </div>	
                     </div>
                 </div>
             </div>
@@ -1763,8 +1332,8 @@ $page_schema = [
     </div>
 </section>
 <!-- End of Service Details section -->
-    <?php include 'testmonial2.php';?>
-    <?php include 'client-logo.php';?>
-    <?php include 'project-count.php';?>
-    <?php include 'certify-partner.php';?>
-    <?php include 'footer.php';?>
+<?php include 'testmonial2.php';?>
+<?php include 'client-logo.php';?>
+<?php include 'project-count.php';?>
+<?php include 'certify-partner.php';?>
+<?php include 'footer.php';?>

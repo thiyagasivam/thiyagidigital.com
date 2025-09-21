@@ -8,6 +8,16 @@ $page_title = "Online Store Setup Services in $city_formatted | ThiyagiDigital";
 $page_description = "Professional online store setup services in $city_formatted. Quick eCommerce store launch, product configuration, and payment integration for businesses in $city_formatted.";
 $page_keywords = "online store setup $city_formatted, ecommerce store setup services $city_formatted, store launch $city_formatted, online business setup $city_formatted";
 
+// List of major cities for tabs
+$major_cities = [
+    'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Ahmedabad', 'Chennai', 'Kolkata', 'Surat', 'Pune', 'Jaipur',
+    'Lucknow', 'Kanpur', 'Nagpur', 'Indore', 'Thane', 'Bhopal', 'Visakhapatnam', 'Pimpri-Chinchwad', 'Patna', 'Vadodara',
+    'Ghaziabad', 'Ludhiana', 'Agra', 'Nashik', 'Faridabad', 'Meerut', 'Rajkot', 'Kalyan-Dombivli', 'Vasai-Virar', 'Varanasi',
+    // International Cities
+    'New York', 'Los Angeles', 'Chicago', 'Toronto', 'London', 'Manchester', 'Berlin', 'Paris', 'Tokyo', 'Singapore',
+    'Dubai', 'Sydney', 'Melbourne', 'São Paulo', 'Mexico City'
+];
+
 include 'header.php';
 ?>
 
