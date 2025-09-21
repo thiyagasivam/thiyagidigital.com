@@ -5,12 +5,13 @@ $page_keywords = 'eCommerce development {city}, online store development {city},
 
 // Get city from URL parameter
 $city = isset($_GET['city']) ? ucwords(str_replace('-', ' ', $_GET['city'])) : 'Chennai';
+$city_lower = strtolower(str_replace(' ', '-', $city));
 
 // Replace placeholders in title and meta
 $page_title = str_replace('{city}', $city, $page_title);
 $page_description = str_replace('{city}', $city, $page_description);
 $page_keywords = str_replace('{city}', $city, $page_keywords);
-$supportedCities = array_merge($supportedCities, $newCities);
+
 // List of major cities for tabs
 $supportedCities = [
 
@@ -1544,6 +1545,15 @@ $newCities = [
     'uttarakhand' => ['name' => 'Uttarakhand', 'state' => 'Uttarakhand'],
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
+
+// Merge supported cities with comprehensive cities
+$supportedCities = array_merge($supportedCities, $newCities);
+
+// Validate city exists
+if (!array_key_exists($city_lower, $supportedCities)) {
+    header("Location: ecommerce-development-service.php");
+    exit();
+}
 
 include 'header.php';
 ?>
