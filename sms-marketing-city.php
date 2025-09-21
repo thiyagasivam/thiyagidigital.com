@@ -1537,12 +1537,23 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge both arrays for complete city coverage
+$supportedCities = array_merge($supportedCities, $newCities);
+
+// Get the city slug from URL
+$citySlug = isset($_GET['city']) ? $_GET['city'] : 'chennai';
 
 // Check if city is supported
-if (!array_key_exists($city_lower, $supportedCities)) {
-    header("Location: sms-marketing-service.php");
+if (!array_key_exists($citySlug, $supportedCities)) {
+    header("Location: /sms-marketing-service/");
     exit();
 }
+
+// Get city information
+$cityInfo = $supportedCities[$citySlug];
+$city = $cityInfo['name'];
+$stateName = $cityInfo['state'];
+$city_lower = strtolower(str_replace(' ', '-', $city));
 
 // State mapping for cities
 $cityStateMapping = [
@@ -1551,7 +1562,7 @@ $cityStateMapping = [
     // Add more mappings as needed - abbreviated for space
 ];
 
-$state = isset($cityStateMapping[$city_lower]) ? $cityStateMapping[$city_lower] : '';
+$state = $stateName; // Use the state from city data instead of mapping
 
 $page_title = "SMS Marketing Services in $city | ThiyagiDigital";
 $page_description = "Professional SMS marketing services in $city. Bulk SMS campaigns, text message marketing, and automated SMS solutions for $city businesses.";
