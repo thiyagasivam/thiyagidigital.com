@@ -2,7 +2,7 @@
 // City-specific eCommerce Marketing page
 $city = isset($_GET['city']) ? ucwords(str_replace('-', ' ', $_GET['city'])) : 'Chennai';
 $city_lower = strtolower(str_replace(' ', '-', $city));
-$supportedCities = array_merge($supportedCities, $newCities);
+
 $supportedCities = [
 
     // Major cities
@@ -1536,6 +1536,8 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge supported cities with comprehensive cities
+$supportedCities = array_merge($supportedCities, $newCities);
 
 // Check if city is supported
 if (!array_key_exists($city_lower, $supportedCities)) {
