@@ -3,7 +3,7 @@
 // Get city name from URL and sanitize it
 $citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
 $cityName = ucwords(str_replace('-', ' ', $citySlug));
-
+$supportedCities = array_merge($supportedCities, $newCities);
 $supportedCities = [
     // Major cities
     'chennai' => ['name' => 'Chennai', 'state' => 'Tamil Nadu'],
@@ -1764,3 +1764,4 @@ $page_schema = [
 <?php include 'project-count.php';?>
 <?php include 'certify-partner.php';?>
 <?php include 'footer.php';?>
+

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Logo Design City Page
 $city = isset($_GET['city']) ? $_GET['city'] : 'Chennai';
 $service_title = 'Logo Design';
@@ -7,7 +7,7 @@ $city_formatted = ucwords(str_replace('-', ' ', $city));
 $page_title = "Logo Design Services in $city_formatted | ThiyagiDigital";
 $page_description = "Professional logo design services in $city_formatted. Custom logo creation, brand identity design, and visual branding solutions for businesses in $city_formatted.";
 $page_keywords = "logo design $city_formatted, brand logo design services $city_formatted, custom logo creation $city_formatted, business logo design $city_formatted";
-
+$supportedCities = array_merge($supportedCities, $newCities);
 // List of major cities for tabs
 $supportedCities = [
     // Major cities
@@ -502,18 +502,18 @@ $supportedCities = [
     'munich' => ['name' => 'Munich', 'state' => 'Bavaria'],
     'cologne' => ['name' => 'Cologne', 'state' => 'North Rhine-Westphalia'],
     'frankfurt' => ['name' => 'Frankfurt', 'state' => 'Hesse'],
-    'stuttgart' => ['name' => 'Stuttgart', 'state' => 'Baden-Württemberg'],
+    'stuttgart' => ['name' => 'Stuttgart', 'state' => 'Baden-WÃ¼rttemberg'],
     'dusseldorf' => ['name' => 'Dusseldorf', 'state' => 'North Rhine-Westphalia'],
     'dortmund' => ['name' => 'Dortmund', 'state' => 'North Rhine-Westphalia'],
     'essen' => ['name' => 'Essen', 'state' => 'North Rhine-Westphalia'],
     'leipzig' => ['name' => 'Leipzig', 'state' => 'Saxony'],
     
     // Europe - France
-    'paris' => ['name' => 'Paris', 'state' => 'Île-de-France'],
-    'marseille' => ['name' => 'Marseille', 'state' => 'Provence-Alpes-Côte d\'Azur'],
-    'lyon' => ['name' => 'Lyon', 'state' => 'Auvergne-Rhône-Alpes'],
+    'paris' => ['name' => 'Paris', 'state' => 'ÃŽle-de-France'],
+    'marseille' => ['name' => 'Marseille', 'state' => 'Provence-Alpes-CÃ´te d\'Azur'],
+    'lyon' => ['name' => 'Lyon', 'state' => 'Auvergne-RhÃ´ne-Alpes'],
     'toulouse' => ['name' => 'Toulouse', 'state' => 'Occitanie'],
-    'nice' => ['name' => 'Nice', 'state' => 'Provence-Alpes-Côte d\'Azur'],
+    'nice' => ['name' => 'Nice', 'state' => 'Provence-Alpes-CÃ´te d\'Azur'],
     'nantes' => ['name' => 'Nantes', 'state' => 'Pays de la Loire'],
     'strasbourg' => ['name' => 'Strasbourg', 'state' => 'Grand Est'],
     'montpellier' => ['name' => 'Montpellier', 'state' => 'Occitanie'],
@@ -558,15 +558,15 @@ $supportedCities = [
     
     // Europe - Sweden
     'stockholm' => ['name' => 'Stockholm', 'state' => 'Stockholm County'],
-    'gothenburg' => ['name' => 'Gothenburg', 'state' => 'Västra Götaland County'],
-    'malmo' => ['name' => 'Malmo', 'state' => 'Skåne County'],
+    'gothenburg' => ['name' => 'Gothenburg', 'state' => 'VÃ¤stra GÃ¶taland County'],
+    'malmo' => ['name' => 'Malmo', 'state' => 'SkÃ¥ne County'],
     'uppsala' => ['name' => 'Uppsala', 'state' => 'Uppsala County'],
-    'vasteras' => ['name' => 'Vasteras', 'state' => 'Västmanland County'],
-    'orebro' => ['name' => 'Orebro', 'state' => 'Örebro County'],
-    'linkoping' => ['name' => 'Linkoping', 'state' => 'Östergötland County'],
-    'helsingborg' => ['name' => 'Helsingborg', 'state' => 'Skåne County'],
-    'jonkoping' => ['name' => 'Jonkoping', 'state' => 'Jönköping County'],
-    'norrkoping' => ['name' => 'Norrkoping', 'state' => 'Östergötland County'],
+    'vasteras' => ['name' => 'Vasteras', 'state' => 'VÃ¤stmanland County'],
+    'orebro' => ['name' => 'Orebro', 'state' => 'Ã–rebro County'],
+    'linkoping' => ['name' => 'Linkoping', 'state' => 'Ã–stergÃ¶tland County'],
+    'helsingborg' => ['name' => 'Helsingborg', 'state' => 'SkÃ¥ne County'],
+    'jonkoping' => ['name' => 'Jonkoping', 'state' => 'JÃ¶nkÃ¶ping County'],
+    'norrkoping' => ['name' => 'Norrkoping', 'state' => 'Ã–stergÃ¶tland County'],
     
     // Europe - Switzerland
     'zurich' => ['name' => 'Zurich', 'state' => 'Zurich'],
@@ -583,7 +583,7 @@ $supportedCities = [
     // Europe - Poland
     'warsaw' => ['name' => 'Warsaw', 'state' => 'Masovian Voivodeship'],
     'krakow' => ['name' => 'Krakow', 'state' => 'Lesser Poland Voivodeship'],
-    'lodz' => ['name' => 'Lodz', 'state' => 'Łódź Voivodeship'],
+    'lodz' => ['name' => 'Lodz', 'state' => 'ÅÃ³dÅº Voivodeship'],
     'wroclaw' => ['name' => 'Wroclaw', 'state' => 'Lower Silesian Voivodeship'],
     'poznan' => ['name' => 'Poznan', 'state' => 'Greater Poland Voivodeship'],
     'gdansk' => ['name' => 'Gdansk', 'state' => 'Pomeranian Voivodeship'],
@@ -761,23 +761,23 @@ $supportedCities = [
     'vereeniging' => ['name' => 'Vereeniging', 'state' => 'Gauteng'],
     
     // South America - Brazil
-    'sao-paulo' => ['name' => 'São Paulo', 'state' => 'São Paulo'],
+    'sao-paulo' => ['name' => 'SÃ£o Paulo', 'state' => 'SÃ£o Paulo'],
     'rio-de-janeiro' => ['name' => 'Rio de Janeiro', 'state' => 'Rio de Janeiro'],
-    'brasilia' => ['name' => 'Brasília', 'state' => 'Federal District'],
+    'brasilia' => ['name' => 'BrasÃ­lia', 'state' => 'Federal District'],
     'salvador' => ['name' => 'Salvador', 'state' => 'Bahia'],
-    'fortaleza' => ['name' => 'Fortaleza', 'state' => 'Ceará'],
+    'fortaleza' => ['name' => 'Fortaleza', 'state' => 'CearÃ¡'],
     'belo-horizonte' => ['name' => 'Belo Horizonte', 'state' => 'Minas Gerais'],
     'manaus' => ['name' => 'Manaus', 'state' => 'Amazonas'],
-    'curitiba' => ['name' => 'Curitiba', 'state' => 'Paraná'],
+    'curitiba' => ['name' => 'Curitiba', 'state' => 'ParanÃ¡'],
     'recife' => ['name' => 'Recife', 'state' => 'Pernambuco'],
     'porto-alegre' => ['name' => 'Porto Alegre', 'state' => 'Rio Grande do Sul'],
     
     // South America - Argentina
     'buenos-aires' => ['name' => 'Buenos Aires', 'state' => 'Buenos Aires'],
-    'cordoba' => ['name' => 'Córdoba', 'state' => 'Córdoba'],
+    'cordoba' => ['name' => 'CÃ³rdoba', 'state' => 'CÃ³rdoba'],
     'rosario' => ['name' => 'Rosario', 'state' => 'Santa Fe'],
     'mendoza' => ['name' => 'Mendoza', 'state' => 'Mendoza'],
-    'tucuman' => ['name' => 'Tucumán', 'state' => 'Tucumán'],
+    'tucuman' => ['name' => 'TucumÃ¡n', 'state' => 'TucumÃ¡n'],
     'la-plata' => ['name' => 'La Plata', 'state' => 'Buenos Aires'],
     'mar-del-plata' => ['name' => 'Mar del Plata', 'state' => 'Buenos Aires'],
     'salta' => ['name' => 'Salta', 'state' => 'Salta'],
@@ -787,14 +787,14 @@ $supportedCities = [
     // South America - Mexico
     'mexico-city' => ['name' => 'Mexico City', 'state' => 'Mexico City'],
     'guadalajara' => ['name' => 'Guadalajara', 'state' => 'Jalisco'],
-    'monterrey' => ['name' => 'Monterrey', 'state' => 'Nuevo León'],
+    'monterrey' => ['name' => 'Monterrey', 'state' => 'Nuevo LeÃ³n'],
     'puebla' => ['name' => 'Puebla', 'state' => 'Puebla'],
     'tijuana' => ['name' => 'Tijuana', 'state' => 'Baja California'],
-    'leon' => ['name' => 'León', 'state' => 'Guanajuato'],
-    'juarez' => ['name' => 'Juárez', 'state' => 'Chihuahua'],
-    'torreon' => ['name' => 'Torreón', 'state' => 'Coahuila'],
-    'queretaro' => ['name' => 'Querétaro', 'state' => 'Querétaro'],
-    'merida' => ['name' => 'Mérida', 'state' => 'Yucatán']
+    'leon' => ['name' => 'LeÃ³n', 'state' => 'Guanajuato'],
+    'juarez' => ['name' => 'JuÃ¡rez', 'state' => 'Chihuahua'],
+    'torreon' => ['name' => 'TorreÃ³n', 'state' => 'Coahuila'],
+    'queretaro' => ['name' => 'QuerÃ©taro', 'state' => 'QuerÃ©taro'],
+    'merida' => ['name' => 'MÃ©rida', 'state' => 'YucatÃ¡n']
 ];
 
 // New list of cities/districts/states from the user's request

@@ -2,8 +2,9 @@
 // City-specific eCommerce Marketing page
 $city = isset($_GET['city']) ? ucwords(str_replace('-', ' ', $_GET['city'])) : 'Chennai';
 $city_lower = strtolower(str_replace(' ', '-', $city));
-
+$supportedCities = array_merge($supportedCities, $newCities);
 $supportedCities = [
+
     // Major cities
     'chennai' => ['name' => 'Chennai', 'state' => 'Tamil Nadu'],
     'madurai' => ['name' => 'Madurai', 'state' => 'Tamil Nadu'],
@@ -1687,3 +1688,4 @@ include 'header.php';
 	<?php include 'certify-partner.php';?>
 
 	<?php include 'footer.php';?>
+
