@@ -1538,7 +1538,7 @@ $newCities = [
 ];
 
 // Check if city is supported
-if (!in_array($city_lower, $supportedCities)) {
+if (!array_key_exists($city_lower, $supportedCities)) {
     header("Location: affiliate-marketing-service.php");
     exit();
 }
