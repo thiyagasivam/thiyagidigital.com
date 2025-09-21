@@ -1558,7 +1558,7 @@ include 'header.php';
 ?>
 
 <!-- Start of breadcrumb section -->
-<section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="assets/img/bg/bread-bg.jpg">
+<section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">
     <div class="background_overlay"></div>
     <div class="container">
         <div class="bi-breadcrumbs-content headline ul-li text-center">
@@ -1681,4 +1681,5 @@ include 'header.php';
 <?php include 'project-count.php';?>
 <?php include 'certify-partner.php';?>
 <?php include 'footer.php';?>
+
 

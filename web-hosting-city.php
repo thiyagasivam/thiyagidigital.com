@@ -1548,7 +1548,7 @@ include 'header.php';
 
 <!-- Start of breadcrumb section
 	============================================= -->
-	<section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="assets/img/bg/bread-bg.jpg">
+	<section id="bi-breadcrumbs" class="bi-bredcrumbs-section position-relative about-bgimgsize" data-background="/assets/img/bg/bread-bg.jpg">
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
@@ -1574,7 +1574,7 @@ include 'header.php';
 					<div class="col-lg-8">
 						<div class="bi-service-details-text-area">
 							<div class="bi-service-details-img">
-								<img src="assets/img/service/serd1.jpg" alt="">
+								<img src="/assets/img/service/serd1.jpg" alt="">
 							</div>
 							<div class="bi-service-details-text headline pera-content">
 								<h2>Web Hosting Services in <?php echo $city; ?></h2>
@@ -1692,4 +1692,5 @@ include 'header.php';
 	<?php include 'certify-partner.php';?>
 
 	<?php include 'footer.php';?>
+
 
