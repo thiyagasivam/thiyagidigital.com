@@ -791,7 +791,6 @@ $supportedCities = [
     'queretaro' => ['name' => 'Querétaro', 'state' => 'Querétaro'],
     'merida' => ['name' => 'Mérida', 'state' => 'Yucatán']
 ];
-$supportedCities = array_merge($supportedCities, $newCities);
 
 // New list of cities/districts/states from the user's request
 $newCities = [
@@ -1536,6 +1535,9 @@ $newCities = [
     'uttarakhand' => ['name' => 'Uttarakhand', 'state' => 'Uttarakhand'],
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
+
+// Merge the arrays to get complete city coverage
+$supportedCities = array_merge($supportedCities, $newCities);
 
 // Check if city is supported
 if (!array_key_exists($city_lower, $supportedCities)) {

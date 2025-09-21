@@ -790,8 +790,6 @@ $supportedCities = [
     'queretaro' => ['name' => 'Querétaro', 'state' => 'Querétaro'],
     'merida' => ['name' => 'Mérida', 'state' => 'Yucatán']
 ];
-$supportedCities = array_merge($supportedCities, $newCities);
-
 // New list of cities/districts/states from the user's request
 $newCities = [
     'nicobar' => ['name' => 'Nicobar', 'state' => 'Andaman and Nicobar Islands'],
@@ -1763,4 +1761,5 @@ $page_schema = [
 <?php include 'project-count.php';?>
 <?php include 'certify-partner.php';?>
 <?php include 'footer.php';?>
+
 
