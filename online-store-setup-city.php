@@ -796,7 +796,6 @@ $supportedCities = [
     'queretaro' => ['name' => 'QuerÃ©taro', 'state' => 'QuerÃ©taro'],
     'merida' => ['name' => 'MÃ©rida', 'state' => 'YucatÃ¡n']
 ];
-$supportedCities = array_merge($supportedCities, $newCities);
 
 // New list of cities/districts/states from the user's request
 $newCities = [
@@ -1542,6 +1541,23 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge both arrays for complete city coverage
+$supportedCities = array_merge($supportedCities, $newCities);
+
+// Get the city slug from URL
+$citySlug = isset($_GET['city']) ? $_GET['city'] : 'chennai';
+
+// Validate if the requested city exists
+if (!array_key_exists($citySlug, $supportedCities)) {
+    header("Location: /online-store-setup-service/");
+    exit();
+}
+
+// Get city information
+$cityInfo = $supportedCities[$citySlug];
+$city_formatted = $cityInfo['name'];
+$stateName = $cityInfo['state'];
+$city_lower = strtolower(str_replace(' ', '-', $city_formatted));
 
 include 'header.php';
 ?>
