@@ -1536,6 +1536,8 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge the new cities with the existing supported cities
+$supportedCities = array_merge($supportedCities, $newCities);
 
 // Redirect to main WordPress development service page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
