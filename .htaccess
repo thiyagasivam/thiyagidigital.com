@@ -6,7 +6,7 @@ RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 
 # City service page redirects
 RewriteRule ^seo-services/([a-z-]+)/?$ seo-city.php?city=$1 [L,QSA]
-RewriteRule ^sem-services/([a-z-]+)/?$ sem-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^sem-services/([a-z-]+)/?$ sem-services-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^web-development-service/([a-z-]+)/?$ web-development-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^smm-service/([a-z-]+)/?$ smm-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^content-writing-service/([a-z-]+)/?$ content-writing-city.php?city=$1 [L,QSA,NC]

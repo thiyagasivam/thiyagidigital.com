@@ -1536,6 +1536,8 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge both arrays for complete city coverage
+$supportedCities = array_merge($supportedCities, $newCities);
 
 // Redirect to main SEM page if city not found
 if (!array_key_exists($citySlug, $supportedCities)) {
