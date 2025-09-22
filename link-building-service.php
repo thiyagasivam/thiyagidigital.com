@@ -1,7 +1,8 @@
 <?php
 $page_title = 'Link Building Services | ThiyagiDigital';
-$page_description = 'Professional link building services to improve your website\'s authority and search rankings. High-quality backlinks and SEO link building strategies by ThiyagiDigital.';
+$page_description = 'Professional link building services to improve your website authority and search rankings. High-quality backlinks and SEO link building strategies by ThiyagiDigital.';
 $page_keywords = 'link building Chennai, SEO backlinks, link building services, high authority links';
+$canonical_url = 'https://www.thiyagidigital.com/link-building-service';
 include 'header.php';
 ?>
 

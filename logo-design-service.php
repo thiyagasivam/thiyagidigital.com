@@ -2,6 +2,7 @@
 $page_title = 'Logo Design Services | ThiyagiDigital';
 $page_description = 'Professional logo design services for brand identity. Custom logo creation, brand guidelines, and visual identity design by ThiyagiDigital.';
 $page_keywords = 'logo design Chennai, brand logo design, custom logo creation, business logo design services';
+$canonical_url = 'https://www.thiyagidigital.com/logo-design-service/';
 include 'header.php';
 ?>
 

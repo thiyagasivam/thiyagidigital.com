@@ -1,5 +1,11 @@
 <?php
 $page_title = 'Search Engine Marketing Services';
+$page_description = 'Drive targeted traffic with ThiyagiDigital SEM services: Google Ads, PPC campaigns, and conversion-focused ad management in Chennai.';
+$page_keywords = 'SEM services, PPC, Google Ads, paid search marketing';
+$canonical_url = 'https://www.thiyagidigital.com/sem-services';
+include 'header.php';
+?>
+$page_title = 'Search Engine Marketing Services';
 $page_description = 'Drive targeted traffic with ThiyagiDigital’s SEM services: Google Ads, PPC campaigns, and conversion-focused ad management in Chennai.';
 $page_keywords = 'SEM services, PPC, Google Ads, paid search marketing';
 include 'header.php';

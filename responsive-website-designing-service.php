@@ -2,6 +2,7 @@
 $page_title = 'Responsive Website Designing Services | ThiyagiDigital';
 $page_description = 'Professional responsive website designing services for optimal mobile and desktop experience. Mobile-first design approach and cross-device compatibility by ThiyagiDigital.';
 $page_keywords = 'responsive website design Chennai, mobile-friendly website, mobile-first design, cross-device compatibility';
+$canonical_url = 'https://thiyagidigital.com/responsive-website-designing-service/';
 include 'header.php';
 ?>
 

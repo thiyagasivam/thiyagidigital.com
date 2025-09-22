@@ -2,6 +2,7 @@
 $page_title = 'Graphic Design Services | ThiyagiDigital';
 $page_description = 'Professional graphic design services for all your branding needs. Creative design solutions including brochures, banners, social media graphics, and marketing materials.';
 $page_keywords = 'graphic design Chennai, creative design services, brochure design, banner design, marketing materials design';
+$canonical_url = 'https://www.thiyagidigital.com/graphic-design-service/';
 include 'header.php';
 ?>
 

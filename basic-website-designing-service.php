@@ -2,6 +2,7 @@
 $page_title = 'Basic Website Designing Services | ThiyagiDigital';
 $page_description = 'Professional basic website designing services for small businesses and startups. Affordable, responsive, and functional website design solutions by ThiyagiDigital.';
 $page_keywords = 'basic website design Chennai, affordable website design, simple website design, startup website';
+$canonical_url = 'https://thiyagidigital.com/basic-website-designing-service/';
 include 'header.php';
 ?>
 

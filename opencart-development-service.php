@@ -2,6 +2,7 @@
 $page_title = 'OpenCart Development Services | ThiyagiDigital';
 $page_description = 'Professional OpenCart development services for lightweight e-commerce solutions. Custom OpenCart development, themes, modules, and extensions by ThiyagiDigital.';
 $page_keywords = 'OpenCart development Chennai, OpenCart e-commerce, custom OpenCart development, OpenCart themes';
+$canonical_url = 'https://www.thiyagidigital.com/opencart-development-service/';
 include 'header.php';
 ?>
 

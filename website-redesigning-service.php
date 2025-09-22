@@ -2,6 +2,7 @@
 $page_title = 'Website Redesigning Services | ThiyagiDigital';
 $page_description = 'Professional website redesigning services to modernize and improve existing websites. Enhanced user experience, mobile optimization, and conversion improvements by ThiyagiDigital.';
 $page_keywords = 'website redesign Chennai, website modernization, website improvement, website makeover';
+$canonical_url = 'https://www.thiyagidigital.com/website-redesigning-service/';
 include 'header.php';
 ?>
 

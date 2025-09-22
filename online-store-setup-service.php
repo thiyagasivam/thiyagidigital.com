@@ -2,6 +2,7 @@
 $page_title = 'Online Store Setup Services | ThiyagiDigital';
 $page_description = 'Professional online store setup services for quick eCommerce launch. Complete store configuration, product uploads, and payment setup by ThiyagiDigital.';
 $page_keywords = 'online store setup Chennai, eCommerce store setup, online shop setup services, digital store launch';
+$canonical_url = 'https://www.thiyagidigital.com/online-store-setup-service/';
 include 'header.php';
 ?>
 

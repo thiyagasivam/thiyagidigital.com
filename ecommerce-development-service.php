@@ -2,6 +2,7 @@
 $page_title = 'eCommerce Development Services | ThiyagiDigital';
 $page_description = 'Professional eCommerce development services for online stores. Custom eCommerce solutions, shopping cart development, and payment integration by ThiyagiDigital.';
 $page_keywords = 'eCommerce development Chennai, online store development, eCommerce website design, shopping website development';
+$canonical_url = 'https://thiyagidigital.com/ecommerce-development-service/';
 include 'header.php';
 ?>
 

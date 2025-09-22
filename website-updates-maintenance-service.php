@@ -2,6 +2,7 @@
 $page_title = 'Website Updates & Maintenance Services | ThiyagiDigital';
 $page_description = 'Professional website updates and maintenance services to keep your site secure, fast, and current. Regular backups, security updates, and content management by ThiyagiDigital.';
 $page_keywords = 'website maintenance Chennai, website updates, website security, website support';
+$canonical_url = 'https://thiyagidigital.com/website-updates-maintenance-service/';
 include 'header.php';
 ?>
 

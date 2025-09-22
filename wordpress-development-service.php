@@ -2,6 +2,7 @@
 $page_title = 'WordPress Website Design Services | ThiyagiDigital';
 $page_description = 'Professional WordPress website design and development services. Custom themes, responsive design, and SEO-optimized WordPress solutions by ThiyagiDigital.';
 $page_keywords = 'WordPress design Chennai, WordPress development, custom WordPress themes, WordPress website design';
+$canonical_url = 'https://www.thiyagidigital.com/wordpress-development-service';
 include 'header.php';
 ?>
 

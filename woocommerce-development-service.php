@@ -2,6 +2,7 @@
 $page_title = 'WooCommerce Development Services | ThiyagiDigital';
 $page_description = 'Professional WooCommerce development services for powerful online stores. Custom WooCommerce solutions, plugin development, and e-commerce optimization by ThiyagiDigital.';
 $page_keywords = 'WooCommerce development Chennai, WordPress eCommerce, online store development, WooCommerce customization';
+$canonical_url = 'https://www.thiyagidigital.com/woocommerce-development-service';
 include 'header.php';
 ?>
 

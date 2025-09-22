@@ -5,7 +5,7 @@ $page_description = 'Boost your organic traffic and rankings with ThiyagiDigital
 $page_keywords = 'SEO services, search engine optimization, on-page SEO, technical SEO, link building';
 
 // Canonical & Schema (Breadcrumbs + FAQ)
-$canonical_url = 'https://www.thiyagidigital.com/seo-services.php';
+$canonical_url = 'https://www.thiyagidigital.com/seo-services';
 $breadcrumbSchema = [
 	'@type' => 'BreadcrumbList',
 	'itemListElement' => [

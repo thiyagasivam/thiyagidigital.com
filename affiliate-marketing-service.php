@@ -2,6 +2,7 @@
 $page_title = 'Affiliate Marketing Services | ThiyagiDigital';
 $page_description = 'Professional affiliate marketing services to expand your reach and drive sales. Partner network management, commission tracking, and affiliate program development by ThiyagiDigital.';
 $page_keywords = 'affiliate marketing Chennai, affiliate program management, commission tracking, partner marketing';
+$canonical_url = 'https://thiyagidigital.com/affiliate-marketing-service/';
 include 'header.php';
 ?>
 

@@ -2,6 +2,7 @@
 $page_title = 'Magento Development Services | ThiyagiDigital';
 $page_description = 'Professional Magento development services for enterprise e-commerce solutions. Custom Magento development, theme design, extension development by ThiyagiDigital.';
 $page_keywords = 'Magento development Chennai, Magento e-commerce, custom Magento development, Magento themes';
+$canonical_url = 'https://www.thiyagidigital.com/magento-development-service/';
 include 'header.php';
 ?>
 
