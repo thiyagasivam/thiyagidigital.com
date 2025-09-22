@@ -40,7 +40,7 @@ RewriteRule ^opencart-development-service/([a-z-]+)/?$ opencart-development-city
 RewriteRule ^web-hosting-service/([a-z-]+)/?$ web-hosting-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^domain-registration-service/([a-z-]+)/?$ domain-registration-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^cloud-hosting-service/([a-z-]+)/?$ cloud-hosting-city.php?city=$1 [L,QSA,NC]
-RewriteRule ^vps-hosting-service/([a-z-]+)/?$ vps-hosting-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^vps-hosting-service/([a-z-]+)/?$ vps-hosting-service-city.php?city=$1 [L,QSA,NC]
 
 # eCommerce Service City Pages
 RewriteRule ^ecommerce-development-service/([a-z-]+)/?$ ecommerce-development-city.php?city=$1 [L,QSA,NC]
