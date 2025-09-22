@@ -3,13 +3,9 @@ $page_title = 'WooCommerce Development Services in {city} | ThiyagiDigital';
 $page_description = 'Professional WooCommerce development services in {city}. Custom WooCommerce solutions, plugin development, and e-commerce optimization by ThiyagiDigital.';
 $page_keywords = 'WooCommerce development {city}, WordPress eCommerce {city}, online store development {city}';
 
-// Get city from URL parameter
-$city = isset($_GET['city']) ? ucwords(str_replace('-', ' ', $_GET['city'])) : 'Chennai';
-
-// Replace placeholders in title and meta
-$page_title = str_replace('{city}', $city, $page_title);
-$page_description = str_replace('{city}', $city, $page_description);
-$page_keywords = str_replace('{city}', $city, $page_keywords);
+// Get city name from URL and sanitize it
+$citySlug = isset($_GET['city']) ? strtolower(trim($_GET['city'])) : '';
+$cityName = ucwords(str_replace('-', ' ', $citySlug));
 
 // List of major cities for tabs
 $supportedCities = [
@@ -1548,14 +1544,22 @@ $newCities = [
 // Merge supported cities with comprehensive cities  
 $supportedCities = array_merge($supportedCities, $newCities);
 
-// Create city_lower for validation
-$city_lower = strtolower(str_replace(' ', '-', $city));
-
-// Check if city is supported
-if (!array_key_exists($city_lower, $supportedCities)) {
-    header("Location: woocommerce-development-service.php");
+// Redirect to main WooCommerce development page if city not found
+if (!array_key_exists($citySlug, $supportedCities)) {
+    header("Location: /woocommerce-development-service.php");
     exit();
 }
+
+// Get city data
+$cityData = $supportedCities[$citySlug];
+$fullCityName = $cityData['name'];
+$stateName = $cityData['state'];
+
+// Update dynamic variables
+$page_title = str_replace('{city}', $fullCityName, $page_title);
+$page_description = str_replace('{city}', $fullCityName, $page_description);
+$page_keywords = str_replace('{city}', $fullCityName, $page_keywords);
+$city = $fullCityName;
 
 include 'header.php';
 ?>

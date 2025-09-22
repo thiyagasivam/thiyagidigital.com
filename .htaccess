@@ -31,6 +31,7 @@ RewriteRule ^website-updates-maintenance-service/([a-z-]+)/?$ website-updates-ma
 
 # Development Service City Pages
 RewriteRule ^woocommerce-development-service/([a-z-]+)/?$ woocommerce-development-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^woocommerce-development/([a-z-]+)/?$ woocommerce-development-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^shopify-development-service/([a-z-]+)/?$ shopify-development-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^shopify-development/([a-z-]+)/?$ shopify-development-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^magento-development-service/([a-z-]+)/?$ magento-development-city.php?city=$1 [L,QSA,NC]
