@@ -2,6 +2,7 @@
 $page_title = 'SMS Marketing Services | ThiyagiDigital';
 $page_description = 'Professional SMS marketing services for direct customer engagement. Bulk SMS campaigns, automated messaging, and targeted SMS marketing solutions by ThiyagiDigital.';
 $page_keywords = 'SMS marketing Chennai, bulk SMS services, SMS campaigns, text message marketing';
+$canonical_url = 'https://www.thiyagidigital.com/sms-marketing-service';
 include 'header.php';
 ?>
 

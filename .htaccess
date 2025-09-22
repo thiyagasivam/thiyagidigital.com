@@ -15,7 +15,8 @@ RewriteRule ^wordpress-development-service/([a-z-]+)/?$ wordpress-development-ci
 RewriteRule ^link-building-service/([a-z-]+)/?$ link-building-city.php?city=$1 [L,QSA,NC]
 
 # New Marketing Service City Pages
-RewriteRule ^sms-marketing-service/?$ sms-marketing-service.php [L,QSA,NC]
+RewriteRule ^sms-marketing-service/$ sms-marketing-service [R=301,L]
+RewriteRule ^sms-marketing-service$ sms-marketing-service.php [L,QSA,NC]
 RewriteRule ^sms-marketing-service/([a-z-]+)$ sms-marketing-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^affiliate-marketing-service/([a-z-]+)/?$ affiliate-marketing-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^ecommerce-marketing-service/([a-z-]+)/?$ ecommerce-marketing-city.php?city=$1 [L,QSA,NC]
