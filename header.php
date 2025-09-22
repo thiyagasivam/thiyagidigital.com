@@ -309,17 +309,7 @@
 							</div>
 							<div class="sidebar-menu ul-li-block">
 								<ul>
-									<li class="dropdown">
-										<a href="#"><i class="fa fa-wrench"></i> Services</a>
-									<ul class="dropdown-menu clearfix">
-									    <li><a href="https://www.thiyagidigital.com/seo-services">Search Engine Optimization</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/smm-service">Social Media Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/sem-services">Search Engine Marketing</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/web-development-service">Web Development</a></li>
-                                        <li><a href="https://www.thiyagidigital.com/content-writing-service">Content Writing</a></li>
-										<li><a href="https://www.thiyagidigital.com/email-marketing-service">Email Marketing</a></li>
-									</ul>
-								</li>
+								<li><a href="https://www.thiyagidigital.com/services"><i class="fal fa-briefcase"></i> Services </a></li>	
 								<li><a href="https://www.thiyagidigital.com/portfolio"><i class="fal fa-briefcase"></i> Portfolio </a></li>
 								<li><a href="https://www.thiyagidigital.com/about"><i class="fal fa-home"></i> About Us </a></li>
 									<li><a href="https://www.thiyagidigital.com/testimonial"><i class="fal fa-comments-alt"></i> Testimonial </a></li>
