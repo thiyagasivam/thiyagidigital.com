@@ -1,5 +1,11 @@
 <?php
 $page_title = 'Social Media Marketing (SMM) Agency | ThiyagiDigital';
+$page_description = 'Grow your brand with ThiyagiDigital social media marketing: strategy, content, and ads that increase reach and engagement.';
+$page_keywords = 'social media marketing Chennai, SMM agency, social media ads, content creation';
+$canonical_url = 'https://www.thiyagidigital.com/smm-service';
+include 'header.php';
+?>
+$page_title = 'Social Media Marketing (SMM) Agency | ThiyagiDigital';
 $page_description = 'Grow your brand with ThiyagiDigital’s social media marketing: strategy, content, and ads that increase reach and engagement.';
 $page_keywords = 'social media marketing Chennai, SMM agency, social media ads, content creation';
 include 'header.php';

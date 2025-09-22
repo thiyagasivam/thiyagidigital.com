@@ -2,6 +2,7 @@
 $page_title = 'Email Marketing Services | ThiyagiDigital';
 $page_description = 'Targeted email campaigns, automation, and segmentation that grow engagement and conversions. Email marketing by ThiyagiDigital.';
 $page_keywords = 'email marketing Chennai, email campaigns, email automation, newsletters';
+$canonical_url = 'https://www.thiyagidigital.com/email-marketing-service';
 include 'header.php';
 ?>
 

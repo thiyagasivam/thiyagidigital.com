@@ -2,6 +2,7 @@
 $page_title = 'Content Writing Services | ThiyagiDigital';
 $page_description = 'Engaging, SEO-optimized content writing services that build authority and drive conversions. Blogs, web copy, and more.';
 $page_keywords = 'content writing Chennai, SEO content, copywriting, blog writing';
+$canonical_url = 'https://www.thiyagidigital.com/content-writing-service';
 include 'header.php';
 ?>
 

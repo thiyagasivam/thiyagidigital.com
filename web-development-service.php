@@ -2,6 +2,7 @@
 $page_title = 'Web Development Services | ThiyagiDigital';
 $page_description = 'Custom web development: responsive, fast, SEO-friendly websites tailored to your business by ThiyagiDigital.';
 $page_keywords = 'web development Chennai, website design, responsive websites, custom development';
+$canonical_url = 'https://www.thiyagidigital.com/web-development-service';
 include 'header.php';
 ?>
 
