@@ -1,7 +1,7 @@
 ﻿<?php
-$page_title = 'VPS Hosting Services in {city} | ThiyagiDigital';
-$page_description = 'Powerful VPS hosting services in {city}. Virtual private servers with root access, SSD storage, and scalable resources by ThiyagiDigital.';
-$page_keywords = 'VPS hosting {city}, virtual private server {city}, dedicated server hosting {city}';
+$page_title = 'UI/UX Design Services in {city} | ThiyagiDigital';
+$page_description = 'Professional UI/UX design services in {city}. User interface design, user experience optimization, and mobile app design by ThiyagiDigital.';
+$page_keywords = 'UI UX design {city}, user interface design {city}, user experience design {city}, mobile app design {city}';
 
 // Get city from URL parameter
 $city = isset($_GET['city']) ? ucwords(str_replace('-', ' ', $_GET['city'])) : 'Chennai';
@@ -1545,6 +1545,23 @@ $newCities = [
     'west-bengal' => ['name' => 'West Bengal', 'state' => 'West Bengal']
 ];
 
+// Merge both arrays for complete city coverage
+$supportedCities = array_merge($supportedCities, $newCities);
+
+// Get the city slug from URL
+$citySlug = isset($_GET['city']) ? $_GET['city'] : 'chennai';
+
+// Validate if the requested city exists
+if (!array_key_exists($citySlug, $supportedCities)) {
+    header("Location: /ui-ux-design-service/");
+    exit();
+}
+
+// Get city information
+$cityInfo = $supportedCities[$citySlug];
+$city = $cityInfo['name'];
+$stateName = $cityInfo['state'];
+$city_lower = strtolower(str_replace(' ', '-', $city));
 
 include 'header.php';
 ?>
@@ -1555,11 +1572,11 @@ include 'header.php';
 		<div class="background_overlay"></div>
 		<div class="container">
 			<div class="bi-breadcrumbs-content headline ul-li text-center">
-				<h1 style="color: white"><b>Best VPS Hosting Services in <?php echo $city; ?></b></h1><br>
+				<h1 style="color: white"><b>Best UI/UX Design Services in <?php echo $city; ?></b></h1><br>
 				<ul>
 					<li><a href="/#">Home</a></li>
 					<li>Services</li>
-					<li>VPS Hosting</li>
+					<li>UI/UX Design</li>
 					<li style="color: white"><?php echo $city; ?></li>
 				</ul>
 			</div>
@@ -1580,49 +1597,49 @@ include 'header.php';
 								<img src="/assets/img/service/serd1.jpg" alt="">
 							</div>
 							<div class="bi-service-details-text headline pera-content">
-								<h2>VPS Hosting Services in <?php echo $city; ?></h2>
+								<h2>UI/UX Design Services in <?php echo $city; ?></h2>
 
-								<p>Experience dedicated server performance with affordable VPS Hosting Services in <?php echo $city; ?> from ThiyagiDigital. We provide virtual private servers that offer guaranteed resources, full control, and scalable solutions for businesses across <?php echo $city; ?> seeking reliable hosting infrastructure.</p>
+								<p>Transform your digital presence with exceptional UI/UX Design Services in <?php echo $city; ?> from ThiyagiDigital. We specialize in creating intuitive user interfaces and engaging user experiences that drive conversions and enhance user satisfaction for businesses across <?php echo $city; ?>.</p>
 
-								<p>Our <?php echo $city; ?>-based VPS hosting solutions combine powerful hardware with local technical support to deliver consistent performance and reliability. From guaranteed CPU cores and RAM to SSD storage and full root access, we provide the resources your applications need to perform optimally.</p>
+								<p>Our <?php echo $city; ?>-based UI/UX design team combines creativity with data-driven insights to deliver designs that not only look stunning but also perform exceptionally. From mobile apps to web applications, we create user-centered designs that resonate with your target audience and achieve your business objectives.</p>
 
-								<p>What makes us the preferred VPS hosting provider in <?php echo $city; ?> is our commitment to performance, reliability, and customer support. We offer both managed and unmanaged options, flexible configurations, and local technical assistance to ensure your VPS meets your specific requirements.</p>
+								<p>What makes us the preferred UI/UX design agency in <?php echo $city; ?> is our user-first approach, attention to detail, and commitment to creating designs that deliver measurable results. We conduct thorough user research, create detailed wireframes, and perform extensive testing to ensure optimal user experiences.</p>
 
-                                <h4>Why Choose Our VPS Hosting Services in <?php echo $city; ?>?</h4>
+                                <h4>Why Choose Our UI/UX Design Services in <?php echo $city; ?>?</h4>
 
                                 <div class="row">
                                     <div class="col-md-6">
                                         <ul>
-                                            <li><strong>Local Technical Support:</strong> <?php echo $city; ?>-based server experts</li>
-                                            <li><strong>Guaranteed Resources:</strong> Dedicated CPU and RAM</li>
-                                            <li><strong>Full Root Access:</strong> Complete server control</li>
+                                            <li><strong>User-Centered Design:</strong> Research-driven design approach</li>
+                                            <li><strong>Mobile-First Design:</strong> Optimized for all devices</li>
+                                            <li><strong>Conversion Focused:</strong> Designs that drive results</li>
                                             <li><strong>SSD Storage:</strong> High-performance storage</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
                                         <ul>
-                                            <li><strong>Scalable Plans:</strong> Upgrade resources easily</li>
-                                            <li><strong>OS Choice:</strong> Linux and Windows options</li>
-                                            <li><strong>99.9% Uptime:</strong> Reliable infrastructure</li>
-                                            <li><strong>24/7 Monitoring:</strong> Proactive server management</li>
+                                            <li><strong>Prototype Testing:</strong> Validate designs before development</li>
+                                            <li><strong>Brand Integration:</strong> Consistent visual identity</li>
+                                            <li><strong>Accessibility Focus:</strong> Inclusive design practices</li>
+                                            <li><strong>Ongoing Support:</strong> Design updates and optimization</li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <p>Power your applications with <?php echo $city; ?>'s premier VPS hosting services at ThiyagiDigital. From server setup and configuration to ongoing management and optimization, we're committed to providing VPS solutions that deliver consistent performance and reliability.</p>
+                                <p>Elevate your digital presence with <?php echo $city; ?>'s premier UI/UX design services at ThiyagiDigital. From initial research and wireframing to final design implementation and testing, we're committed to creating user experiences that delight your customers and drive business growth.</p>
 
-								<h4>Frequently Asked Questions - VPS Hosting in <?php echo $city; ?></h4>
+								<h4>Frequently Asked Questions - UI/UX Design in <?php echo $city; ?></h4>
 								<div class="bi-faq-content-area">
 									<div class="accordion" id="accordionExample_city">
 										<div class="accordion-item wow fadeInUp"  data-wow-delay="200ms" data-wow-duration="1000ms">
 											<h2 class="accordion-header" id="heading_city1">
 												<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_city1" aria-expanded="true" aria-controls="collapse_city1">
-													<span>Why choose VPS hosting services in <?php echo $city; ?>?</span>
+													<span>Why choose UI/UX design services in <?php echo $city; ?>?</span>
 												</button>
 											</h2>
 											<div id="collapse_city1" class="accordion-collapse collapse show" aria-labelledby="heading_city1" data-bs-parent="#accordionExample_city">
 												<div class="accordion-body ">
-													<div class="bi-faq-text">Our <?php echo $city; ?>-based VPS hosting services offer local technical support, better performance for regional users, competitive pricing, and personalized server management for businesses requiring dedicated resources.
+													<div class="bi-faq-text">Our <?php echo $city; ?>-based UI/UX design services offer local market understanding, user research expertise, mobile-first design approach, and personalized design solutions that resonate with your target audience and drive conversions.
 													</div>
 												</div>
 											</div>
@@ -1630,12 +1647,12 @@ include 'header.php';
 										<div class="accordion-item wow fadeInUp"  data-wow-delay="300ms" data-wow-duration="1000ms">
 											<h2 class="accordion-header" id="heading_city2">
 												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_city2" aria-expanded="false" aria-controls="collapse_city2">
-													<span>What VPS plans are available for <?php echo $city; ?> businesses?</span>
+													<span>What UI/UX design services are available for <?php echo $city; ?> businesses?</span>
 												</button>
 											</h2>
 											<div id="collapse_city2" class="accordion-collapse collapse" aria-labelledby="heading_city2" data-bs-parent="#accordionExample_city">
 												<div class="accordion-body ">
-													<div class="bi-faq-text">We offer various VPS plans with different CPU cores, RAM, storage, and bandwidth options suitable for small websites to high-traffic applications. All plans include root access and choice of operating systems.
+													<div class="bi-faq-text">We offer comprehensive UI/UX design services including user research, wireframing, prototyping, visual design, interaction design, usability testing, and mobile app design tailored for <?php echo $city; ?> businesses across various industries.
 													</div>
 												</div>
 											</div>
@@ -1643,12 +1660,12 @@ include 'header.php';
 										<div class="accordion-item wow fadeInUp"  data-wow-delay="400ms" data-wow-duration="1000ms">
 											<h2 class="accordion-header" id="heading_city3">
 												<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_city3" aria-expanded="false" aria-controls="collapse_city3">
-													<span>Do you provide VPS management services for <?php echo $city; ?> clients?</span>
+													<span>Do you provide ongoing design support for <?php echo $city; ?> clients?</span>
 												</button>
 											</h2>
 											<div id="collapse_city3" class="accordion-collapse collapse" aria-labelledby="heading_city3" data-bs-parent="#accordionExample_city">
 												<div class="accordion-body ">
-													<div class="bi-faq-text">Yes, we offer managed VPS services including server setup, security hardening, software updates, monitoring, backups, and technical support for <?php echo $city; ?> businesses who prefer hands-off server management.
+													<div class="bi-faq-text">Yes, we offer ongoing design support including design updates, A/B testing, user feedback analysis, design optimization, and maintenance services for <?php echo $city; ?> businesses to ensure their designs continue to perform effectively.
 													</div>
 												</div>
 											</div>
@@ -1677,10 +1694,12 @@ include 'header.php';
 	<!-- Cities Selection Section -->
 	<section class="cities-section">
 		<div class="container">
-			<h3 class="text-center mb-4">VPS Hosting Services in Major Cities</h3>
+			<h3 class="text-center mb-4">UI/UX Design Services in Major Cities</h3>
 			<div class="cities-grid">
-				<?php foreach($major_cities as $major_city): ?>
-					<a href="/vps-hosting/<?php echo strtolower(str_replace(' ', '-', $major_city)); ?>" 
+				<?php 
+				$major_cities = ['Chennai', 'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Kolkata', 'Pune', 'Ahmedabad', 'Surat', 'Jaipur'];
+				foreach($major_cities as $major_city): ?>
+					<a href="/ui-ux-design-service/<?php echo strtolower(str_replace(' ', '-', $major_city)); ?>" 
 					   class="city-link <?php echo ($city == $major_city) ? 'active' : ''; ?>">
 						<?php echo $major_city; ?>
 					</a>

@@ -26,7 +26,7 @@ RewriteRule ^responsive-website-designing-service/([a-z-]+)/?$ responsive-websit
 RewriteRule ^cms-website-designing-service/([a-z-]+)/?$ cms-website-designing-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^cms-website-designing/([a-z-]+)/?$ cms-website-designing-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^website-redesigning-service/([a-z-]+)/?$ website-redesigning-city.php?city=$1 [L,QSA,NC]
-RewriteRule ^ui-ux-design-service/([a-z-]+)/?$ ui-ux-design-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^ui-ux-design-service/([a-z-]+)/?$ ui-ux-design-service-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^website-updates-maintenance-service/([a-z-]+)/?$ website-updates-maintenance-city.php?city=$1 [L,QSA,NC]
 
 # Development Service City Pages
