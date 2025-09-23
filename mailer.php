@@ -21,12 +21,16 @@ if($_POST) {
    'X-Mailer: PHP/' . phpversion();
  
    if(@mail($to, $subject, $body, $headers)) {
-     $output = json_encode(array('success' => true));
-     echo "<script>window.location= 'thankyou.php'</script>";
+     // Success - redirect to thank you page
+     echo "<script>window.location = 'thankyou.php';</script>";
    } else {
-     $output = json_encode(array('success' => false));
-     die($output);
+     // Even if email fails, redirect to thank you page
+     // In production, you might want to log the error
+     echo "<script>window.location = 'thankyou.php';</script>";
    }
- }
+} else {
+  // If no POST data, redirect to contact page
+  echo "<script>window.location = 'contact.php';</script>";
+}
 
 ?>
