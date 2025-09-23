@@ -19,7 +19,7 @@ function saveFormSubmission($name, $phone, $email, $service, $message, $status =
     $jsonData = json_encode($data) . "\n";
     file_put_contents('contact_submissions.json', $jsonData, FILE_APPEND | LOCK_EX);
     
-    // Also save as readable text
+    // Also save as readable 
     $readable = sprintf(
         "[%s] NEW CONTACT FORM SUBMISSION\n" .
         "Name: %s\n" .
