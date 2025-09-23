@@ -2,7 +2,7 @@
 $page_title = 'Amazon Marketing Services | ThiyagiDigital';
 $page_description = 'Professional Amazon marketing services to boost product visibility and sales. Amazon PPC, product optimization, brand store creation, and marketplace strategies by ThiyagiDigital.';
 $page_keywords = 'Amazon marketing Chennai, Amazon PPC, product listing optimization, Amazon brand store';
-$canonical_url = 'https://thiyagidigital.com/amazon-marketing-service/';
+$canonical_url = 'https://thiyagidigital.com/amazon-marketing-service';
 include 'header.php';
 ?>
 

@@ -2,7 +2,7 @@
 $page_title = 'Domain Registration Services | ThiyagiDigital';
 $page_description = 'Professional domain registration services for your business. Register .com, .in, .org domains with DNS management and privacy protection by ThiyagiDigital.';
 $page_keywords = 'domain registration Chennai, buy domain names, domain booking services, website domains';
-$canonical_url = 'https://www.thiyagidigital.com/domain-registration-service/';
+$canonical_url = 'https://www.thiyagidigital.com/domain-registration-service';
 include 'header.php';
 ?>
 

@@ -2,7 +2,7 @@
 $page_title = 'Shopify Development Services | ThiyagiDigital';
 $page_description = 'Expert Shopify development services for powerful e-commerce stores. Custom Shopify themes, app development, store setup, and optimization by ThiyagiDigital.';
 $page_keywords = 'Shopify development Chennai, Shopify store setup, custom Shopify themes, Shopify app development';
-$canonical_url = 'https://www.thiyagidigital.com/shopify-development-service/';
+$canonical_url = 'https://www.thiyagidigital.com/shopify-development-service';
 include 'header.php';
 ?>
 

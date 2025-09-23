@@ -2,7 +2,7 @@
 $page_title = 'CMS Website Designing Services | ThiyagiDigital';
 $page_description = 'Professional CMS website designing services with WordPress, Joomla, and Drupal. User-friendly content management systems for easy website updates by ThiyagiDigital.';
 $page_keywords = 'CMS website design Chennai, WordPress website design, content management system, easy website updates';
-$canonical_url = 'https://www.thiyagidigital.com/cms-website-designing-service/';
+$canonical_url = 'https://www.thiyagidigital.com/cms-website-designing-service';
 include 'header.php';
 ?>
 

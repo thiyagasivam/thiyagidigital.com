@@ -2,7 +2,7 @@
 $page_title = 'eCommerce Marketing Services | ThiyagiDigital';
 $page_description = 'Comprehensive eCommerce marketing services to boost online sales. Product listing optimization, conversion rate optimization, and multi-channel marketing strategies by ThiyagiDigital.';
 $page_keywords = 'eCommerce marketing Chennai, online store marketing, product optimization, conversion rate optimization';
-$canonical_url = 'https://thiyagidigital.com/ecommerce-marketing-service/';
+$canonical_url = 'https://thiyagidigital.com/ecommerce-marketing-service';
 include 'header.php';
 ?>
 

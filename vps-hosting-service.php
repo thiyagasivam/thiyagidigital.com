@@ -2,7 +2,7 @@
 $page_title = 'VPS Hosting Services | ThiyagiDigital';
 $page_description = 'Powerful VPS hosting services for dedicated performance. Virtual private servers with root access, SSD storage, and scalable resources by ThiyagiDigital.';
 $page_keywords = 'VPS hosting Chennai, virtual private server, dedicated server hosting, VPS server Chennai';
-$canonical_url = 'https://www.thiyagidigital.com/vps-hosting-service/';
+$canonical_url = 'https://www.thiyagidigital.com/vps-hosting-service';
 include 'header.php';
 ?>
 

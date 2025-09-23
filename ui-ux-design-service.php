@@ -2,7 +2,7 @@
 $page_title = 'UI/UX Design Services | ThiyagiDigital';
 $page_description = 'Professional UI/UX design services for exceptional user experiences. User interface design, user experience optimization, and usability testing by ThiyagiDigital.';
 $page_keywords = 'UI/UX design Chennai, user interface design, user experience design, usability testing';
-$canonical_url = 'https://www.thiyagidigital.com/ui-ux-design-service/';
+$canonical_url = 'https://www.thiyagidigital.com/ui-ux-design-service';
 include 'header.php';
 ?>
 

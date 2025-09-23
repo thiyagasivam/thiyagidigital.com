@@ -2,7 +2,7 @@
 $page_title = 'Cloud Hosting Services | ThiyagiDigital';
 $page_description = 'Scalable cloud hosting services for high-performance websites. Reliable cloud infrastructure, auto-scaling, and 24/7 support by ThiyagiDigital.';
 $page_keywords = 'cloud hosting Chennai, cloud server hosting, scalable hosting, cloud infrastructure services';
-$canonical_url = 'https://www.thiyagidigital.com/cloud-hosting-service/';
+$canonical_url = 'https://www.thiyagidigital.com/cloud-hosting-service';
 include 'header.php';
 ?>
 

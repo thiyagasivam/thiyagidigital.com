@@ -2,7 +2,7 @@
 $page_title = 'Web Hosting Services | ThiyagiDigital';
 $page_description = 'Reliable web hosting services for fast, secure websites. Shared hosting, dedicated hosting, cloud hosting solutions with 24/7 support by ThiyagiDigital.';
 $page_keywords = 'web hosting Chennai, website hosting services, shared hosting, dedicated hosting, cloud hosting';
-$canonical_url = 'https://www.thiyagidigital.com/web-hosting-service/';
+$canonical_url = 'https://www.thiyagidigital.com/web-hosting-service';
 include 'header.php';
 ?>
 
