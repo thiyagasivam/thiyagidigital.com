@@ -10,7 +10,7 @@ if($_POST) {
 
   $subject = 'ThiyagiDigital Contact Form Submission';
   $cc = 'support@thiyagidigital.com';
-  $bcc = 'admin@thiyagidigital.com';
+  $bcc = 'kannasivamps@gmail.com';
   $body = "Name: $name\nPhone: $phone\nEmail: $email\nService: $service\nMessage: $message\n";
  
    //mail headers are mandatory for sending email
