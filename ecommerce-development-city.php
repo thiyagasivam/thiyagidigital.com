@@ -1551,7 +1551,6 @@ $newCities = [
     'punjab' => ['name' => 'Punjab', 'state' => 'Punjab'],
     'rajasthan' => ['name' => 'Rajasthan', 'state' => 'Rajasthan'],
     'sikkim' => ['name' => 'Sikkim', 'state' => 'Sikkim'],
-    // Tamil Nadu already included
     'telangana' => ['name' => 'Telangana', 'state' => 'Telangana'],
     'tripura' => ['name' => 'Tripura', 'state' => 'Tripura'],
     'uttar-pradesh' => ['name' => 'Uttar Pradesh', 'state' => 'Uttar Pradesh'],
