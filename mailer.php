@@ -84,11 +84,30 @@ if($_POST) {
   $leadData .= "User Agent: " . ($_SERVER['HTTP_USER_AGENT'] ?? 'Unknown') . "\n";
   $leadData .= "=====================================\n\n";
   
-  // Save to leads file
-  if (file_put_contents('leads.txt', $leadData, FILE_APPEND | LOCK_EX)) {
-    logEmailAttempt("SUCCESS: Lead saved to file - $name ($email)");
+  // Save to leads file (text format)
+  if (file_put_contents('contact_submissions.txt', $leadData, FILE_APPEND | LOCK_EX)) {
+    logEmailAttempt("SUCCESS: Lead saved to TXT file - $name ($email)");
   } else {
-    logEmailAttempt("ERROR: Failed to save lead to file - $name ($email)");
+    logEmailAttempt("ERROR: Failed to save lead to TXT file - $name ($email)");
+  }
+  
+  // Save to JSON file for admin panel
+  $jsonSubmission = array(
+    'timestamp' => $timestamp,
+    'name' => $name,
+    'phone' => $phone,
+    'email' => $email,
+    'service' => $service,
+    'message' => $message,
+    'ip' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown',
+    'status' => 'received' // Will be updated after email attempt
+  );
+  
+  // Append to JSON file (one JSON object per line)
+  if (file_put_contents('contact_submissions.json', json_encode($jsonSubmission) . "\n", FILE_APPEND | LOCK_EX)) {
+    logEmailAttempt("SUCCESS: Lead saved to JSON file - $name ($email)");
+  } else {
+    logEmailAttempt("ERROR: Failed to save lead to JSON file - $name ($email)");
   }
   
   // Prepare email content
@@ -133,8 +152,23 @@ if($_POST) {
     $totalAttempts++;
   }
   
+  // Update JSON submission with email status
+  $emailStatus = ($emailsSent > 0) ? 'email_sent' : 'email_failed';
+  $jsonSubmission['status'] = $emailStatus;
+  $jsonSubmission['emails_sent'] = $emailsSent;
+  $jsonSubmission['total_attempts'] = $totalAttempts;
+  
+  // Update the last line in JSON file with email status
+  if (file_exists('contact_submissions.json')) {
+    $lines = file('contact_submissions.json');
+    if (count($lines) > 0) {
+      $lines[count($lines) - 1] = json_encode($jsonSubmission) . "\n";
+      file_put_contents('contact_submissions.json', implode('', $lines), LOCK_EX);
+    }
+  }
+  
   // Log final result
-  logEmailAttempt("FINAL RESULT: $emailsSent/$totalAttempts emails sent for lead: $name ($email)");
+  logEmailAttempt("FINAL RESULT: $emailsSent/$totalAttempts emails sent for lead: $name ($email) - Status: $emailStatus");
   
   // Always redirect to thank you page (lead is saved regardless)
   echo "<script>window.location = 'thankyou.php';</script>";
