@@ -97,7 +97,7 @@ include 'header.php';
 					</div>
 					<p>Let’s talk about your business. Fill the form, and we will reach out to you.</p>
 					<div class="bi-team-details-contact-form">
-						<form method="post" action="mailer.php" id="contactForm">
+						<form method="post" action="contact-action" id="contactForm">
 							<div class="row">
 								<div class="col-md-6">
 									<input type="text" name="name" placeholder="Name*" required>
@@ -171,8 +171,8 @@ include 'header.php';
 							submitBtn.disabled = true;
 							submitBtn.innerHTML = 'Sending...';
 							
-							// Form will submit normally to mailer.php
-							// mailer.php will handle the redirect to thankyou.php
+							// Form will submit normally to contact-action
+							// contact-action will handle the redirect to thankyou.php
 						});
 						</script>
 					</div>
