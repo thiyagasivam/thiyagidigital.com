@@ -97,7 +97,7 @@ include 'header.php';
 					</div>
 					<p>Let’s talk about your business. Fill the form, and we will reach out to you.</p>
 					<div class="bi-team-details-contact-form">
-						<form method="post" action="contact-action" id="contactForm">
+						<form method="post" action="contact-action" id="contactForm" enctype="multipart/form-data">
 							<div class="row">
 								<div class="col-md-6">
 									<input type="text" name="name" placeholder="Name*" required>
@@ -128,6 +128,13 @@ include 'header.php';
 							   <div class="col-md-12">
 								<textarea name="message" rows="4" placeholder="Your Message (Optional)"></textarea>
 							   </div>
+							   <div class="col-md-12">
+								<label style="display: block; margin: 10px 0 5px 0; color: #666; font-size: 14px;">
+									Attach File (Optional - Max 5MB)
+								</label>
+								<input type="file" name="attachment" id="fileAttachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.txt" style="display: block; width: 100%; padding: 10px; border: 2px dashed #ddd; border-radius: 5px; background: #f9f9f9;">
+								<small style="color: #999; display: block; margin-top: 5px;">Allowed: PDF, DOC, DOCX, JPG, PNG, TXT (Max 5MB)</small>
+							   </div>
 								<div class="col-md-12">
 									<div class="bi-submit-btn">
 										<button type="submit" id="submitBtn">Send Message</button>
@@ -143,6 +150,7 @@ include 'header.php';
 							const email = document.querySelector('input[name="email"]').value.trim();
 							const phone = document.querySelector('input[name="phone"]').value.trim();
 							const service = document.querySelector('select[name="service"]').value;
+							const fileInput = document.getElementById('fileAttachment');
 							
 							// Basic validation
 							if (!name || !email || !phone || !service) {
@@ -167,12 +175,22 @@ include 'header.php';
 								return;
 							}
 							
+							// File size validation (5MB max)
+							if (fileInput.files.length > 0) {
+								const fileSize = fileInput.files[0].size / 1024 / 1024; // in MB
+								if (fileSize > 5) {
+									alert('File size must be less than 5MB');
+									e.preventDefault();
+									return;
+								}
+							}
+							
 							// Disable submit button to prevent double submission
 							submitBtn.disabled = true;
 							submitBtn.innerHTML = 'Sending...';
 							
 							// Form will submit normally to contact-action
-							// contact-action will handle the redirect to thankyou.php
+							// contact-action will handle the redirect to thankyou
 						});
 						</script>
 					</div>

@@ -163,6 +163,15 @@ usort($submissions, function($a, $b) {
                         <div class="detail-label">IP Address</div>
                         <div class="detail-value"><?php echo htmlspecialchars($submission['ip']); ?></div>
                     </div>
+                    
+                    <?php if (!empty($submission['attachment'])): ?>
+                    <div class="detail-item">
+                        <div class="detail-label">Attachment</div>
+                        <div class="detail-value">
+                            📎 <?php echo htmlspecialchars($submission['attachment']); ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
                 </div>
                 
                 <?php if (!empty($submission['message'])): ?>
