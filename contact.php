@@ -144,19 +144,31 @@ include 'header.php';
 						</form>
 						
 						<script>
+						let formSubmitted = false; // Prevent double submission
+						
 						document.getElementById('contactForm').addEventListener('submit', function(e) {
+							// Prevent double submission
+							if (formSubmitted) {
+								e.preventDefault();
+								return false;
+							}
+							
 							const submitBtn = document.getElementById('submitBtn');
 							const name = document.querySelector('input[name="name"]').value.trim();
 							const email = document.querySelector('input[name="email"]').value.trim();
 							const phone = document.querySelector('input[name="phone"]').value.trim();
 							const service = document.querySelector('select[name="service"]').value;
+							const message = document.querySelector('textarea[name="message"]').value.trim();
 							const fileInput = document.getElementById('fileAttachment');
+							
+							console.log('Form submission started');
+							console.log('Form data:', {name, email, phone, service, message: message.substring(0, 50)});
 							
 							// Basic validation
 							if (!name || !email || !phone || !service) {
 								alert('Please fill in all required fields (marked with *)');
 								e.preventDefault();
-								return;
+								return false;
 							}
 							
 							// Email validation
@@ -164,7 +176,7 @@ include 'header.php';
 							if (!emailRegex.test(email)) {
 								alert('Please enter a valid email address');
 								e.preventDefault();
-								return;
+								return false;
 							}
 							
 							// Phone validation (basic)
@@ -172,7 +184,7 @@ include 'header.php';
 							if (!phoneRegex.test(phone)) {
 								alert('Please enter a valid phone number');
 								e.preventDefault();
-								return;
+								return false;
 							}
 							
 							// File size validation (5MB max)
@@ -181,16 +193,47 @@ include 'header.php';
 								if (fileSize > 5) {
 									alert('File size must be less than 5MB');
 									e.preventDefault();
-									return;
+									return false;
 								}
+								console.log('File selected:', fileInput.files[0].name, 'Size:', fileSize.toFixed(2) + 'MB');
 							}
 							
-							// Disable submit button to prevent double submission
+							// All validation passed
+							formSubmitted = true;
+							
+							// Disable submit button and show loading state
 							submitBtn.disabled = true;
-							submitBtn.innerHTML = 'Sending...';
+							submitBtn.innerHTML = '⏳ Sending...';
+							submitBtn.style.opacity = '0.7';
+							
+							// Show loading message
+							const loadingDiv = document.createElement('div');
+							loadingDiv.id = 'loadingMessage';
+							loadingDiv.style.cssText = 'margin-top: 15px; padding: 10px; background: #e7f3ff; border-left: 4px solid #2196F3; border-radius: 5px; color: #0c5460;';
+							loadingDiv.innerHTML = '<strong>📤 Submitting your message...</strong><br><small>Please wait, this may take a few seconds.</small>';
+							submitBtn.parentElement.appendChild(loadingDiv);
+							
+							console.log('Form validation passed, submitting to contact-action');
 							
 							// Form will submit normally to contact-action
-							// contact-action will handle the redirect to thankyou
+							return true;
+						});
+						
+						// Reset form if user comes back
+						window.addEventListener('pageshow', function(event) {
+							if (event.persisted) {
+								formSubmitted = false;
+								const submitBtn = document.getElementById('submitBtn');
+								if (submitBtn) {
+									submitBtn.disabled = false;
+									submitBtn.innerHTML = 'Send Message';
+									submitBtn.style.opacity = '1';
+								}
+								const loadingMsg = document.getElementById('loadingMessage');
+								if (loadingMsg) {
+									loadingMsg.remove();
+								}
+							}
 						});
 						</script>
 					</div>
