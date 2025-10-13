@@ -81,7 +81,7 @@ if (!$is_logged_in) {
                                     <input type="password" name="password" class="form-control" placeholder="Enter admin password" required autocomplete="off">
                                 </div>
                                 <div class="form-text text-muted">
-                                    <small>Default password: <code>admin123</code></small>
+                                    <!-- <small>Default password: <code>admin123</code></small> -->
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-admin w-100 py-2">
