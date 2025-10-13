@@ -2,7 +2,7 @@
 <div class="container">
   <div class="side-form-container">
     <h2 class="side-form-header">Contact Us</h2>
-    <form method="post" action="contact-action.php">
+    <form method="post" action="contact-action">
       <div class="mb-3">
         <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
       </div>
@@ -67,7 +67,7 @@
 					<div class="bi-single-sidebar">
                         <div class="banner-form">
                             <h3 class="text-center form-heading">Get Appointment</h3>
-                            <form id="form" action="contact-action.php" method="post">
+                            <form id="form" action="contact-action" method="post">
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control" placeholder="Name" required="">
                                 </div>                             
