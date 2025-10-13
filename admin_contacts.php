@@ -3,7 +3,7 @@
 // Access this page to see all form submissions even if emails failed
 
 // Simple password protection
-$correct_password = 'thiyagi2024'; // Change this password!
+$correct_password = 'admin123'; // Simple admin password
 $entered_password = $_GET['pass'] ?? $_POST['pass'] ?? '';
 
 if ($entered_password !== $correct_password) {

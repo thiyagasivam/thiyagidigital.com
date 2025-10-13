@@ -66,14 +66,24 @@ if (file_exists('.htaccess')) {
 }
 
 echo "<h3>🔧 Test Form Submission:</h3>";
-echo "<p>You can test the form by:</p>";
+echo "<div style='background:#e7f3ff; padding:15px; border-radius:5px; margin:15px 0;'>";
+echo "<p><strong>Quick Test Options:</strong></p>";
+echo "<ul>";
+echo "<li><a href='test-contact-form.php' target='_blank' style='color:#007cba;'>🧪 Use Test Form</a> - Pre-filled form for quick testing</li>";
+echo "<li><a href='contact' target='_blank' style='color:#007cba;'>📝 Real Contact Page</a> - Production contact form</li>";
+echo "<li><a href='admin_contacts.php' target='_blank' style='color:#007cba;'>👨‍💼 Admin Panel</a> - View submissions (Password: admin123)</li>";
+echo "</ul>";
+echo "</div>";
+
+echo "<p><strong>Testing Steps:</strong></p>";
 echo "<ol>";
-echo "<li>Go to the <a href='contact' target='_blank'>contact page</a></li>";
-echo "<li>Fill in all required fields</li>";
-echo "<li>Optionally attach a file</li>";
+echo "<li>Use either the test form or real contact page</li>";
+echo "<li>Fill in all required fields (Name, Email, Phone, Service)</li>";
+echo "<li>Optionally add a message and attach a file</li>";
 echo "<li>Click 'Send Message'</li>";
 echo "<li>Check if you get redirected to the thank you page</li>";
-echo "<li>Check <a href='admin_contacts.php' target='_blank'>admin panel</a> for submissions</li>";
+echo "<li>Check the admin panel to verify data was saved</li>";
+echo "<li>Check emails (gopikannaps@gmail.com, kannasivamp@gmail.com, kannasivamps@gmail.com)</li>";
 echo "</ol>";
 
 echo "</body></html>";
