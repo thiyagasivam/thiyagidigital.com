@@ -6,6 +6,15 @@
 $correct_password = 'admin123'; // Simple admin password
 $entered_password = $_GET['pass'] ?? $_POST['pass'] ?? '';
 
+// Debug information (remove in production)
+$debug_info = [
+    'GET_pass' => $_GET['pass'] ?? 'not set',
+    'POST_pass' => $_POST['pass'] ?? 'not set',
+    'entered_password' => $entered_password,
+    'correct_password' => $correct_password,
+    'match' => ($entered_password === $correct_password) ? 'YES' : 'NO'
+];
+
 if ($entered_password !== $correct_password) {
     ?>
     <!DOCTYPE html>
@@ -21,11 +30,24 @@ if ($entered_password !== $correct_password) {
         </style>
     </head>
     <body>
-        <form class="login-form" method="post">
+        <form class="login-form" method="post" action="">
             <h2>Admin Access Required</h2>
             <p>Enter password to view contact form submissions:</p>
-            <input type="password" name="pass" placeholder="Enter Password" required>
+            <p><strong>Password:</strong> admin123</p>
+            <input type="password" name="pass" placeholder="Enter Password" required autocomplete="off">
             <input type="submit" value="Login">
+            <div style="margin-top: 15px; font-size: 12px; color: #666;">
+                <p>Default password: <code>admin123</code></p>
+                <p><a href="admin-login-test.php" style="color: #007cba;">🔧 Having trouble? Try debug page</a></p>
+            </div>
+            
+            <!-- Debug info (remove in production) -->
+            <div style="margin-top: 20px; padding: 10px; background: #f8f9fa; border-radius: 5px; font-size: 11px;">
+                <strong>Debug Info:</strong><br>
+                <?php foreach ($debug_info as $key => $value): ?>
+                    <?php echo $key . ': ' . $value . '<br>'; ?>
+                <?php endforeach; ?>
+            </div>
         </form>
     </body>
     </html>
@@ -73,7 +95,7 @@ usort($submissions, function($a, $b) {
         .status-email_failed { background: #ffc107; color: #333; }
         .status-error { background: #dc3545; }
         .submission-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .detail-item { }
+        .detail-item { padding: 5px 0; }
         .detail-label { font-weight: bold; color: #555; font-size: 12px; text-transform: uppercase; margin-bottom: 5px; }
         .detail-value { color: #333; word-break: break-all; }
         .message-box { background: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 10px; }
