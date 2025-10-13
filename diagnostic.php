@@ -38,8 +38,7 @@ if ($entered_password !== $correct_password) {
             
             <?php
             $files = [
-                'mailer.php' => 'Main form processor',
-                'smailer.php' => 'Sidebar form processor',
+                'contact-action.php' => 'Main contact form processor',
                 'contact.php' => 'Contact page',
                 'sideform.php' => 'Sidebar form',
                 'admin_contacts.php' => 'Admin panel',
@@ -149,7 +148,7 @@ if ($entered_password !== $correct_password) {
         <div class="check">
             <h2>✅ System Status</h2>
             <?php
-            $allOk = file_exists('mailer.php') && 
+            $allOk = file_exists('contact-action.php') && 
                      file_exists('contact.php') && 
                      $mailEnabled && 
                      $jsonEnabled && 

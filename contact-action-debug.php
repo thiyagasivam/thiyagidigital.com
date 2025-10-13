@@ -1,10 +1,17 @@
 <?php
-// CONTACT FORM ACTION - No .php extension
-// Handles form submission with file upload, saves data, sends email with TO/CC, and redirects
+// DEBUG VERSION - Contact Form Action
+// This will help us see what's happening
 
-// Enable error reporting for debugging
+// Enable error reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
+// Log all activity
+$debug_log = "debug_contact_" . date('Y-m-d') . ".log";
+file_put_contents($debug_log, "\n=== DEBUG SESSION - " . date('Y-m-d H:i:s') . " ===\n", FILE_APPEND);
+file_put_contents($debug_log, "Request Method: " . $_SERVER['REQUEST_METHOD'] . "\n", FILE_APPEND);
+file_put_contents($debug_log, "POST Data: " . print_r($_POST, true) . "\n", FILE_APPEND);
+file_put_contents($debug_log, "FILES Data: " . print_r($_FILES, true) . "\n", FILE_APPEND);
 
 // Configuration
 $TO_EMAIL = 'info@thiyagidigital.com';
@@ -14,10 +21,13 @@ $UPLOAD_DIR = 'uploads/contact_attachments/';
 // Create upload directory if it doesn't exist
 if (!file_exists($UPLOAD_DIR)) {
     mkdir($UPLOAD_DIR, 0755, true);
+    file_put_contents($debug_log, "Created upload directory: $UPLOAD_DIR\n", FILE_APPEND);
 }
 
 // Function to save contact data
 function saveContactData($name, $phone, $email, $service, $message = '', $fileName = '') {
+    global $debug_log;
+    
     $timestamp = date('Y-m-d H:i:s');
     $ip = $_SERVER['REMOTE_ADDR'] ?? 'Unknown';
     
@@ -35,8 +45,11 @@ function saveContactData($name, $phone, $email, $service, $message = '', $fileNa
         'status' => 'received'
     );
     
+    file_put_contents($debug_log, "Saving contact data: " . print_r($contactData, true) . "\n", FILE_APPEND);
+    
     // Append to JSON file
-    file_put_contents('contact_submissions.json', json_encode($contactData) . "\n", FILE_APPEND | LOCK_EX);
+    $jsonResult = file_put_contents('contact_submissions.json', json_encode($contactData) . "\n", FILE_APPEND | LOCK_EX);
+    file_put_contents($debug_log, "JSON save result: " . ($jsonResult ? 'Success' : 'Failed') . "\n", FILE_APPEND);
     
     // Also save to text file for backup
     $textData = "=== NEW CONTACT - $timestamp ===\n";
@@ -51,14 +64,17 @@ function saveContactData($name, $phone, $email, $service, $message = '', $fileNa
     $textData .= "IP: $ip\n";
     $textData .= "=====================================\n\n";
     
-    file_put_contents('contact_submissions.txt', $textData, FILE_APPEND | LOCK_EX);
+    $txtResult = file_put_contents('contact_submissions.txt', $textData, FILE_APPEND | LOCK_EX);
+    file_put_contents($debug_log, "TXT save result: " . ($txtResult ? 'Success' : 'Failed') . "\n", FILE_APPEND);
     
     return $contactData['id'];
 }
 
 // Function to send email with attachment and CC
 function sendContactEmail($name, $phone, $email, $service, $message = '', $attachmentPath = '') {
-    global $TO_EMAIL, $CC_EMAIL;
+    global $TO_EMAIL, $CC_EMAIL, $debug_log;
+    
+    file_put_contents($debug_log, "Attempting to send email to: $TO_EMAIL and CC: $CC_EMAIL\n", FILE_APPEND);
     
     $subject = "New Contact Form Submission - $service";
     $boundary = md5(time());
@@ -101,31 +117,42 @@ function sendContactEmail($name, $phone, $email, $service, $message = '', $attac
         $body .= "Content-Transfer-Encoding: base64\r\n";
         $body .= "Content-Disposition: attachment; filename=\"{$fileName}\"\r\n\r\n";
         $body .= $fileContent . "\r\n";
+        
+        file_put_contents($debug_log, "Email includes attachment: $fileName\n", FILE_APPEND);
     }
     
     $body .= "--{$boundary}--";
     
-    return @mail($TO_EMAIL, $subject, $body, $headers);
+    $mailResult = @mail($TO_EMAIL, $subject, $body, $headers);
+    file_put_contents($debug_log, "Email send result: " . ($mailResult ? 'Success' : 'Failed') . "\n", FILE_APPEND);
+    
+    return $mailResult;
 }
 
 // Handle file upload
 function handleFileUpload() {
-    global $UPLOAD_DIR;
+    global $UPLOAD_DIR, $debug_log;
+    
+    file_put_contents($debug_log, "Checking file upload...\n", FILE_APPEND);
     
     if (!isset($_FILES['attachment']) || $_FILES['attachment']['error'] == UPLOAD_ERR_NO_FILE) {
+        file_put_contents($debug_log, "No file uploaded\n", FILE_APPEND);
         return ['success' => true, 'fileName' => '', 'filePath' => ''];
     }
     
     $file = $_FILES['attachment'];
+    file_put_contents($debug_log, "File details: " . print_r($file, true) . "\n", FILE_APPEND);
     
     // Check for upload errors
     if ($file['error'] !== UPLOAD_ERR_OK) {
+        file_put_contents($debug_log, "Upload error: " . $file['error'] . "\n", FILE_APPEND);
         return ['success' => false, 'error' => 'File upload failed'];
     }
     
     // Validate file size (5MB max)
     $maxSize = 5 * 1024 * 1024; // 5MB in bytes
     if ($file['size'] > $maxSize) {
+        file_put_contents($debug_log, "File too large: " . $file['size'] . " bytes\n", FILE_APPEND);
         return ['success' => false, 'error' => 'File size exceeds 5MB limit'];
     }
     
@@ -134,6 +161,7 @@ function handleFileUpload() {
     $fileExtension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
     
     if (!in_array($fileExtension, $allowedExtensions)) {
+        file_put_contents($debug_log, "Invalid file type: $fileExtension\n", FILE_APPEND);
         return ['success' => false, 'error' => 'Invalid file type'];
     }
     
@@ -143,18 +171,22 @@ function handleFileUpload() {
     
     // Move uploaded file
     if (move_uploaded_file($file['tmp_name'], $uploadPath)) {
+        file_put_contents($debug_log, "File uploaded successfully: $uploadPath\n", FILE_APPEND);
         return [
             'success' => true,
             'fileName' => $file['name'],
             'filePath' => $uploadPath
         ];
     } else {
+        file_put_contents($debug_log, "Failed to move uploaded file\n", FILE_APPEND);
         return ['success' => false, 'error' => 'Failed to save file'];
     }
 }
 
 // Main form processing
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    file_put_contents($debug_log, "Processing POST request\n", FILE_APPEND);
+    
     // Get form data
     $name = trim($_POST['name'] ?? '');
     $phone = trim($_POST['phone'] ?? '');
@@ -162,22 +194,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $service = trim($_POST['service'] ?? '');
     $message = trim($_POST['message'] ?? '');
     
+    file_put_contents($debug_log, "Form data - Name: $name, Phone: $phone, Email: $email, Service: $service\n", FILE_APPEND);
+    
     // Validate required fields
     if (empty($name) || empty($phone) || empty($email) || empty($service)) {
+        file_put_contents($debug_log, "Validation failed - missing required fields\n", FILE_APPEND);
         echo "<script>alert('Please fill all required fields'); window.history.back();</script>";
         exit;
     }
     
     // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        file_put_contents($debug_log, "Validation failed - invalid email format\n", FILE_APPEND);
         echo "<script>alert('Please enter a valid email address'); window.history.back();</script>";
         exit;
     }
+    
+    file_put_contents($debug_log, "Validation passed\n", FILE_APPEND);
     
     // Handle file upload
     $uploadResult = handleFileUpload();
     
     if (!$uploadResult['success'] && isset($uploadResult['error'])) {
+        file_put_contents($debug_log, "File upload failed: " . $uploadResult['error'] . "\n", FILE_APPEND);
         echo "<script>alert('{$uploadResult['error']}'); window.history.back();</script>";
         exit;
     }
@@ -187,6 +226,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Save contact data (always save regardless of email success)
     $contactId = saveContactData($name, $phone, $email, $service, $message, $fileName);
+    file_put_contents($debug_log, "Contact saved with ID: $contactId\n", FILE_APPEND);
     
     // Try to send email with attachment
     $emailSent = sendContactEmail($name, $phone, $email, $service, $message, $filePath);
@@ -201,36 +241,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $data['status'] = 'email_sent';
                 $lines[count($lines) - 1] = json_encode($data);
                 file_put_contents('contact_submissions.json', implode("\n", $lines) . "\n", LOCK_EX);
+                file_put_contents($debug_log, "Updated status to email_sent\n", FILE_APPEND);
             }
         }
     }
     
-    // Show success message with redirect
+    file_put_contents($debug_log, "Processing complete - redirecting to thankyou\n", FILE_APPEND);
+    
+    // Show success message and redirect
     echo "<!DOCTYPE html>
     <html>
     <head>
         <title>Contact Form Submitted</title>
-        <meta http-equiv='refresh' content='3;url=thankyou'>
         <style>
-            body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f5f5f5; }
-            .success { background: #d4edda; color: #155724; padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto; }
-            .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; }
-            @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+            body { font-family: Arial, sans-serif; padding: 20px; text-align: center; }
+            .success { background: #d4edda; color: #155724; padding: 20px; border-radius: 10px; margin: 20px auto; max-width: 600px; }
+            .info { background: #d1ecf1; color: #0c5460; padding: 15px; border-radius: 5px; margin: 10px auto; max-width: 600px; }
+            .debug { background: #f8f9fa; color: #495057; padding: 10px; border-radius: 5px; margin: 10px auto; max-width: 600px; font-size: 12px; }
         </style>
     </head>
     <body>
         <div class='success'>
-            <h2>✅ Message Sent Successfully!</h2>
-            <p>Thank you for contacting us. We have received your message.</p>
-            <div class='spinner'></div>
-            <p>Redirecting to thank you page...</p>
-            <p><a href='thankyou'>Click here if not redirected automatically</a></p>
+            <h2>✅ Contact Form Submitted Successfully!</h2>
+            <p>Thank you for contacting us. We have received your message and will get back to you soon.</p>
         </div>
+        
+        <div class='info'>
+            <strong>Submitted Details:</strong><br>
+            Name: " . htmlspecialchars($name) . "<br>
+            Email: " . htmlspecialchars($email) . "<br>
+            Service: " . htmlspecialchars($service) . "<br>
+            " . ($fileName ? "Attachment: " . htmlspecialchars($fileName) . "<br>" : "") . "
+        </div>
+        
+        <div class='info'>
+            <strong>Status:</strong><br>
+            Data Saved: ✅ Yes<br>
+            Email Sent: " . ($emailSent ? '✅ Yes' : '❌ Failed (but data is saved)') . "<br>
+            Contact ID: " . htmlspecialchars($contactId) . "
+        </div>
+        
+        <div class='debug'>
+            <strong>Debug Info:</strong><br>
+            Check debug log: debug_contact_" . date('Y-m-d') . ".log<br>
+            Admin panel: <a href='admin_contacts.php?pass=thiyagi2024'>View submissions</a>
+        </div>
+        
+        <script>
+            setTimeout(function() {
+                window.location.href = 'thankyou';
+            }, 5000);
+        </script>
+        
+        <p><a href='thankyou'>Continue to Thank You Page →</a></p>
+        <p><a href='contact'>Submit Another Form ←</a></p>
     </body>
     </html>";
-    exit;
     
 } else {
+    file_put_contents($debug_log, "Not a POST request - redirecting to contact\n", FILE_APPEND);
     // If not POST request, redirect to contact page
     header('Location: contact');
     exit;

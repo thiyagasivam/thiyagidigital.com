@@ -97,7 +97,7 @@ include 'header.php';
 					</div>
 					<p>Let’s talk about your business. Fill the form, and we will reach out to you.</p>
 					<div class="bi-team-details-contact-form">
-						<form method="post" action="contact-action" id="contactForm" enctype="multipart/form-data">
+						<form method="post" action="contact-action.php" id="contactForm" enctype="multipart/form-data">
 							<div class="row">
 								<div class="col-md-6">
 									<input type="text" name="name" placeholder="Name*" required>
