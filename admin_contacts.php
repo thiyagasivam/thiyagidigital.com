@@ -2,19 +2,32 @@
 // ADMIN PANEL TO VIEW ALL CONTACT FORM SUBMISSIONS
 // Access this page to see all form submissions even if emails failed
 
-// Simple password protection
-$correct_password = 'admin123'; // Simple admin password
-$entered_password = $_GET['pass'] ?? $_POST['pass'] ?? '';
+// Enable error reporting for debugging
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Debug information (remove in production)
+// Simple password protection
+$correct_password = 'admin123';
+$entered_password = '';
+
+// Get password from GET or POST
+if (isset($_GET['pass'])) {
+    $entered_password = trim($_GET['pass']);
+} elseif (isset($_POST['pass'])) {
+    $entered_password = trim($_POST['pass']);
+}
+
+// Debug information
 $debug_info = [
-    'GET_pass' => $_GET['pass'] ?? 'not set',
-    'POST_pass' => $_POST['pass'] ?? 'not set',
+    'GET_pass' => isset($_GET['pass']) ? $_GET['pass'] : 'not set',
+    'POST_pass' => isset($_POST['pass']) ? $_POST['pass'] : 'not set',
     'entered_password' => $entered_password,
     'correct_password' => $correct_password,
-    'match' => ($entered_password === $correct_password) ? 'YES' : 'NO'
+    'match' => ($entered_password === $correct_password) ? 'YES' : 'NO',
+    'request_method' => $_SERVER['REQUEST_METHOD']
 ];
 
+// Check password
 if ($entered_password !== $correct_password) {
     ?>
     <!DOCTYPE html>
@@ -38,15 +51,20 @@ if ($entered_password !== $correct_password) {
             <input type="submit" value="Login">
             <div style="margin-top: 15px; font-size: 12px; color: #666;">
                 <p>Default password: <code>admin123</code></p>
-                <p><a href="admin-login-test.php" style="color: #007cba;">🔧 Having trouble? Try debug page</a></p>
+                <p><a href="admin-login-test" style="color: #007cba;">🔧 Having trouble? Try debug page</a></p>
             </div>
             
             <!-- Debug info (remove in production) -->
             <div style="margin-top: 20px; padding: 10px; background: #f8f9fa; border-radius: 5px; font-size: 11px;">
                 <strong>Debug Info:</strong><br>
                 <?php foreach ($debug_info as $key => $value): ?>
-                    <?php echo $key . ': ' . $value . '<br>'; ?>
+                    <?php echo htmlspecialchars($key . ': ' . $value) . '<br>'; ?>
                 <?php endforeach; ?>
+                
+                <hr style="margin: 10px 0;">
+                <strong>Quick Tests:</strong><br>
+                <a href="?pass=admin123" style="color: #007cba;">🔗 Test GET method</a> | 
+                <a href="admin-debug" style="color: #007cba;">🧪 Full Debug Page</a>
             </div>
         </form>
     </body>

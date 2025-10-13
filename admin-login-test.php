@@ -19,7 +19,7 @@
     <div class="test-section">
         <h3>📋 Current Admin Setup:</h3>
         <ul>
-            <li><strong>Admin File:</strong> admin_contacts.php</li>
+            <li><strong>Admin File:</strong> admin_contacts (clean URL)</li>
             <li><strong>Password:</strong> admin123</li>
             <li><strong>Method:</strong> POST form</li>
         </ul>
@@ -27,7 +27,7 @@
 
     <div class="test-section">
         <h3>🧪 Quick Login Test Form:</h3>
-        <form action="admin_contacts.php" method="POST" target="_blank">
+        <form action="admin_contacts" method="POST" target="_blank">
             <p>Test the admin login directly:</p>
             <input type="password" name="pass" value="admin123" placeholder="Password">
             <button type="submit">🔑 Test Login</button>
@@ -37,8 +37,8 @@
     <div class="test-section">
         <h3>🔗 Direct Access Links:</h3>
         <ul>
-            <li><a href="admin_contacts.php" target="_blank">📱 Normal Admin Login Page</a></li>
-            <li><a href="admin_contacts.php?pass=admin123" target="_blank">🚀 Direct Access (GET method)</a></li>
+            <li><a href="admin_contacts" target="_blank">📱 Normal Admin Login Page</a></li>
+            <li><a href="admin_contacts?pass=admin123" target="_blank">🚀 Direct Access (GET method)</a></li>
         </ul>
     </div>
 
@@ -87,7 +87,7 @@
     <div class="test-section">
         <h3>💡 Expected Behavior:</h3>
         <ol>
-            <li>Visit admin_contacts.php</li>
+            <li>Visit admin_contacts (clean URL)</li>
             <li>See login form asking for password</li>
             <li>Enter: <code>admin123</code></li>
             <li>Click "Login" button</li>
