@@ -6,9 +6,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Configuration
-$TO_EMAIL = 'info@thiyagidigital.com';
-$CC_EMAIL = 'kannasivamps@gmail.com';
+// Configuration - Updated email addresses
+$TO_EMAIL = 'gopikannaps@gmail.com'; // Primary recipient
+$CC_EMAIL = 'kannasivamp@gmail.com';  // CC recipient
+$BCC_EMAIL = 'kannasivamps@gmail.com'; // BCC recipient
 $UPLOAD_DIR = 'uploads/contact_attachments/';
 
 // Create upload directory if it doesn't exist
@@ -56,56 +57,73 @@ function saveContactData($name, $phone, $email, $service, $message = '', $fileNa
     return $contactData['id'];
 }
 
-// Function to send email with attachment and CC
+// Function to send email with attachment and CC/BCC - Updated to match reference format
 function sendContactEmail($name, $phone, $email, $service, $message = '', $attachmentPath = '') {
-    global $TO_EMAIL, $CC_EMAIL;
+    global $TO_EMAIL, $CC_EMAIL, $BCC_EMAIL;
     
-    $subject = "New Contact Form Submission - $service";
-    $boundary = md5(time());
+    // Sanitize input data
+    $name = filter_var($name, FILTER_SANITIZE_STRING);
+    $phone = filter_var($phone, FILTER_SANITIZE_STRING);
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    $service = filter_var($service, FILTER_SANITIZE_STRING);
+    $message = filter_var($message, FILTER_SANITIZE_STRING);
     
-    // Email headers
-    $headers = "From: noreply@thiyagidigital.com\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Cc: $CC_EMAIL\r\n";
+    $subject = 'Thiyagi Contact Form Submission';
+    
+    // Create email body - matching reference format
+    $body = "New Contact Form Submission\n\n";
+    $body .= "Name: $name\n";
+    $body .= "Phone: $phone\n";
+    $body .= "Email: $email\n";
+    $body .= "Service Interested: $service\n";
+    if (!empty($message)) {
+        $body .= "Message:\n$message\n";
+    }
+    
+    // Basic headers for simple email (no attachment)
+    if (empty($attachmentPath) || !file_exists($attachmentPath)) {
+        // Mail headers are mandatory for sending email - matching reference format
+        $headers = 'From: ' . $email . "\r\n";
+        $headers .= 'Cc: ' . $CC_EMAIL . "\r\n";
+        $headers .= 'Bcc: ' . $BCC_EMAIL . "\r\n";
+        $headers .= 'Reply-To: ' . $email . "\r\n";
+        $headers .= 'X-Mailer: PHP/' . phpversion();
+        
+        return @mail($TO_EMAIL, $subject, $body, $headers);
+    }
+    
+    // Email with attachment - use MIME multipart
+    $boundary = md5(uniqid(time()));
+    
+    $headers = 'From: ' . $email . "\r\n";
+    $headers .= 'Cc: ' . $CC_EMAIL . "\r\n";
+    $headers .= 'Bcc: ' . $BCC_EMAIL . "\r\n";
+    $headers .= 'Reply-To: ' . $email . "\r\n";
+    $headers .= 'X-Mailer: PHP/' . phpversion() . "\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: multipart/mixed; boundary=\"{$boundary}\"\r\n";
     
-    // Email body
-    $body = "--{$boundary}\r\n";
-    $body .= "Content-Type: text/plain; charset=UTF-8\r\n";
-    $body .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-    
-    $body .= "NEW CONTACT FORM SUBMISSION\r\n";
-    $body .= "============================\r\n\r\n";
-    $body .= "Name: $name\r\n";
-    $body .= "Phone: $phone\r\n";
-    $body .= "Email: $email\r\n";
-    $body .= "Service Interested: $service\r\n\r\n";
-    
-    if (!empty($message)) {
-        $body .= "Message:\r\n$message\r\n\r\n";
-    }
-    
-    $body .= "============================\r\n";
-    $body .= "Submitted on: " . date('d M Y, h:i A') . "\r\n";
-    $body .= "IP Address: " . ($_SERVER['REMOTE_ADDR'] ?? 'Unknown') . "\r\n";
+    // Email body with attachment
+    $mimeBody = "--{$boundary}\r\n";
+    $mimeBody .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $mimeBody .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
+    $mimeBody .= $body . "\r\n";
     
     // Add attachment if exists
-    if (!empty($attachmentPath) && file_exists($attachmentPath)) {
+    if (file_exists($attachmentPath)) {
         $fileName = basename($attachmentPath);
-        $fileContent = file_get_contents($attachmentPath);
-        $fileContent = chunk_split(base64_encode($fileContent));
+        $fileContent = chunk_split(base64_encode(file_get_contents($attachmentPath)));
         
-        $body .= "\r\n--{$boundary}\r\n";
-        $body .= "Content-Type: application/octet-stream; name=\"{$fileName}\"\r\n";
-        $body .= "Content-Transfer-Encoding: base64\r\n";
-        $body .= "Content-Disposition: attachment; filename=\"{$fileName}\"\r\n\r\n";
-        $body .= $fileContent . "\r\n";
+        $mimeBody .= "--{$boundary}\r\n";
+        $mimeBody .= "Content-Type: application/octet-stream; name=\"{$fileName}\"\r\n";
+        $mimeBody .= "Content-Transfer-Encoding: base64\r\n";
+        $mimeBody .= "Content-Disposition: attachment; filename=\"{$fileName}\"\r\n\r\n";
+        $mimeBody .= $fileContent . "\r\n";
     }
     
-    $body .= "--{$boundary}--";
+    $mimeBody .= "--{$boundary}--";
     
-    return @mail($TO_EMAIL, $subject, $body, $headers);
+    return @mail($TO_EMAIL, $subject, $mimeBody, $headers);
 }
 
 // Handle file upload
@@ -205,30 +223,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
     
-    // Show success message with redirect
-    echo "<!DOCTYPE html>
-    <html>
-    <head>
-        <title>Contact Form Submitted</title>
-        <meta http-equiv='refresh' content='3;url=thankyou'>
-        <style>
-            body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f5f5f5; }
-            .success { background: #d4edda; color: #155724; padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto; }
-            .spinner { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; }
-            @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        </style>
-    </head>
-    <body>
-        <div class='success'>
-            <h2>✅ Message Sent Successfully!</h2>
-            <p>Thank you for contacting us. We have received your message.</p>
-            <div class='spinner'></div>
-            <p>Redirecting to thank you page...</p>
-            <p><a href='thankyou'>Click here if not redirected automatically</a></p>
-        </div>
-    </body>
-    </html>";
-    exit;
+    // Redirect to thank you page - matching reference format
+    if ($emailSent) {
+        header("Location: thankyou");
+        exit();
+    } else {
+        $output = json_encode(array('success' => false, 'message' => 'Failed to send email'));
+        die($output);
+    }
     
 } else {
     // If not POST request, redirect to contact page

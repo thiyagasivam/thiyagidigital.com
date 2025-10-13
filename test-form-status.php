@@ -21,6 +21,9 @@ if (is_dir($uploadDir)) {
 
 echo "<h3>📧 Email Configuration:</h3>";
 echo "<ul>";
+echo "<li><strong>TO Email:</strong> gopikannaps@gmail.com</li>";
+echo "<li><strong>CC Email:</strong> kannasivamp@gmail.com</li>";
+echo "<li><strong>BCC Email:</strong> kannasivamps@gmail.com</li>";
 echo "<li><strong>mail() function:</strong> " . (function_exists('mail') ? '✅ AVAILABLE' : '❌ NOT AVAILABLE') . "</li>";
 echo "<li><strong>file_uploads:</strong> " . (ini_get('file_uploads') ? '✅ ENABLED' : '❌ DISABLED') . "</li>";
 echo "<li><strong>max_file_uploads:</strong> " . ini_get('max_file_uploads') . "</li>";
