@@ -203,34 +203,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fileName = $uploadResult['fileName'] ?? '';
     $filePath = $uploadResult['filePath'] ?? '';
     
-    // Save contact data (always save regardless of email success)
+    // Save contact data (ALWAYS save data first - even if email fails)
     $contactId = saveContactData($name, $phone, $email, $service, $message, $fileName);
     
     // Try to send email with attachment
-    $emailSent = sendContactEmail($name, $phone, $email, $service, $message, $filePath);
+    $emailSent = false;
+    $emailError = '';
     
-    // Update status in JSON file if email was sent
-    if ($emailSent && file_exists('contact_submissions.json')) {
+    try {
+        $emailSent = sendContactEmail($name, $phone, $email, $service, $message, $filePath);
+    } catch (Exception $e) {
+        $emailError = $e->getMessage();
+    }
+    
+    // Update status in JSON file based on email result
+    if (file_exists('contact_submissions.json')) {
         $lines = file('contact_submissions.json', FILE_IGNORE_NEW_LINES);
         if (!empty($lines)) {
             $lastLine = end($lines);
             $data = json_decode($lastLine, true);
             if ($data && $data['id'] === $contactId) {
-                $data['status'] = 'email_sent';
+                $data['status'] = $emailSent ? 'email_sent' : 'email_failed';
+                if (!$emailSent && $emailError) {
+                    $data['email_error'] = $emailError;
+                }
                 $lines[count($lines) - 1] = json_encode($data);
                 file_put_contents('contact_submissions.json', implode("\n", $lines) . "\n", LOCK_EX);
             }
         }
     }
     
-    // Redirect to thank you page - matching reference format
-    if ($emailSent) {
-        header("Location: thankyou");
-        exit();
-    } else {
-        $output = json_encode(array('success' => false, 'message' => 'Failed to send email'));
-        die($output);
-    }
+    // ALWAYS redirect to thank you page (data is saved regardless of email status)
+    // This ensures user gets confirmation even if email fails
+    header("Location: thankyou");
+    exit();
     
 } else {
     // If not POST request, redirect to contact page
