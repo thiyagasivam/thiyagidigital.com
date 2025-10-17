@@ -9,6 +9,7 @@
                                         <li><a href="https://www.thiyagidigital.com/web-development-service">Web Development</a></li>
                                         <li><a href="https://www.thiyagidigital.com/content-writing-service">Content Writing</a></li>
 										<li><a href="https://www.thiyagidigital.com/email-marketing-service">Email Marketing</a></li>
+										<li><a href="https://www.thiyagidigital.com/landing-page-design-service">Landing Page Design</a></li>
 										</ul>
 									</div>
 								</div>
