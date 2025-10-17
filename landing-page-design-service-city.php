@@ -1723,8 +1723,8 @@ $newCities = [
 // Merge supported cities with comprehensive cities
 $supportedCities = array_merge($supportedCities, $newCities);
 
-// Create city_lower for validation
-$city_lower = strtolower(str_replace(' ', '-', $city_formatted));
+// Create city_lower for validation (use original city parameter)
+$city_lower = strtolower($city);
 
 // Check if city is supported
 if (!array_key_exists($city_lower, $supportedCities)) {

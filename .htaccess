@@ -122,6 +122,11 @@ RewriteRule ^logo-design-service/([a-z-]+)/?$ logo-design-city.php?city=$1 [L,QS
 RewriteRule ^graphic-design-service/$ graphic-design-service [R=301,L]
 RewriteRule ^graphic-design-service$ graphic-design-service.php [L,QSA,NC]
 RewriteRule ^graphic-design-service/([a-z-]+)/?$ graphic-design-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^landing-page-design-service/$ landing-page-design-service [R=301,L]
+RewriteRule ^landing-page-design-service$ landing-page-design-service.php [L,QSA,NC]
+RewriteRule ^landing-page-design-service/([a-z-]+)/?$ landing-page-design-service-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^landing-page-design/$ landing-page-design-service [R=301,L]
+RewriteRule ^landing-page-design/([a-z-]+)/?$ landing-page-design-service-city.php?city=$1 [L,QSA,NC]
 
 # Dynamic sitemap redirect
 RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
