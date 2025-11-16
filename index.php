@@ -70,7 +70,7 @@ include 'header.php';
                                 </div>
 
                                 <div class="hero-2-img-1">
-                                    <img src="assets/img/new_home/hero/hero-2-img-1.png" alt="Digital Marketing Illustration">
+                                    <img src="assets/img/service/digital-marketing-hero.jpg" alt="Digital Marketing Illustration">
                                 </div>
 
                                 <span class="hero-2-shape-1"></span>
