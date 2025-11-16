@@ -70,14 +70,14 @@ include 'header.php';
                                 </div>
 
                                 <div class="hero-2-img-1">
-                                    <img src="assets/img/service/digital-marketing-hero.jpg" alt="Digital Marketing Illustration">
+                                    <img src="#" alt="Digital Marketing Illustration">
                                 </div>
 
                                 <span class="hero-2-shape-1"></span>
 
                                 <div class="hero-2-curcle-position">
                                     <div class="hero-2-curcle">
-                                        <img src="assets/img/new_home/bg-shape/hero-2-curcle-1.png" alt="Decorative Circle">
+                                        <img src="#" alt="Decorative Circle">
                                     </div>
                                 </div>
                             </div>
