@@ -294,7 +294,7 @@ include 'header.php';
 
 								<!-- Call to Action -->
 								<div class="text-center mt-4">
-									<a href="https://g.page/r/CRVJxJQqJJq5EBM/review" target="_blank" class="btn btn-primary">
+									<a href="https://share.google/btgfQBKTFcKraYLcd" target="_blank" class="btn btn-primary">
 										<i class="fab fa-google me-2"></i>Write a Review on Google
 									</a>
 								</div>
