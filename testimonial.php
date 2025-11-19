@@ -124,7 +124,7 @@ include 'header.php';
 							<!-- Google Reviews Section -->
 							<div class="google-reviews-section mb-5">
 								<div class="section-header d-flex align-items-center mb-4">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" width="24" height="24" class="me-2">
+									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google" width="24" height="24" class="me-2">
 									<h3 class="mb-0">Google My Business Reviews</h3>
 									<div class="ms-auto">
 										<div class="rating-display">
