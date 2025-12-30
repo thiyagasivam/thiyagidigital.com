@@ -1,6 +1,6 @@
 <?php
 $page_title = 'About Us | ThiyagiDigital';
-$page_description = 'Learn about ThiyagiDigital—our mission, values, and the team behind our SEO, SMM, SEM, content, and web development services.';
+$page_description = 'Learn about ThiyagiDigital—our mission, values, and the team behind our SEO, SMM, SEM, content, ppc,and web development services.';
 $page_keywords = 'About ThiyagiDigital, digital marketing agency, Chennai';
 include 'header.php';
 ?>
