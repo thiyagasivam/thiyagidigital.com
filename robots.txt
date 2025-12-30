@@ -45,8 +45,7 @@ Disallow: /assets/fonts/
 # Allow important assets
 Allow: /assets/img/
 
-# Crawl delay for being respectful to server resources
-Crawl-delay: 1
+
 
 # Sitemap location
 Sitemap: https://www.thiyagidigital.com/sitemap.xml
