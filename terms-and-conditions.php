@@ -29,7 +29,7 @@ include 'header.php';
 			<div class="bi-about-content position-relative">
                         <div class="row">
             <h1>Terms and Conditions</h1>
-        <p>Last updated: August 24, 2025</p>
+        <p>Last updated: August 24, 2026</p>
         <p>Please read these terms and conditions carefully before using Our Service.</p>
         <h2>Interpretation and Definitions</h2>
         <h3>Interpretation</h3>

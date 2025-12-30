@@ -29,7 +29,7 @@ include 'header.php';
 			<div class="bi-about-content position-relative">
 				<div class="row">
         <h1>Shipping and Delivery Policy</h1>
-        <p>Last updated: August 24, 2025</p>
+        <p>Last updated: August 24, 2026</p>
         <p>Thank you for shopping at thiyagidigital.</p>
         <p>Welcome to Thiyagidigital Our Shipping & Returns Policy outlines the terms and conditions regarding the shipment of our products, as well as the procedures for returns and refunds. By placing an order with us, you agree to comply with and be bound by the following terms.</p>
         <h2>Shipping Information:</h2>

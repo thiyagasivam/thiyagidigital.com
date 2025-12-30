@@ -336,7 +336,7 @@
 							</div>
                            
 							<div class="sidebar-copyright text-center">
-								© Copyright 2025. Thiyagidigital All Rights Reserved. 
+								© Copyright 2026. Thiyagidigital All Rights Reserved. 
 							</div>
 						</div>
 					</div>

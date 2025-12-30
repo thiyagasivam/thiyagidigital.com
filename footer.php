@@ -201,7 +201,7 @@
 </div>
 
 <div class="hpt-footer-copyright text-center">
-    Copyright 2025 @thiyagidigital
+    Copyright 2026 @thiyagidigital
 </div>
 
 </footer>	        
