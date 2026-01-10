@@ -363,7 +363,7 @@
                 <a href="https://in.pinterest.com/thiyagidigital/" class="social-link" target="_blank" aria-label="Pinterest">
                     <i class="fab fa-pinterest"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/thiyagidigital" class="social-link" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/company/thiyagi-digital/" class="social-link" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
