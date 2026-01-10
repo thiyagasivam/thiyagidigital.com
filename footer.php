@@ -373,7 +373,7 @@
     <!-- Copyright -->
     <div class="footer-copyright">
         <div class="container">
-            <p class="mb-0">© 2026 Thiyagi Digital. All rights reserved. | Crafted with <span style="color: #ef4444;">❤</span> in Tamil Nadu</p>
+            <p class="mb-0">© 2026 Thiyagi Digital. All rights reserved. | Crafted with <span style="color: #ef4444;">❤</span> in Chennai</p>
         </div>
     </div>
 </footer>
