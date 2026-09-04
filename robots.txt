@@ -1,5 +1,4 @@
 User-agent: *
-Allow: /
 
 # Block access to admin/internal files
 Disallow: /mailer.php
