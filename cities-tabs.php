@@ -121,19 +121,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=chennai" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/chennai" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <a href="/sem-city?city=chennai" class="service-link">Search Engine Marketing</a>
+                                                    <a href="/sem-services/chennai" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <a href="/web-development-city?city=chennai" class="service-link">Web Development</a>
+                                                    <a href="/web-development-service/chennai" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -171,19 +171,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=madurai" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/madurai" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <a href="/sem-city?city=madurai" class="service-link">Search Engine Marketing</a>
+                                                    <a href="/sem-services/madurai" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <a href="/email-marketing-city?city=madurai" class="service-link">Email Marketing</a>
+                                                    <a href="/email-marketing-service/madurai" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -221,19 +221,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <a href="/web-development-city?city=coimbatore" class="service-link">Web Development</a>
+                                                    <a href="/web-development-service/coimbatore" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <a href="/sem-city?city=coimbatore" class="service-link">Search Engine Marketing</a>
+                                                    <a href="/sem-services/coimbatore" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <a href="/content-writing-city?city=coimbatore" class="service-link">Content Writing Services</a>
+                                                    <a href="/content-writing-service/coimbatore" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -274,19 +274,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=tiruchirappalli" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/tiruchirappalli" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <a href="/web-development-city?city=tiruchirappalli" class="service-link">Web Development</a>
+                                                    <a href="/web-development-service/tiruchirappalli" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <a href="/content-writing-city?city=tiruchirappalli" class="service-link">Content Writing Services</a>
+                                                    <a href="/content-writing-service/tiruchirappalli" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -324,19 +324,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <a href="/sem-city?city=salem" class="service-link">Search Engine Marketing</a>
+                                                    <a href="/sem-services/salem" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=salem" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/salem" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <a href="/email-marketing-city?city=salem" class="service-link">Email Marketing</a>
+                                                    <a href="/email-marketing-service/salem" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -374,19 +374,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=tirunelveli" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/tirunelveli" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <a href="/web-development-city?city=tirunelveli" class="service-link">Web Development</a>
+                                                    <a href="/web-development-service/tirunelveli" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <a href="/content-writing-city?city=tirunelveli" class="service-link">Content Writing Services</a>
+                                                    <a href="/content-writing-service/tirunelveli" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -426,19 +426,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <a href="/sem-city?city=thoothukudi" class="service-link">Search Engine Marketing</a>
+                                                    <a href="/sem-services/thoothukudi" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=thoothukudi" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/thoothukudi" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <a href="/web-development-city?city=thoothukudi" class="service-link">Web Development</a>
+                                                    <a href="/web-development-service/thoothukudi" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -476,19 +476,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=dindigul" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/dindigul" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <a href="/email-marketing-city?city=dindigul" class="service-link">Email Marketing</a>
+                                                    <a href="/email-marketing-service/dindigul" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <a href="/content-writing-city?city=dindigul" class="service-link">Content Writing Services</a>
+                                                    <a href="/content-writing-service/dindigul" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -526,19 +526,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <a href="/web-development-city?city=thanjavur" class="service-link">Web Development</a>
+                                                    <a href="/web-development-service/thanjavur" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=thanjavur" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/thanjavur" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <a href="/content-writing-city?city=thanjavur" class="service-link">Content Writing Services</a>
+                                                    <a href="/content-writing-service/thanjavur" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -576,19 +576,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <a href="/sem-city?city=vellore" class="service-link">Search Engine Marketing</a>
+                                                    <a href="/sem-services/vellore" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=vellore" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/vellore" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <a href="/email-marketing-city?city=vellore" class="service-link">Email Marketing</a>
+                                                    <a href="/email-marketing-service/vellore" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -628,19 +628,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=nagercoil" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/nagercoil" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-code text-primary me-2"></i>
-                                                    <a href="/web-development-city?city=nagercoil" class="service-link">Web Development</a>
+                                                    <a href="/web-development-service/nagercoil" class="service-link">Web Development</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-envelope text-primary me-2"></i>
-                                                    <a href="/email-marketing-city?city=nagercoil" class="service-link">Email Marketing</a>
+                                                    <a href="/email-marketing-service/nagercoil" class="service-link">Email Marketing</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -678,19 +678,19 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-bullhorn text-primary me-2"></i>
-                                                    <a href="/sem-city?city=hosur" class="service-link">Search Engine Marketing</a>
+                                                    <a href="/sem-services/hosur" class="service-link">Search Engine Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-share-alt text-primary me-2"></i>
-                                                    <a href="/smm-city?city=hosur" class="service-link">Social Media Marketing</a>
+                                                    <a href="/smm-service/hosur" class="service-link">Social Media Marketing</a>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 mb-3">
                                                 <div class="service-item">
                                                     <i class="fas fa-pen-fancy text-primary me-2"></i>
-                                                    <a href="/content-writing-city?city=hosur" class="service-link">Content Writing Services</a>
+                                                    <a href="/content-writing-service/hosur" class="service-link">Content Writing Services</a>
                                                 </div>
                                             </div>
                                         </div>
