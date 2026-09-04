@@ -99,6 +99,6 @@ Allow: /assets/img/
 # Sitemap location
 Sitemap: https://www.thiyagidigital.com/sitemap-index.xml
 
-# Component sitemaps
+# Component si
 # Sitemap: https://www.thiyagidigital.com/sitemap1.xml
 # Sitemap: https://www.thiyagidigital.com/sitemap2.xml
