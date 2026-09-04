@@ -168,7 +168,10 @@ RewriteRule ^opencart-development/([a-z-]+)/?$ /opencart-development-service/$1 
 RewriteRule ^admin-tools/?$ admin-panel.php [L,NC]
 RewriteRule ^admin_contacts/?$ admin-panel.php [L,NC]
 
-# Dynamic sitemap redirect
+# Dynamic sitemap routing
+RewriteRule ^sitemap-index\.xml$ sitemap-index.xml [L]
+RewriteRule ^sitemap1\.xml$ sitemap1.xml.php [L]
+RewriteRule ^sitemap2\.xml$ sitemap2.xml.php [L]
 RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
 
 # Contact form action without .php extension
