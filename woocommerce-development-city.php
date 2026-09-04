@@ -1716,7 +1716,52 @@ $newCities = [
     'madaba-governorate' => ['name' => 'Madaba Governorate', 'state' => 'Jordan'],
     'balqa-governorate' => ['name' => 'Balqa Governorate', 'state' => 'Jordan'],
     'jarash-governorate' => ['name' => 'Jarash Governorate', 'state' => 'Jordan'],
-    'mafraq-governorate' => ['name' => 'Mafraq Governorate', 'state' => 'Jordan']
+    'mafraq-governorate' => ['name' => 'Mafraq Governorate', 'state' => 'Jordan'],
+    'seoul' => ['name' => 'Seoul', 'state' => 'South Korea'],
+    'beijing' => ['name' => 'Beijing', 'state' => 'China'],
+    'tokyo' => ['name' => 'Tokyo', 'state' => 'Japan'],
+    'bangkok' => ['name' => 'Bangkok', 'state' => 'Thailand'],
+    'ho-chi-minh-city' => ['name' => 'Ho Chi Minh City', 'state' => 'Vietnam'],
+    'jakarta' => ['name' => 'Jakarta', 'state' => 'Indonesia'],
+    'manila' => ['name' => 'Manila', 'state' => 'Philippines'],
+    'kuala-lumpur' => ['name' => 'Kuala Lumpur', 'state' => 'Malaysia'],
+    'london' => ['name' => 'London', 'state' => 'United Kingdom'],
+    'paris' => ['name' => 'Paris', 'state' => 'France'],
+    'berlin' => ['name' => 'Berlin', 'state' => 'Germany'],
+    'munich' => ['name' => 'Munich', 'state' => 'Germany'],
+    'madrid' => ['name' => 'Madrid', 'state' => 'Spain'],
+    'barcelona' => ['name' => 'Barcelona', 'state' => 'Spain'],
+    'amsterdam' => ['name' => 'Amsterdam', 'state' => 'Netherlands'],
+    'brussels' => ['name' => 'Brussels', 'state' => 'Belgium'],
+    'zurich' => ['name' => 'Zurich', 'state' => 'Switzerland'],
+    'vienna' => ['name' => 'Vienna', 'state' => 'Austria'],
+    'prague' => ['name' => 'Prague', 'state' => 'Czech Republic'],
+    'warsaw' => ['name' => 'Warsaw', 'state' => 'Poland'],
+    'budapest' => ['name' => 'Budapest', 'state' => 'Hungary'],
+    'athens' => ['name' => 'Athens', 'state' => 'Greece'],
+    'lisbon' => ['name' => 'Lisbon', 'state' => 'Portugal'],
+    'moscow' => ['name' => 'Moscow', 'state' => 'Russia'],
+    'istanbul' => ['name' => 'Istanbul', 'state' => 'Turkey'],
+    'new-york' => ['name' => 'New York', 'state' => 'USA'],
+    'los-angeles' => ['name' => 'Los Angeles', 'state' => 'USA'],
+    'chicago' => ['name' => 'Chicago', 'state' => 'USA'],
+    'boston' => ['name' => 'Boston', 'state' => 'USA'],
+    'miami' => ['name' => 'Miami', 'state' => 'USA'],
+    'seattle' => ['name' => 'Seattle', 'state' => 'USA'],
+    'san-francisco' => ['name' => 'San Francisco', 'state' => 'USA'],
+    'denver' => ['name' => 'Denver', 'state' => 'USA'],
+    'toronto' => ['name' => 'Toronto', 'state' => 'Canada'],
+    'vancouver' => ['name' => 'Vancouver', 'state' => 'Canada'],
+    'mexico-city' => ['name' => 'Mexico City', 'state' => 'Mexico'],
+    'buenos-aires' => ['name' => 'Buenos Aires', 'state' => 'Argentina'],
+    'sao-paulo' => ['name' => 'Sao Paulo', 'state' => 'Brazil'],
+    'rio-de-janeiro' => ['name' => 'Rio de Janeiro', 'state' => 'Brazil'],
+    'johannesburg' => ['name' => 'Johannesburg', 'state' => 'South Africa'],
+    'cape-town' => ['name' => 'Cape Town', 'state' => 'South Africa'],
+    'cairo' => ['name' => 'Cairo', 'state' => 'Egypt'],
+    'dubai' => ['name' => 'Dubai', 'state' => 'UAE'],
+    'hong-kong' => ['name' => 'Hong Kong', 'state' => 'Hong Kong'],
+    'singapore' => ['name' => 'Singapore', 'state' => 'Singapore']
 ];
 
 // Merge supported cities with comprehensive cities  
@@ -1738,6 +1783,14 @@ $page_title = str_replace('{city}', $fullCityName, $page_title);
 $page_description = str_replace('{city}', $fullCityName, $page_description);
 $page_keywords = str_replace('{city}', $fullCityName, $page_keywords);
 $city = $fullCityName;
+
+// Define major cities for the grid display
+$major_cities = [
+    'Chennai', 'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Kolkata', 'Pune', 'Ahmedabad',
+    'Jaipur', 'Lucknow', 'Chandigarh', 'Indore', 'Kochi', 'Nagpur', 'Surat', 'Goa',
+    'Visakhapatnam', 'Bhopal', 'Vadodara', 'Ludhiana', 'Seoul', 'London', 'Dubai', 'Bangkok',
+    'Tokyo', 'Beijing', 'Paris', 'New York', 'Toronto', 'Singapore'
+];
 
 include 'header.php';
 ?>

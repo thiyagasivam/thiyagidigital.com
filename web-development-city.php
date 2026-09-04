@@ -756,6 +756,13 @@ $supportedCities = [
     'diyarbakir' => ['name' => 'Diyarbakir', 'state' => 'Diyarbakir'],
     'mersin' => ['name' => 'Mersin', 'state' => 'Mersin'],
     
+    // Middle East & Africa - Egypt
+    'cairo' => ['name' => 'Cairo', 'state' => 'Cairo'],
+    'alexandria' => ['name' => 'Alexandria', 'state' => 'Alexandria'],
+    'giza' => ['name' => 'Giza', 'state' => 'Giza'],
+    'aswan' => ['name' => 'Aswan', 'state' => 'Aswan'],
+    'luxor' => ['name' => 'Luxor', 'state' => 'Luxor'],
+    
     // Middle East & Africa - South Africa
     'cape-town' => ['name' => 'Cape Town', 'state' => 'Western Cape'],
     'johannesburg' => ['name' => 'Johannesburg', 'state' => 'Gauteng'],

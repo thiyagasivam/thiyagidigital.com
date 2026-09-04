@@ -128,6 +128,40 @@ RewriteRule ^landing-page-design-service/([a-z-]+)/?$ landing-page-design-servic
 RewriteRule ^landing-page-design/$ landing-page-design-service [R=301,L]
 RewriteRule ^landing-page-design/([a-z-]+)/?$ landing-page-design-service-city.php?city=$1 [L,QSA,NC]
 
+# SHORT PATH REDIRECTS (without -service or -services in URL)
+# SEO Services
+RewriteRule ^seo/([a-z-]+)/?$ seo-city.php?city=$1 [L,QSA]
+RewriteRule ^seo/?$ seo-services.php [L,QSA,NC]
+
+# SMM Services (Social Media Marketing)
+RewriteRule ^smm/([a-z-]+)/?$ smm-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^smm/?$ smm-service.php [L,QSA,NC]
+
+# Web Hosting Services
+RewriteRule ^web-hosting/([a-z-]+)/?$ web-hosting-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^web-hosting/?$ web-hosting-service.php [L,QSA,NC]
+
+# Ecommerce Development Services
+RewriteRule ^ecommerce-development/([a-z-]+)/?$ ecommerce-development-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^ecommerce-development/?$ ecommerce-development-service.php [L,QSA,NC]
+
+# Email Marketing Services
+RewriteRule ^email-marketing/([a-z-]+)/?$ email-marketing-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^email-marketing/?$ email-marketing-service.php [L,QSA,NC]
+
+# SEM Services
+RewriteRule ^sem-city/?$ sem-services-city.php [L,QSA,NC]
+RewriteRule ^sem/([a-z-]+)/?$ sem-services-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^sem/?$ sem-services.php [L,QSA,NC]
+
+# Other common short paths
+RewriteRule ^web-development/([a-z-]+)/?$ web-development-city.php?city=$1 [L,QSA,NC]
+RewriteRule ^web-development/?$ web-development-service.php [L,QSA,NC]
+
+# Admin paths
+RewriteRule ^admin-tools/?$ admin-panel.php [L,NC]
+RewriteRule ^admin_contacts/?$ admin-panel.php [L,NC]
+
 # Dynamic sitemap redirect
 RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
 
