@@ -158,6 +158,12 @@ RewriteRule ^sem/?$ sem-services.php [L,QSA,NC]
 RewriteRule ^web-development/([a-z-]+)/?$ web-development-city.php?city=$1 [L,QSA,NC]
 RewriteRule ^web-development/?$ web-development-service.php [L,QSA,NC]
 
+# Redirect short paths to service paths to avoid duplicates (canonical consolidation)
+RewriteRule ^woocommerce-development/([a-z-]+)/?$ /woocommerce-development-service/$1 [R=301,L]
+RewriteRule ^shopify-development/([a-z-]+)/?$ /shopify-development-service/$1 [R=301,L]
+RewriteRule ^magento-development/([a-z-]+)/?$ /magento-development-service/$1 [R=301,L]
+RewriteRule ^opencart-development/([a-z-]+)/?$ /opencart-development-service/$1 [R=301,L]
+
 # Admin paths
 RewriteRule ^admin-tools/?$ admin-panel.php [L,NC]
 RewriteRule ^admin_contacts/?$ admin-panel.php [L,NC]
@@ -167,6 +173,35 @@ RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
 
 # Contact form action without .php extension
 RewriteRule ^contact-action$ contact-action.php [L]
+
+# Redirect query string city URLs to clean URLs (e.g., /email-marketing-city.php?city=nagercoil -> /email-marketing/nagercoil)
+RewriteCond %{QUERY_STRING} ^city=([a-z-]+)$ [NC]
+RewriteRule ^email-marketing-city\.php$ /email-marketing/%1? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^city=([a-z-]+)$ [NC]
+RewriteRule ^smm-city\.php$ /smm/%1? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^city=([a-z-]+)$ [NC]
+RewriteRule ^seo-city\.php$ /seo/%1? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^city=([a-z-]+)$ [NC]
+RewriteRule ^web-development-city\.php$ /web-development/%1? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^city=([a-z-]+)$ [NC]
+RewriteRule ^sem-services-city\.php$ /sem/%1? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^city=([a-z-]+)$ [NC]
+RewriteRule ^web-hosting-city\.php$ /web-hosting/%1? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^city=([a-z-]+)$ [NC]
+RewriteRule ^ecommerce-development-city\.php$ /ecommerce-development/%1? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^city=([a-z-]+)$ [NC]
+RewriteRule ^([a-z-]+)-city\.php$ /$1/%1? [R=301,L]
+
+# Redirect malformed city URLs without city parameter (e.g., /service-city instead of /service/city)
+RewriteRule ^([a-z-]+-(?:redesigning|updates-maintenance|hosting|development|marketing|design|writing))-service-city/?$ /$1-service.php [R=301,L]
+RewriteRule ^([a-z-]+)-city/?$ /$1-service.php [R=301,L]
 
 # Remove .php from URL (redirect to clean URL)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
