@@ -210,6 +210,11 @@ if (empty($citySlugs)) {
     ];
 }
 
+// SITEMAP 1: Only include cities 0-1600 to keep under 50,000 URLs
+// With ~80 non-city URLs + 31 services, this leaves room for ~49,900 city combinations
+// 49,900 / 31 services = ~1,610 cities max
+$citySlugs = array_slice($citySlugs, 0, 1610);
+
 // Generate all service x city combinations
 foreach ($serviceCityPatterns as $pattern => $serviceName) {
     if ($urlCount > $maxUrls) break;
@@ -257,5 +262,5 @@ if ($urlCount < $maxUrls) {
 echo '</urlset>' . "\n";
 
 // Log generation for debugging
-error_log('[Dynamic Sitemap 1] Generated ' . $urlCount . ' URLs at ' . date('Y-m-d H:i:s'));
+error_log('[Dynamic Sitemap 1] Generated ' . $urlCount . ' URLs (cities 0-1609) at ' . date('Y-m-d H:i:s'));
 ?>

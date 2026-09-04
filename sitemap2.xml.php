@@ -87,31 +87,14 @@ if (empty($citySlugs)) {
     ];
 }
 
-// Calculate which service to start from
-// sitemap1.xml.php has approximately:
-// 1 (homepage) + ~50 (public pages) + 31 (main services) + ~50k (cities from first services)
-// So sitemap2 will have the overflow of city-service combinations
+// SITEMAP 2: Only include cities 1610+ (remaining cities from sitemap1)
+$citySlugs = array_slice($citySlugs, 1610);
 
 $urlCount = 0;
-$sitemap1UrlLimit = 50000;
-$startIndex = 0;
 
-// Calculate how many city URLs sitemap1 captured
-// Approximate: 1 + 50 + 31 = 82 non-city URLs, leaving ~49918 city slots
-$nonCityUrls = 1 + count(glob(__DIR__ . DIRECTORY_SEPARATOR . '*.php', GLOB_NOSORT)) + count($serviceCityPatterns); // Rough estimate
-$remainingCapacity = $sitemap1UrlLimit - $nonCityUrls;
-
-// Generate REMAINING city service combinations
-$cityIndex = 0;
+// Generate REMAINING city service combinations (cities 1610+)
 foreach ($serviceCityPatterns as $pattern => $serviceName) {
     foreach ($citySlugs as $citySlug) {
-        $cityIndex++;
-        
-        // Skip URLs that were included in sitemap1
-        if ($cityIndex <= $remainingCapacity) {
-            continue;
-        }
-        
         $urlCount++;
         $loc = $baseUrl . $pattern . '/' . $citySlug;
         
@@ -127,5 +110,5 @@ foreach ($serviceCityPatterns as $pattern => $serviceName) {
 echo '</urlset>' . "\n";
 
 // Log generation for debugging
-error_log('[Dynamic Sitemap 2] Generated ' . $urlCount . ' overflow URLs at ' . date('Y-m-d H:i:s'));
+error_log('[Dynamic Sitemap 2] Generated ' . ($urlCount) . ' overflow URLs (cities 1610+) at ' . date('Y-m-d H:i:s'));
 ?>
