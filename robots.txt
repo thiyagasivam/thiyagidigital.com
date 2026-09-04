@@ -7,3 +7,5 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.thiyagidigital.com/sitemap-index.xml
+Sitemap: https://www.thiyagidigital.com/sitemap1.xml
+Sitemap: https://www.thiyagidigital.com/sitemap2.xml
